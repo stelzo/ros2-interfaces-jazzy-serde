@@ -31,4 +31,5 @@ impl Default for Wiper {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Wiper {}

@@ -24,6 +24,7 @@ impl Default for ManageLifecycleNodesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ManageLifecycleNodesRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for ManageLifecycleNodesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ManageLifecycleNodesResponse {}
 
 
 pub struct ManageLifecycleNodes;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ManageLifecycleNodes {
     type Request = ManageLifecycleNodesRequest;
     type Response = ManageLifecycleNodesResponse;

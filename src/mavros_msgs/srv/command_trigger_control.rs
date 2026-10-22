@@ -18,6 +18,7 @@ impl Default for CommandTriggerControlRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandTriggerControlRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for CommandTriggerControlResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandTriggerControlResponse {}
 
 
 pub struct CommandTriggerControl;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandTriggerControl {
     type Request = CommandTriggerControlRequest;
     type Response = CommandTriggerControlResponse;

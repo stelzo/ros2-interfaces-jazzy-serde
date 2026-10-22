@@ -14,6 +14,7 @@ impl Default for DeleteLightRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteLightRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for DeleteLightResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteLightResponse {}
 
 
 pub struct DeleteLight;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteLight {
     type Request = DeleteLightRequest;
     type Response = DeleteLightResponse;

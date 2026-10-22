@@ -16,6 +16,7 @@ impl Default for GetBasePlaneCalibrationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetBasePlaneCalibrationRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetBasePlaneCalibrationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetBasePlaneCalibrationResponse {}
 
 
 pub struct GetBasePlaneCalibration;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetBasePlaneCalibration {
     type Request = GetBasePlaneCalibrationRequest;
     type Response = GetBasePlaneCalibrationResponse;

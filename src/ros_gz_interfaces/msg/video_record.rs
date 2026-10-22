@@ -21,4 +21,5 @@ impl Default for VideoRecord {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for VideoRecord {}

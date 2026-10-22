@@ -14,6 +14,7 @@ impl Default for SetBoolRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetBoolRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetBoolResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetBoolResponse {}
 
 
 pub struct SetBool;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetBool {
     type Request = SetBoolRequest;
     type Response = SetBoolResponse;

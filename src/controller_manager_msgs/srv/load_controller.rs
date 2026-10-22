@@ -14,6 +14,7 @@ impl Default for LoadControllerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadControllerRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for LoadControllerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadControllerResponse {}
 
 
 pub struct LoadController;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LoadController {
     type Request = LoadControllerRequest;
     type Response = LoadControllerResponse;

@@ -14,6 +14,7 @@ impl Default for MapLoadRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MapLoadRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for MapLoadResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MapLoadResponse {}
 
 
 pub struct MapLoad;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MapLoad {
     type Request = MapLoadRequest;
     type Response = MapLoadResponse;

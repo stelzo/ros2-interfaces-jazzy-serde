@@ -39,6 +39,7 @@ impl Default for MountConfigureRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MountConfigureRequest {}
 
 
@@ -58,10 +59,12 @@ impl Default for MountConfigureResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MountConfigureResponse {}
 
 
 pub struct MountConfigure;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MountConfigure {
     type Request = MountConfigureRequest;
     type Response = MountConfigureResponse;

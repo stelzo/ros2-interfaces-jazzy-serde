@@ -14,6 +14,7 @@ impl Default for GetLoadedProgramRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLoadedProgramRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetLoadedProgramResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLoadedProgramResponse {}
 
 
 pub struct GetLoadedProgram;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetLoadedProgram {
     type Request = GetLoadedProgramRequest;
     type Response = GetLoadedProgramResponse;

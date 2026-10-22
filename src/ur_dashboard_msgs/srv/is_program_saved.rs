@@ -14,6 +14,7 @@ impl Default for IsProgramSavedRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsProgramSavedRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for IsProgramSavedResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsProgramSavedResponse {}
 
 
 pub struct IsProgramSaved;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IsProgramSaved {
     type Request = IsProgramSavedRequest;
     type Response = IsProgramSavedResponse;

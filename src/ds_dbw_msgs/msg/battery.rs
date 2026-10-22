@@ -23,4 +23,5 @@ impl Default for Battery {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Battery {}

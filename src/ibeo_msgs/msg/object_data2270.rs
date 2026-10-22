@@ -23,4 +23,5 @@ impl Default for ObjectData2270 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ObjectData2270 {}

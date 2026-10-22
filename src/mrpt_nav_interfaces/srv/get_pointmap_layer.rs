@@ -14,6 +14,7 @@ impl Default for GetPointmapLayerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPointmapLayerRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetPointmapLayerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPointmapLayerResponse {}
 
 
 pub struct GetPointmapLayer;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPointmapLayer {
     type Request = GetPointmapLayerRequest;
     type Response = GetPointmapLayerResponse;

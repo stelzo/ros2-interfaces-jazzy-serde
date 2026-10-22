@@ -14,6 +14,7 @@ impl Default for ListHardwareComponentsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListHardwareComponentsRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ListHardwareComponentsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListHardwareComponentsResponse {}
 
 
 pub struct ListHardwareComponents;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListHardwareComponents {
     type Request = ListHardwareComponentsRequest;
     type Response = ListHardwareComponentsResponse;

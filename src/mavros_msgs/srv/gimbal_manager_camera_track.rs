@@ -34,6 +34,7 @@ impl Default for GimbalManagerCameraTrackRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerCameraTrackRequest {}
 
 
@@ -53,10 +54,12 @@ impl Default for GimbalManagerCameraTrackResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerCameraTrackResponse {}
 
 
 pub struct GimbalManagerCameraTrack;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GimbalManagerCameraTrack {
     type Request = GimbalManagerCameraTrackRequest;
     type Response = GimbalManagerCameraTrackResponse;

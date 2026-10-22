@@ -14,6 +14,7 @@ impl Default for ListTriggersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListTriggersRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for ListTriggersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListTriggersResponse {}
 
 
 pub struct ListTriggers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListTriggers {
     type Request = ListTriggersRequest;
     type Response = ListTriggersResponse;

@@ -26,4 +26,5 @@ impl Default for CfgVALDEL {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CfgVALDEL {}

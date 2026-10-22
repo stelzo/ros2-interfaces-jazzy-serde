@@ -37,4 +37,5 @@ impl Default for SrrFeatureAlert {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SrrFeatureAlert {}

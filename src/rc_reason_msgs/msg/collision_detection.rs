@@ -15,4 +15,5 @@ impl Default for CollisionDetection {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CollisionDetection {}

@@ -17,4 +17,5 @@ impl Default for Point32 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Point32 {}

@@ -14,6 +14,7 @@ impl Default for GetInteractiveMarkersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetInteractiveMarkersRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetInteractiveMarkersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetInteractiveMarkersResponse {}
 
 
 pub struct GetInteractiveMarkers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetInteractiveMarkers {
     type Request = GetInteractiveMarkersRequest;
     type Response = GetInteractiveMarkersResponse;

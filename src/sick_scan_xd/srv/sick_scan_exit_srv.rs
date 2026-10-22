@@ -14,6 +14,7 @@ impl Default for SickScanExitSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SickScanExitSrvRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SickScanExitSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SickScanExitSrvResponse {}
 
 
 pub struct SickScanExitSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SickScanExitSrv {
     type Request = SickScanExitSrvRequest;
     type Response = SickScanExitSrvResponse;

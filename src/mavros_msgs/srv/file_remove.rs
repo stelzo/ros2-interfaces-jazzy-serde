@@ -14,6 +14,7 @@ impl Default for FileRemoveRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileRemoveRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for FileRemoveResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileRemoveResponse {}
 
 
 pub struct FileRemove;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileRemove {
     type Request = FileRemoveRequest;
     type Response = FileRemoveResponse;

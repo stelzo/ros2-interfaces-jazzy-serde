@@ -14,6 +14,7 @@ impl Default for ECRChangeArrSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ECRChangeArrSrvRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ECRChangeArrSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ECRChangeArrSrvResponse {}
 
 
 pub struct ECRChangeArrSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ECRChangeArrSrv {
     type Request = ECRChangeArrSrvRequest;
     type Response = ECRChangeArrSrvResponse;

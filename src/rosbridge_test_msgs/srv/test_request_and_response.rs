@@ -14,6 +14,7 @@ impl Default for TestRequestAndResponseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestRequestAndResponseRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for TestRequestAndResponseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestRequestAndResponseResponse {}
 
 
 pub struct TestRequestAndResponse;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TestRequestAndResponse {
     type Request = TestRequestAndResponseRequest;
     type Response = TestRequestAndResponseResponse;

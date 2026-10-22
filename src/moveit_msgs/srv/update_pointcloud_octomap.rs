@@ -14,6 +14,7 @@ impl Default for UpdatePointcloudOctomapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdatePointcloudOctomapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for UpdatePointcloudOctomapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdatePointcloudOctomapResponse {}
 
 
 pub struct UpdatePointcloudOctomap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UpdatePointcloudOctomap {
     type Request = UpdatePointcloudOctomapRequest;
     type Response = UpdatePointcloudOctomapResponse;

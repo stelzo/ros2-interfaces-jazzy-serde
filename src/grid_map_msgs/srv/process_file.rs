@@ -16,6 +16,7 @@ impl Default for ProcessFileRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ProcessFileRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ProcessFileResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ProcessFileResponse {}
 
 
 pub struct ProcessFile;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ProcessFile {
     type Request = ProcessFileRequest;
     type Response = ProcessFileResponse;

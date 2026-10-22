@@ -14,6 +14,7 @@ impl Default for GetSelectedPointCloudMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetSelectedPointCloudMapRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetSelectedPointCloudMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetSelectedPointCloudMapResponse {}
 
 
 pub struct GetSelectedPointCloudMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetSelectedPointCloudMap {
     type Request = GetSelectedPointCloudMapRequest;
     type Response = GetSelectedPointCloudMapResponse;

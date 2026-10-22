@@ -16,6 +16,7 @@ impl Default for ConfigLoggerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ConfigLoggerRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ConfigLoggerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ConfigLoggerResponse {}
 
 
 pub struct ConfigLogger;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ConfigLogger {
     type Request = ConfigLoggerRequest;
     type Response = ConfigLoggerResponse;

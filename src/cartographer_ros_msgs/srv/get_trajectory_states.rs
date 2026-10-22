@@ -14,6 +14,7 @@ impl Default for GetTrajectoryStatesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetTrajectoryStatesRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetTrajectoryStatesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetTrajectoryStatesResponse {}
 
 
 pub struct GetTrajectoryStates;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetTrajectoryStates {
     type Request = GetTrajectoryStatesRequest;
     type Response = GetTrajectoryStatesResponse;

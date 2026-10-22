@@ -14,6 +14,7 @@ impl Default for DeviceInfoRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeviceInfoRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for DeviceInfoResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeviceInfoResponse {}
 
 
 pub struct DeviceInfo;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeviceInfo {
     type Request = DeviceInfoRequest;
     type Response = DeviceInfoResponse;

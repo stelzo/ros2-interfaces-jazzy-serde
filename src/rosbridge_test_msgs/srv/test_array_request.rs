@@ -14,6 +14,7 @@ impl Default for TestArrayRequestRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestArrayRequestRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for TestArrayRequestResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestArrayRequestResponse {}
 
 
 pub struct TestArrayRequest;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TestArrayRequest {
     type Request = TestArrayRequestRequest;
     type Response = TestArrayRequestResponse;

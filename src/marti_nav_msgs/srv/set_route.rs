@@ -16,6 +16,7 @@ impl Default for SetRouteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetRouteRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for SetRouteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetRouteResponse {}
 
 
 pub struct SetRoute;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetRoute {
     type Request = SetRouteRequest;
     type Response = SetRouteResponse;

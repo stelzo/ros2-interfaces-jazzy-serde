@@ -16,6 +16,7 @@ impl Default for SetLabelRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLabelRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetLabelResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLabelResponse {}
 
 
 pub struct SetLabel;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetLabel {
     type Request = SetLabelRequest;
     type Response = SetLabelResponse;

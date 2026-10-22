@@ -26,6 +26,7 @@ impl Default for GetPointMapROIRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPointMapROIRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for GetPointMapROIResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPointMapROIResponse {}
 
 
 pub struct GetPointMapROI;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPointMapROI {
     type Request = GetPointMapROIRequest;
     type Response = GetPointMapROIResponse;

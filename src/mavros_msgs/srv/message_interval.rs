@@ -16,6 +16,7 @@ impl Default for MessageIntervalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MessageIntervalRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for MessageIntervalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MessageIntervalResponse {}
 
 
 pub struct MessageInterval;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MessageInterval {
     type Request = MessageIntervalRequest;
     type Response = MessageIntervalResponse;

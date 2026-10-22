@@ -38,6 +38,7 @@ path = "src/lib.rs"
 
 [dependencies.ros2-client]
 version = "0.10"
+optional = true
 
 [dependencies.serde]
 version = "1.0.215"
@@ -330,7 +331,10 @@ controller_manager_msgs = [
 ]
 data_tamer_msgs = []
 dataspeed_can_msgs = ["std_msgs"]
-default = []
+# Preserve existing ROS client integration for downstream users.
+# Disable default features for transport-independent message structs.
+default = ["ros2-client"]
+ros2-client = ["dep:ros2-client"]
 delphi_esr_msgs = ["std_msgs"]
 delphi_mrr_msgs = ["std_msgs"]
 delphi_srr_msgs = ["std_msgs"]

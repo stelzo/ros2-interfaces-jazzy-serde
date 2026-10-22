@@ -18,6 +18,7 @@ impl Default for FileWriteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileWriteRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for FileWriteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileWriteResponse {}
 
 
 pub struct FileWrite;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileWrite {
     type Request = FileWriteRequest;
     type Response = FileWriteResponse;

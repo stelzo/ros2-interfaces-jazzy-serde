@@ -14,6 +14,7 @@ impl Default for IsPausedRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsPausedRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for IsPausedResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsPausedResponse {}
 
 
 pub struct IsPaused;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IsPaused {
     type Request = IsPausedRequest;
     type Response = IsPausedResponse;

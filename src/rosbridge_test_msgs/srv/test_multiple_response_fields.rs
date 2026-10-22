@@ -14,6 +14,7 @@ impl Default for TestMultipleResponseFieldsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestMultipleResponseFieldsRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for TestMultipleResponseFieldsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestMultipleResponseFieldsResponse {}
 
 
 pub struct TestMultipleResponseFields;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TestMultipleResponseFields {
     type Request = TestMultipleResponseFieldsRequest;
     type Response = TestMultipleResponseFieldsResponse;

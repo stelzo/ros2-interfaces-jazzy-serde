@@ -14,6 +14,7 @@ impl Default for IntrospectSubscribersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IntrospectSubscribersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for IntrospectSubscribersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IntrospectSubscribersResponse {}
 
 
 pub struct IntrospectSubscribers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IntrospectSubscribers {
     type Request = IntrospectSubscribersRequest;
     type Response = IntrospectSubscribersResponse;

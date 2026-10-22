@@ -14,6 +14,7 @@ impl Default for GetOctomapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetOctomapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetOctomapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetOctomapResponse {}
 
 
 pub struct GetOctomap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetOctomap {
     type Request = GetOctomapRequest;
     type Response = GetOctomapResponse;

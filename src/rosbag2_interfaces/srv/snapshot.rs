@@ -14,6 +14,7 @@ impl Default for SnapshotRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SnapshotRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SnapshotResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SnapshotResponse {}
 
 
 pub struct Snapshot;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Snapshot {
     type Request = SnapshotRequest;
     type Response = SnapshotResponse;

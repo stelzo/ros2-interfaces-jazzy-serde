@@ -14,6 +14,7 @@ impl Default for GetProblemGoalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetProblemGoalRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetProblemGoalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetProblemGoalResponse {}
 
 
 pub struct GetProblemGoal;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetProblemGoal {
     type Request = GetProblemGoalRequest;
     type Response = GetProblemGoalResponse;

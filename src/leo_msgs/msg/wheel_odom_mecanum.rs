@@ -25,4 +25,5 @@ impl Default for WheelOdomMecanum {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WheelOdomMecanum {}

@@ -14,6 +14,7 @@ impl Default for MuxSelectRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MuxSelectRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for MuxSelectResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MuxSelectResponse {}
 
 
 pub struct MuxSelect;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MuxSelect {
     type Request = MuxSelectRequest;
     type Response = MuxSelectResponse;

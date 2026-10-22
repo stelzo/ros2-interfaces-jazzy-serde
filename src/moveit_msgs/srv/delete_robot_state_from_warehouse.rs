@@ -16,6 +16,7 @@ impl Default for DeleteRobotStateFromWarehouseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteRobotStateFromWarehouseRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for DeleteRobotStateFromWarehouseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteRobotStateFromWarehouseResponse {}
 
 
 pub struct DeleteRobotStateFromWarehouse;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteRobotStateFromWarehouse {
     type Request = DeleteRobotStateFromWarehouseRequest;
     type Response = DeleteRobotStateFromWarehouseResponse;

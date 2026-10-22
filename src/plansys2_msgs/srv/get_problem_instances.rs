@@ -14,6 +14,7 @@ impl Default for GetProblemInstancesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetProblemInstancesRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetProblemInstancesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetProblemInstancesResponse {}
 
 
 pub struct GetProblemInstances;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetProblemInstances {
     type Request = GetProblemInstancesRequest;
     type Response = GetProblemInstancesResponse;

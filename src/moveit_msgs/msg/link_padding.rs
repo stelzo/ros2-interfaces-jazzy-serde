@@ -15,4 +15,5 @@ impl Default for LinkPadding {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LinkPadding {}

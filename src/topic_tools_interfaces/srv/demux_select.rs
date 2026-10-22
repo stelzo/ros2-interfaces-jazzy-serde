@@ -14,6 +14,7 @@ impl Default for DemuxSelectRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DemuxSelectRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for DemuxSelectResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DemuxSelectResponse {}
 
 
 pub struct DemuxSelect;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DemuxSelect {
     type Request = DemuxSelectRequest;
     type Response = DemuxSelectResponse;

@@ -18,6 +18,7 @@ impl Default for DetectTagsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectTagsRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for DetectTagsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectTagsResponse {}
 
 
 pub struct DetectTags;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DetectTags {
     type Request = DetectTagsRequest;
     type Response = DetectTagsResponse;

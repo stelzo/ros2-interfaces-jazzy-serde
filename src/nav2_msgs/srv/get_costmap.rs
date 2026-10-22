@@ -14,6 +14,7 @@ impl Default for GetCostmapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetCostmapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetCostmapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetCostmapResponse {}
 
 
 pub struct GetCostmap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetCostmap {
     type Request = GetCostmapRequest;
     type Response = GetCostmapResponse;

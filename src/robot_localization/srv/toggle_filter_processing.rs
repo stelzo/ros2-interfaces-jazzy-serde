@@ -14,6 +14,7 @@ impl Default for ToggleFilterProcessingRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ToggleFilterProcessingRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ToggleFilterProcessingResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ToggleFilterProcessingResponse {}
 
 
 pub struct ToggleFilterProcessing;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ToggleFilterProcessing {
     type Request = ToggleFilterProcessingRequest;
     type Response = ToggleFilterProcessingResponse;

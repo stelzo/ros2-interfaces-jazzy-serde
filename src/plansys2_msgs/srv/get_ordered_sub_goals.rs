@@ -14,6 +14,7 @@ impl Default for GetOrderedSubGoalsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetOrderedSubGoalsRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetOrderedSubGoalsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetOrderedSubGoalsResponse {}
 
 
 pub struct GetOrderedSubGoals;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetOrderedSubGoals {
     type Request = GetOrderedSubGoalsRequest;
     type Response = GetOrderedSubGoalsResponse;

@@ -31,6 +31,7 @@ impl Default for COWriteIDRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COWriteIDRequest {}
 
 
@@ -48,10 +49,12 @@ impl Default for COWriteIDResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COWriteIDResponse {}
 
 
 pub struct COWriteID;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for COWriteID {
     type Request = COWriteIDRequest;
     type Response = COWriteIDResponse;

@@ -15,4 +15,5 @@ impl Default for Particle {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Particle {}

@@ -14,6 +14,7 @@ impl Default for SetMapProjectionsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetMapProjectionsRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetMapProjectionsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetMapProjectionsResponse {}
 
 
 pub struct SetMapProjections;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetMapProjections {
     type Request = SetMapProjectionsRequest;
     type Response = SetMapProjectionsResponse;

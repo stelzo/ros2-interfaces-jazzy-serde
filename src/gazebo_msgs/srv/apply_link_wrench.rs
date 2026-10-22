@@ -24,6 +24,7 @@ impl Default for ApplyLinkWrenchRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApplyLinkWrenchRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for ApplyLinkWrenchResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApplyLinkWrenchResponse {}
 
 
 pub struct ApplyLinkWrench;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ApplyLinkWrench {
     type Request = ApplyLinkWrenchRequest;
     type Response = ApplyLinkWrenchResponse;

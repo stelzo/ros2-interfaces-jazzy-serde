@@ -14,6 +14,7 @@ impl Default for GetCMGraphRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetCMGraphRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetCMGraphResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetCMGraphResponse {}
 
 
 pub struct GetCMGraph;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetCMGraph {
     type Request = GetCMGraphRequest;
     type Response = GetCMGraphResponse;

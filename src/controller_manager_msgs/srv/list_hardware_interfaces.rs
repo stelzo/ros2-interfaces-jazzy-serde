@@ -14,6 +14,7 @@ impl Default for ListHardwareInterfacesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListHardwareInterfacesRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ListHardwareInterfacesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListHardwareInterfacesResponse {}
 
 
 pub struct ListHardwareInterfaces;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListHardwareInterfaces {
     type Request = ListHardwareInterfacesRequest;
     type Response = ListHardwareInterfacesResponse;

@@ -14,6 +14,7 @@ impl Default for CalculateWhiteBalanceRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CalculateWhiteBalanceRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for CalculateWhiteBalanceResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CalculateWhiteBalanceResponse {}
 
 
 pub struct CalculateWhiteBalance;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CalculateWhiteBalance {
     type Request = CalculateWhiteBalanceRequest;
     type Response = CalculateWhiteBalanceResponse;

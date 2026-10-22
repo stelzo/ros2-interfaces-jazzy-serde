@@ -14,6 +14,7 @@ impl Default for COTargetDoubleRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COTargetDoubleRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for COTargetDoubleResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COTargetDoubleResponse {}
 
 
 pub struct COTargetDouble;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for COTargetDouble {
     type Request = COTargetDoubleRequest;
     type Response = COTargetDoubleResponse;

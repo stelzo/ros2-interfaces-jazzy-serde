@@ -39,6 +39,7 @@ impl Default for SetMavFrameRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetMavFrameRequest {}
 
 
@@ -56,10 +57,12 @@ impl Default for SetMavFrameResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetMavFrameResponse {}
 
 
 pub struct SetMavFrame;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetMavFrame {
     type Request = SetMavFrameRequest;
     type Response = SetMavFrameResponse;

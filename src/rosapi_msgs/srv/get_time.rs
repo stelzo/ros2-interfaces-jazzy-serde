@@ -14,6 +14,7 @@ impl Default for GetTimeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetTimeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetTimeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetTimeResponse {}
 
 
 pub struct GetTime;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetTime {
     type Request = GetTimeRequest;
     type Response = GetTimeResponse;

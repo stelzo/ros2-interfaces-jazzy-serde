@@ -23,6 +23,7 @@ impl Default for ColdStartRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ColdStartRequest {}
 
 
@@ -40,10 +41,12 @@ impl Default for ColdStartResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ColdStartResponse {}
 
 
 pub struct ColdStart;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ColdStart {
     type Request = ColdStartRequest;
     type Response = ColdStartResponse;

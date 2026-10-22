@@ -14,6 +14,7 @@ impl Default for GetLightPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLightPropertiesRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for GetLightPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLightPropertiesResponse {}
 
 
 pub struct GetLightProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetLightProperties {
     type Request = GetLightPropertiesRequest;
     type Response = GetLightPropertiesResponse;

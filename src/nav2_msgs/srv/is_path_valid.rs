@@ -14,6 +14,7 @@ impl Default for IsPathValidRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsPathValidRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for IsPathValidResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsPathValidResponse {}
 
 
 pub struct IsPathValid;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IsPathValid {
     type Request = IsPathValidRequest;
     type Response = IsPathValidResponse;

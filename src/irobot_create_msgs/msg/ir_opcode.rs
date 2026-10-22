@@ -30,4 +30,5 @@ impl Default for IrOpcode {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IrOpcode {}

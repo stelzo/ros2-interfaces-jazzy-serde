@@ -14,6 +14,7 @@ impl Default for ListScheduleStatesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListScheduleStatesRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for ListScheduleStatesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListScheduleStatesResponse {}
 
 
 pub struct ListScheduleStates;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListScheduleStates {
     type Request = ListScheduleStatesRequest;
     type Response = ListScheduleStatesResponse;

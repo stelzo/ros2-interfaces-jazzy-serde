@@ -16,6 +16,7 @@ impl Default for ReviveTaskRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ReviveTaskRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ReviveTaskResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ReviveTaskResponse {}
 
 
 pub struct ReviveTask;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ReviveTask {
     type Request = ReviveTaskRequest;
     type Response = ReviveTaskResponse;

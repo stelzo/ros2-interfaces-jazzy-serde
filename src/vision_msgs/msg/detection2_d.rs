@@ -19,4 +19,5 @@ impl Default for Detection2D {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Detection2D {}

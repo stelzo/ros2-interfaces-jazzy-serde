@@ -19,4 +19,5 @@ impl Default for ColorRGBA {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ColorRGBA {}

@@ -32,6 +32,7 @@ impl Default for GimbalManagerPitchyawRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerPitchyawRequest {}
 
 
@@ -51,10 +52,12 @@ impl Default for GimbalManagerPitchyawResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerPitchyawResponse {}
 
 
 pub struct GimbalManagerPitchyaw;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GimbalManagerPitchyaw {
     type Request = GimbalManagerPitchyawRequest;
     type Response = GimbalManagerPitchyawResponse;

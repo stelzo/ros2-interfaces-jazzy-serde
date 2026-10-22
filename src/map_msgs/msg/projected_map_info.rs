@@ -25,4 +25,5 @@ impl Default for ProjectedMapInfo {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ProjectedMapInfo {}

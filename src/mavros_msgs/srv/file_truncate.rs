@@ -16,6 +16,7 @@ impl Default for FileTruncateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileTruncateRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for FileTruncateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileTruncateResponse {}
 
 
 pub struct FileTruncate;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileTruncate {
     type Request = FileTruncateRequest;
     type Response = FileTruncateResponse;

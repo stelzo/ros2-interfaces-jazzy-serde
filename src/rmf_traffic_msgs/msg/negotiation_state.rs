@@ -21,4 +21,5 @@ impl Default for NegotiationState {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NegotiationState {}

@@ -46,4 +46,5 @@ impl Default for ParamInfo {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ParamInfo {}

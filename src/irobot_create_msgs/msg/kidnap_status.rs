@@ -15,4 +15,5 @@ impl Default for KidnapStatus {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for KidnapStatus {}

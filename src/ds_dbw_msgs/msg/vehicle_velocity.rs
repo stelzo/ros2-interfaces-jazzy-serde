@@ -25,4 +25,5 @@ impl Default for VehicleVelocity {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for VehicleVelocity {}

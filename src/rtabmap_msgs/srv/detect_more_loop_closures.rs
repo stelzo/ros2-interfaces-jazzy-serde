@@ -24,6 +24,7 @@ impl Default for DetectMoreLoopClosuresRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectMoreLoopClosuresRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for DetectMoreLoopClosuresResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectMoreLoopClosuresResponse {}
 
 
 pub struct DetectMoreLoopClosures;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DetectMoreLoopClosures {
     type Request = DetectMoreLoopClosuresRequest;
     type Response = DetectMoreLoopClosuresResponse;

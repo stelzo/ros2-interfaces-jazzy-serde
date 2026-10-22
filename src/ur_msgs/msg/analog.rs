@@ -22,4 +22,5 @@ impl Default for Analog {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Analog {}

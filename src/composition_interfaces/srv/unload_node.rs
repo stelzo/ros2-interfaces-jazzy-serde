@@ -14,6 +14,7 @@ impl Default for UnloadNodeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UnloadNodeRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for UnloadNodeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UnloadNodeResponse {}
 
 
 pub struct UnloadNode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UnloadNode {
     type Request = UnloadNodeRequest;
     type Response = UnloadNodeResponse;

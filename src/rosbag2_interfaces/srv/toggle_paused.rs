@@ -14,6 +14,7 @@ impl Default for TogglePausedRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TogglePausedRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for TogglePausedResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TogglePausedResponse {}
 
 
 pub struct TogglePaused;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TogglePaused {
     type Request = TogglePausedRequest;
     type Response = TogglePausedResponse;

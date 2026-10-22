@@ -14,6 +14,7 @@ impl Default for SaveGeometryToFileRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveGeometryToFileRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SaveGeometryToFileResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveGeometryToFileResponse {}
 
 
 pub struct SaveGeometryToFile;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SaveGeometryToFile {
     type Request = SaveGeometryToFileRequest;
     type Response = SaveGeometryToFileResponse;

@@ -5,7 +5,9 @@
 This repository contains Rust structs for all interfaces (i.e., messages and services) that are listed as releases
 on the [ROS Index for Jazzy](https://index.ros.org/packages/#jazzy).
 
-The interfaces implement traits from the `ros2-client` library and can be used easily in conjunction.
+The default `ros2-client` feature implements the ROS client message and service traits.
+For transport-independent structs with Serde serialization, disable default features;
+this avoids compiling `ros2-client` and its DDS runtime.
 
 Every package is a separate feature for this crate, so you can cherry-pick the interfaces you need.
 Example are `std_msgs`, `geometry_msgs` and `nav2_msgs`. 
@@ -18,6 +20,17 @@ Add this crate to your `Cargo.toml`:
 [dependencies]
 ros2-interfaces-jazzy-serde = { version = "*", features = ["std_msgs"] }  # replace with the latest version and features you need
 ```
+
+For message types without a ROS client or DDS runtime:
+
+```toml
+[dependencies]
+ros2-interfaces-jazzy-serde = { version = "0.0.5", default-features = false, features = ["sensor_msgs", "nav_msgs"] }
+```
+
+Enable `ros2-client` explicitly when connecting these types to a ROS DDS node.
+The `all` feature selects all interface packages; it does not enable transport integration.
+Struct fields and Serde serialization are identical in both modes.
 
 Then you can use the interfaces in your code:
 

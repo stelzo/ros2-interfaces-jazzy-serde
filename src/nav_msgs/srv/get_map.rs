@@ -14,6 +14,7 @@ impl Default for GetMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetMapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetMapResponse {}
 
 
 pub struct GetMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetMap {
     type Request = GetMapRequest;
     type Response = GetMapResponse;

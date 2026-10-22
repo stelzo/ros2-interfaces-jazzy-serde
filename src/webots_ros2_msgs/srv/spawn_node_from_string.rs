@@ -14,6 +14,7 @@ impl Default for SpawnNodeFromStringRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpawnNodeFromStringRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SpawnNodeFromStringResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpawnNodeFromStringResponse {}
 
 
 pub struct SpawnNodeFromString;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SpawnNodeFromString {
     type Request = SpawnNodeFromStringRequest;
     type Response = SpawnNodeFromStringResponse;

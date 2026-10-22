@@ -14,6 +14,7 @@ impl Default for SeekRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SeekRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SeekResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SeekResponse {}
 
 
 pub struct Seek;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Seek {
     type Request = SeekRequest;
     type Response = SeekResponse;

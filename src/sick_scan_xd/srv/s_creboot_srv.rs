@@ -14,6 +14,7 @@ impl Default for SCrebootSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SCrebootSrvRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SCrebootSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SCrebootSrvResponse {}
 
 
 pub struct SCrebootSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SCrebootSrv {
     type Request = SCrebootSrvRequest;
     type Response = SCrebootSrvResponse;

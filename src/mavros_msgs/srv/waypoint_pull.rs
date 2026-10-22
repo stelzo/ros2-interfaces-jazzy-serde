@@ -14,6 +14,7 @@ impl Default for WaypointPullRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointPullRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for WaypointPullResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointPullResponse {}
 
 
 pub struct WaypointPull;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WaypointPull {
     type Request = WaypointPullRequest;
     type Response = WaypointPullResponse;

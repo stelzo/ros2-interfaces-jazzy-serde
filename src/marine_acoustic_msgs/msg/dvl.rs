@@ -54,4 +54,5 @@ impl Default for Dvl {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Dvl {}

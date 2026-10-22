@@ -16,6 +16,7 @@ impl Default for TeleportRelativeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TeleportRelativeRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for TeleportRelativeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TeleportRelativeResponse {}
 
 
 pub struct TeleportRelative;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TeleportRelative {
     type Request = TeleportRelativeRequest;
     type Response = TeleportRelativeResponse;

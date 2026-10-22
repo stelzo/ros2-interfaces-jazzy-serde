@@ -16,6 +16,7 @@ impl Default for WaypointPushRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointPushRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for WaypointPushResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointPushResponse {}
 
 
 pub struct WaypointPush;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WaypointPush {
     type Request = WaypointPushRequest;
     type Response = WaypointPushResponse;

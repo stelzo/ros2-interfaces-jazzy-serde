@@ -14,6 +14,7 @@ impl Default for HandEyeCalibrationTriggerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HandEyeCalibrationTriggerRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for HandEyeCalibrationTriggerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HandEyeCalibrationTriggerResponse {}
 
 
 pub struct HandEyeCalibrationTrigger;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for HandEyeCalibrationTrigger {
     type Request = HandEyeCalibrationTriggerRequest;
     type Response = HandEyeCalibrationTriggerResponse;

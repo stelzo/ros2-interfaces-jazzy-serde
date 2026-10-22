@@ -36,6 +36,7 @@ impl Default for CommandIntRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandIntRequest {}
 
 
@@ -53,10 +54,12 @@ impl Default for CommandIntResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandIntResponse {}
 
 
 pub struct CommandInt;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandInt {
     type Request = CommandIntRequest;
     type Response = CommandIntResponse;

@@ -14,6 +14,7 @@ impl Default for GetGridmapLayerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGridmapLayerRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetGridmapLayerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGridmapLayerResponse {}
 
 
 pub struct GetGridmapLayer;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetGridmapLayer {
     type Request = GetGridmapLayerRequest;
     type Response = GetGridmapLayerResponse;

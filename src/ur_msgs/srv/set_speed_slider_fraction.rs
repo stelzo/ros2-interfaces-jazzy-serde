@@ -14,6 +14,7 @@ impl Default for SetSpeedSliderFractionRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetSpeedSliderFractionRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetSpeedSliderFractionResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetSpeedSliderFractionResponse {}
 
 
 pub struct SetSpeedSliderFraction;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetSpeedSliderFraction {
     type Request = SetSpeedSliderFractionRequest;
     type Response = SetSpeedSliderFractionResponse;

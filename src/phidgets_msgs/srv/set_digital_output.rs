@@ -16,6 +16,7 @@ impl Default for SetDigitalOutputRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetDigitalOutputRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetDigitalOutputResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetDigitalOutputResponse {}
 
 
 pub struct SetDigitalOutput;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetDigitalOutput {
     type Request = SetDigitalOutputRequest;
     type Response = SetDigitalOutputResponse;

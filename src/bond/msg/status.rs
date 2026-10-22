@@ -23,4 +23,5 @@ impl Default for Status {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Status {}

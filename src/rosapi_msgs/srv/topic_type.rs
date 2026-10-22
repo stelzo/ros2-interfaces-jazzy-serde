@@ -14,6 +14,7 @@ impl Default for TopicTypeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TopicTypeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for TopicTypeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TopicTypeResponse {}
 
 
 pub struct TopicType;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TopicType {
     type Request = TopicTypeRequest;
     type Response = TopicTypeResponse;

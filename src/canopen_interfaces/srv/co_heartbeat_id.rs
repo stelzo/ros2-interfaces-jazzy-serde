@@ -16,6 +16,7 @@ impl Default for COHeartbeatIDRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COHeartbeatIDRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for COHeartbeatIDResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COHeartbeatIDResponse {}
 
 
 pub struct COHeartbeatID;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for COHeartbeatID {
     type Request = COHeartbeatIDRequest;
     type Response = COHeartbeatIDResponse;

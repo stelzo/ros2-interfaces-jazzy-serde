@@ -41,4 +41,5 @@ impl Default for ScannerInfo2204 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ScannerInfo2204 {}

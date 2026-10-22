@@ -35,4 +35,5 @@ impl Default for StatusEvent {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StatusEvent {}

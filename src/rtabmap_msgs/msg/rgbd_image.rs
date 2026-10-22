@@ -33,4 +33,5 @@ impl Default for RGBDImage {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RGBDImage {}

@@ -14,6 +14,7 @@ impl Default for ComplexSrvMsgRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ComplexSrvMsgRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ComplexSrvMsgResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ComplexSrvMsgResponse {}
 
 
 pub struct ComplexSrvMsg;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ComplexSrvMsg {
     type Request = ComplexSrvMsgRequest;
     type Response = ComplexSrvMsgResponse;

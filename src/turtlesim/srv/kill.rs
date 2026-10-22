@@ -14,6 +14,7 @@ impl Default for KillRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for KillRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for KillResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for KillResponse {}
 
 
 pub struct Kill;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Kill {
     type Request = KillRequest;
     type Response = KillResponse;

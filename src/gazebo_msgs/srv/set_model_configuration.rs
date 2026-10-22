@@ -20,6 +20,7 @@ impl Default for SetModelConfigurationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetModelConfigurationRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for SetModelConfigurationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetModelConfigurationResponse {}
 
 
 pub struct SetModelConfiguration;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetModelConfiguration {
     type Request = SetModelConfigurationRequest;
     type Response = SetModelConfigurationResponse;

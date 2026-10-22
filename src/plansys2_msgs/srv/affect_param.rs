@@ -14,6 +14,7 @@ impl Default for AffectParamRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AffectParamRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for AffectParamResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AffectParamResponse {}
 
 
 pub struct AffectParam;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for AffectParam {
     type Request = AffectParamRequest;
     type Response = AffectParamResponse;

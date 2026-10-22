@@ -14,6 +14,7 @@ impl Default for GetPositionIKRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPositionIKRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetPositionIKResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPositionIKResponse {}
 
 
 pub struct GetPositionIK;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPositionIK {
     type Request = GetPositionIKRequest;
     type Response = GetPositionIKResponse;

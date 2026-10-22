@@ -59,4 +59,5 @@ impl Default for RCGCD14 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RCGCD14 {}

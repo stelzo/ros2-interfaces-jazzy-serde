@@ -25,4 +25,5 @@ impl Default for UBXRxmRTCM {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UBXRxmRTCM {}

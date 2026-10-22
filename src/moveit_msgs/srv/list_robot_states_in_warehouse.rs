@@ -16,6 +16,7 @@ impl Default for ListRobotStatesInWarehouseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListRobotStatesInWarehouseRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ListRobotStatesInWarehouseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListRobotStatesInWarehouseResponse {}
 
 
 pub struct ListRobotStatesInWarehouse;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListRobotStatesInWarehouse {
     type Request = ListRobotStatesInWarehouseRequest;
     type Response = ListRobotStatesInWarehouseResponse;

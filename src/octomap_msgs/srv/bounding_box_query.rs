@@ -16,6 +16,7 @@ impl Default for BoundingBoxQueryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BoundingBoxQueryRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for BoundingBoxQueryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BoundingBoxQueryResponse {}
 
 
 pub struct BoundingBoxQuery;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for BoundingBoxQuery {
     type Request = BoundingBoxQueryRequest;
     type Response = BoundingBoxQueryResponse;

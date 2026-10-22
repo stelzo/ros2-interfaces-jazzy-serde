@@ -38,4 +38,5 @@ impl Default for BrakeCmd {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BrakeCmd {}

@@ -14,6 +14,7 @@ impl Default for GetImageForMapTileRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetImageForMapTileRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetImageForMapTileResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetImageForMapTileResponse {}
 
 
 pub struct GetImageForMapTile;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetImageForMapTile {
     type Request = GetImageForMapTileRequest;
     type Response = GetImageForMapTileResponse;

@@ -21,4 +21,5 @@ impl Default for RadarPreHeaderDeviceBlock {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RadarPreHeaderDeviceBlock {}

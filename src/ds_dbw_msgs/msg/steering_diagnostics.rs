@@ -97,4 +97,5 @@ impl Default for SteeringDiagnostics {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SteeringDiagnostics {}

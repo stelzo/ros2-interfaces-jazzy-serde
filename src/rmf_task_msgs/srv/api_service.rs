@@ -14,6 +14,7 @@ impl Default for ApiServiceRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApiServiceRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ApiServiceResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApiServiceResponse {}
 
 
 pub struct ApiService;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ApiService {
     type Request = ApiServiceRequest;
     type Response = ApiServiceResponse;

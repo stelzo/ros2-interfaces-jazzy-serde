@@ -14,6 +14,7 @@ impl Default for SetCameraInfoRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetCameraInfoRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetCameraInfoResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetCameraInfoResponse {}
 
 
 pub struct SetCameraInfo;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetCameraInfo {
     type Request = SetCameraInfoRequest;
     type Response = SetCameraInfoResponse;

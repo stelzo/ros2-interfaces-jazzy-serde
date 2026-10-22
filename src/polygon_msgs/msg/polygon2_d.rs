@@ -13,4 +13,5 @@ impl Default for Polygon2D {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Polygon2D {}

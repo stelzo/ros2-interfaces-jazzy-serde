@@ -14,6 +14,7 @@ impl Default for GetModelListRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetModelListRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetModelListResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetModelListResponse {}
 
 
 pub struct GetModelList;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetModelList {
     type Request = GetModelListRequest;
     type Response = GetModelListResponse;

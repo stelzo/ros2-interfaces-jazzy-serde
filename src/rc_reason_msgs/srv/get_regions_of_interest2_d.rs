@@ -14,6 +14,7 @@ impl Default for GetRegionsOfInterest2DRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRegionsOfInterest2DRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetRegionsOfInterest2DResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRegionsOfInterest2DResponse {}
 
 
 pub struct GetRegionsOfInterest2D;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetRegionsOfInterest2D {
     type Request = GetRegionsOfInterest2DRequest;
     type Response = GetRegionsOfInterest2DResponse;

@@ -14,6 +14,7 @@ impl Default for ClearEntireCostmapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ClearEntireCostmapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ClearEntireCostmapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ClearEntireCostmapResponse {}
 
 
 pub struct ClearEntireCostmap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ClearEntireCostmap {
     type Request = ClearEntireCostmapRequest;
     type Response = ClearEntireCostmapResponse;

@@ -14,6 +14,7 @@ impl Default for SetDatumRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetDatumRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetDatumResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetDatumResponse {}
 
 
 pub struct SetDatum;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetDatum {
     type Request = SetDatumRequest;
     type Response = SetDatumResponse;

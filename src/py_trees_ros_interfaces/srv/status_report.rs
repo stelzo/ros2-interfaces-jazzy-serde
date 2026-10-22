@@ -14,6 +14,7 @@ impl Default for StatusReportRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StatusReportRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for StatusReportResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StatusReportResponse {}
 
 
 pub struct StatusReport;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for StatusReport {
     type Request = StatusReportRequest;
     type Response = StatusReportResponse;

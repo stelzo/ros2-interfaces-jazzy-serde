@@ -18,6 +18,7 @@ impl Default for FileReadRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileReadRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for FileReadResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileReadResponse {}
 
 
 pub struct FileRead;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileRead {
     type Request = FileReadRequest;
     type Response = FileReadResponse;

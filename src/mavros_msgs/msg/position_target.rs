@@ -46,4 +46,5 @@ impl Default for PositionTarget {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PositionTarget {}

@@ -22,6 +22,7 @@ impl Default for CommandTOLLocalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandTOLLocalRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for CommandTOLLocalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandTOLLocalResponse {}
 
 
 pub struct CommandTOLLocal;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandTOLLocal {
     type Request = CommandTOLLocalRequest;
     type Response = CommandTOLLocalResponse;

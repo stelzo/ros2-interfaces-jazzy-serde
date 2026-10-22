@@ -41,4 +41,5 @@ impl Default for UlcReport {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UlcReport {}

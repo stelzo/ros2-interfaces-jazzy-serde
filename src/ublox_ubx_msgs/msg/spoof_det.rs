@@ -20,4 +20,5 @@ impl Default for SpoofDet {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpoofDet {}

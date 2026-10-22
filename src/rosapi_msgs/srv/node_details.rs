@@ -14,6 +14,7 @@ impl Default for NodeDetailsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NodeDetailsRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for NodeDetailsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NodeDetailsResponse {}
 
 
 pub struct NodeDetails;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for NodeDetails {
     type Request = NodeDetailsRequest;
     type Response = NodeDetailsResponse;

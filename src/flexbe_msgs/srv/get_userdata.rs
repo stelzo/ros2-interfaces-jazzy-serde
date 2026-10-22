@@ -14,6 +14,7 @@ impl Default for GetUserdataRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetUserdataRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetUserdataResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetUserdataResponse {}
 
 
 pub struct GetUserdata;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetUserdata {
     type Request = GetUserdataRequest;
     type Response = GetUserdataResponse;

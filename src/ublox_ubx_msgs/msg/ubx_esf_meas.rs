@@ -29,4 +29,5 @@ impl Default for UBXEsfMeas {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UBXEsfMeas {}

@@ -14,6 +14,7 @@ impl Default for TrajectoryQueryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TrajectoryQueryRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for TrajectoryQueryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TrajectoryQueryResponse {}
 
 
 pub struct TrajectoryQuery;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TrajectoryQuery {
     type Request = TrajectoryQueryRequest;
     type Response = TrajectoryQueryResponse;

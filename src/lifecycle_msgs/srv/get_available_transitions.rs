@@ -14,6 +14,7 @@ impl Default for GetAvailableTransitionsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetAvailableTransitionsRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetAvailableTransitionsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetAvailableTransitionsResponse {}
 
 
 pub struct GetAvailableTransitions;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetAvailableTransitions {
     type Request = GetAvailableTransitionsRequest;
     type Response = GetAvailableTransitionsResponse;

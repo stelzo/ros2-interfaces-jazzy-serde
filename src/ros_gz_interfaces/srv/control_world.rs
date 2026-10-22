@@ -14,6 +14,7 @@ impl Default for ControlWorldRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ControlWorldRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ControlWorldResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ControlWorldResponse {}
 
 
 pub struct ControlWorld;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ControlWorld {
     type Request = ControlWorldRequest;
     type Response = ControlWorldResponse;

@@ -50,4 +50,5 @@ impl Default for NovatelDualAntennaHeading {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NovatelDualAntennaHeading {}

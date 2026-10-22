@@ -16,6 +16,7 @@ impl Default for UpdateRouteMetadataRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdateRouteMetadataRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for UpdateRouteMetadataResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdateRouteMetadataResponse {}
 
 
 pub struct UpdateRouteMetadata;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UpdateRouteMetadata {
     type Request = UpdateRouteMetadataRequest;
     type Response = UpdateRouteMetadataResponse;

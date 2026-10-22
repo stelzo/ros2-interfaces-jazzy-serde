@@ -14,6 +14,7 @@ impl Default for GetPlanningSceneRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPlanningSceneRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetPlanningSceneResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPlanningSceneResponse {}
 
 
 pub struct GetPlanningScene;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPlanningScene {
     type Request = GetPlanningSceneRequest;
     type Response = GetPlanningSceneResponse;

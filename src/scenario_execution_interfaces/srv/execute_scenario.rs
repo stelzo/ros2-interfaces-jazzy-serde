@@ -14,6 +14,7 @@ impl Default for ExecuteScenarioRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ExecuteScenarioRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ExecuteScenarioResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ExecuteScenarioResponse {}
 
 
 pub struct ExecuteScenario;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ExecuteScenario {
     type Request = ExecuteScenarioRequest;
     type Response = ExecuteScenarioResponse;

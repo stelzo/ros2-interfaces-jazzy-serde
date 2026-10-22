@@ -24,6 +24,7 @@ impl Default for ApplyBodyWrenchRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApplyBodyWrenchRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for ApplyBodyWrenchResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApplyBodyWrenchResponse {}
 
 
 pub struct ApplyBodyWrench;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ApplyBodyWrench {
     type Request = ApplyBodyWrenchRequest;
     type Response = ApplyBodyWrenchResponse;

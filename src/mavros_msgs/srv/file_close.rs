@@ -14,6 +14,7 @@ impl Default for FileCloseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileCloseRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for FileCloseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileCloseResponse {}
 
 
 pub struct FileClose;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileClose {
     type Request = FileCloseRequest;
     type Response = FileCloseResponse;

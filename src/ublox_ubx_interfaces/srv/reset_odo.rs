@@ -14,6 +14,7 @@ impl Default for ResetODORequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ResetODORequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ResetODOResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ResetODOResponse {}
 
 
 pub struct ResetODO;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ResetODO {
     type Request = ResetODORequest;
     type Response = ResetODOResponse;

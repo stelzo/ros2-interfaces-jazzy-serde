@@ -14,6 +14,7 @@ impl Default for DeleteRegionsOfInterest3DRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteRegionsOfInterest3DRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DeleteRegionsOfInterest3DResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteRegionsOfInterest3DResponse {}
 
 
 pub struct DeleteRegionsOfInterest3D;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteRegionsOfInterest3D {
     type Request = DeleteRegionsOfInterest3DRequest;
     type Response = DeleteRegionsOfInterest3DResponse;

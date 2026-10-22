@@ -14,6 +14,7 @@ impl Default for ColaMsgSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ColaMsgSrvRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ColaMsgSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ColaMsgSrvResponse {}
 
 
 pub struct ColaMsgSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ColaMsgSrv {
     type Request = ColaMsgSrvRequest;
     type Response = ColaMsgSrvResponse;

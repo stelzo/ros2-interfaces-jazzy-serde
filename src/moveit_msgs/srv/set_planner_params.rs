@@ -22,6 +22,7 @@ impl Default for SetPlannerParamsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPlannerParamsRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for SetPlannerParamsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPlannerParamsResponse {}
 
 
 pub struct SetPlannerParams;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetPlannerParams {
     type Request = SetPlannerParamsRequest;
     type Response = SetPlannerParamsResponse;

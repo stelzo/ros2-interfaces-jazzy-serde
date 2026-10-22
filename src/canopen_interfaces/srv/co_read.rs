@@ -16,6 +16,7 @@ impl Default for COReadRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COReadRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for COReadResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COReadResponse {}
 
 
 pub struct CORead;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CORead {
     type Request = COReadRequest;
     type Response = COReadResponse;

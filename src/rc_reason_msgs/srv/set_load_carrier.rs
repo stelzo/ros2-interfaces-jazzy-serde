@@ -14,6 +14,7 @@ impl Default for SetLoadCarrierRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLoadCarrierRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetLoadCarrierResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLoadCarrierResponse {}
 
 
 pub struct SetLoadCarrier;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetLoadCarrier {
     type Request = SetLoadCarrierRequest;
     type Response = SetLoadCarrierResponse;

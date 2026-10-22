@@ -50,6 +50,7 @@ impl Default for SetIORequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetIORequest {}
 
 
@@ -67,10 +68,12 @@ impl Default for SetIOResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetIOResponse {}
 
 
 pub struct SetIO;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetIO {
     type Request = SetIORequest;
     type Response = SetIOResponse;

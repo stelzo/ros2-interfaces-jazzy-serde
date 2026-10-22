@@ -14,6 +14,7 @@ impl Default for FrameGraphRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FrameGraphRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for FrameGraphResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FrameGraphResponse {}
 
 
 pub struct FrameGraph;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FrameGraph {
     type Request = FrameGraphRequest;
     type Response = FrameGraphResponse;

@@ -30,6 +30,7 @@ impl Default for ComputeGraspsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ComputeGraspsRequest {}
 
 
@@ -55,10 +56,12 @@ impl Default for ComputeGraspsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ComputeGraspsResponse {}
 
 
 pub struct ComputeGrasps;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ComputeGrasps {
     type Request = ComputeGraspsRequest;
     type Response = ComputeGraspsResponse;

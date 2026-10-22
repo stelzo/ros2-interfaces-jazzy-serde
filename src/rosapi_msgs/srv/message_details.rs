@@ -14,6 +14,7 @@ impl Default for MessageDetailsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MessageDetailsRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for MessageDetailsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MessageDetailsResponse {}
 
 
 pub struct MessageDetails;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MessageDetails {
     type Request = MessageDetailsRequest;
     type Response = MessageDetailsResponse;

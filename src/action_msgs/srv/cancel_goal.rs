@@ -14,6 +14,7 @@ impl Default for CancelGoalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CancelGoalRequest {}
 
 
@@ -40,10 +41,12 @@ impl Default for CancelGoalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CancelGoalResponse {}
 
 
 pub struct CancelGoal;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CancelGoal {
     type Request = CancelGoalRequest;
     type Response = CancelGoalResponse;

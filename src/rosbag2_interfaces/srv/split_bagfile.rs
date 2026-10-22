@@ -14,6 +14,7 @@ impl Default for SplitBagfileRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SplitBagfileRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SplitBagfileResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SplitBagfileResponse {}
 
 
 pub struct SplitBagfile;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SplitBagfile {
     type Request = SplitBagfileRequest;
     type Response = SplitBagfileResponse;

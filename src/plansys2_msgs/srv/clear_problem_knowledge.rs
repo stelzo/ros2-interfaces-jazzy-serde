@@ -14,6 +14,7 @@ impl Default for ClearProblemKnowledgeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ClearProblemKnowledgeRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ClearProblemKnowledgeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ClearProblemKnowledgeResponse {}
 
 
 pub struct ClearProblemKnowledge;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ClearProblemKnowledge {
     type Request = ClearProblemKnowledgeRequest;
     type Response = ClearProblemKnowledgeResponse;

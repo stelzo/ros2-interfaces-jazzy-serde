@@ -14,6 +14,7 @@ impl Default for StopRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StopRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for StopResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StopResponse {}
 
 
 pub struct Stop;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Stop {
     type Request = StopRequest;
     type Response = StopResponse;

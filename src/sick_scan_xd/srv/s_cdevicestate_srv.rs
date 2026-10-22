@@ -14,6 +14,7 @@ impl Default for SCdevicestateSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SCdevicestateSrvRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SCdevicestateSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SCdevicestateSrvResponse {}
 
 
 pub struct SCdevicestateSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SCdevicestateSrv {
     type Request = SCdevicestateSrvRequest;
     type Response = SCdevicestateSrvResponse;

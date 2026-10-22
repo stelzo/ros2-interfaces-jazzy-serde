@@ -85,4 +85,5 @@ impl Default for SrrStatus5 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SrrStatus5 {}

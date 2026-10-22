@@ -13,4 +13,5 @@ impl Default for Byte {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Byte {}

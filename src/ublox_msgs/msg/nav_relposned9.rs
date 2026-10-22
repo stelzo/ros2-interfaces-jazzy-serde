@@ -70,4 +70,5 @@ impl Default for NavRELPOSNED9 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NavRELPOSNED9 {}

@@ -22,6 +22,7 @@ impl Default for GraspPlanningRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GraspPlanningRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for GraspPlanningResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GraspPlanningResponse {}
 
 
 pub struct GraspPlanning;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GraspPlanning {
     type Request = GraspPlanningRequest;
     type Response = GraspPlanningResponse;

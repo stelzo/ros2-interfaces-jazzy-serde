@@ -14,6 +14,7 @@ impl Default for CreateScheduleRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CreateScheduleRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for CreateScheduleResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CreateScheduleResponse {}
 
 
 pub struct CreateSchedule;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CreateSchedule {
     type Request = CreateScheduleRequest;
     type Response = CreateScheduleResponse;

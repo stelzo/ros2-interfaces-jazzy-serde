@@ -14,6 +14,7 @@ impl Default for TestNestedServiceRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestNestedServiceRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for TestNestedServiceResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestNestedServiceResponse {}
 
 
 pub struct TestNestedService;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TestNestedService {
     type Request = TestNestedServiceRequest;
     type Response = TestNestedServiceResponse;

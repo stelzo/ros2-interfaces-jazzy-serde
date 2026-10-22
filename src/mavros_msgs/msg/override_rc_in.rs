@@ -18,4 +18,5 @@ impl Default for OverrideRCIn {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for OverrideRCIn {}

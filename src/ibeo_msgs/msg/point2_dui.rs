@@ -15,4 +15,5 @@ impl Default for Point2Dui {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Point2Dui {}

@@ -18,6 +18,7 @@ impl Default for OpenBlackboardStreamRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for OpenBlackboardStreamRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for OpenBlackboardStreamResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for OpenBlackboardStreamResponse {}
 
 
 pub struct OpenBlackboardStream;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for OpenBlackboardStream {
     type Request = OpenBlackboardStreamRequest;
     type Response = OpenBlackboardStreamResponse;

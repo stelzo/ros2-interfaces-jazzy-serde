@@ -14,6 +14,7 @@ impl Default for SetGraphRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetGraphRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetGraphResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetGraphResponse {}
 
 
 pub struct SetGraph;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetGraph {
     type Request = SetGraphRequest;
     type Response = SetGraphResponse;

@@ -16,6 +16,7 @@ impl Default for SetAnalogOutputRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetAnalogOutputRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetAnalogOutputResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetAnalogOutputResponse {}
 
 
 pub struct SetAnalogOutput;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetAnalogOutput {
     type Request = SetAnalogOutputRequest;
     type Response = SetAnalogOutputResponse;

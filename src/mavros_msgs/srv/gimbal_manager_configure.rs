@@ -22,6 +22,7 @@ impl Default for GimbalManagerConfigureRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerConfigureRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for GimbalManagerConfigureResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerConfigureResponse {}
 
 
 pub struct GimbalManagerConfigure;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GimbalManagerConfigure {
     type Request = GimbalManagerConfigureRequest;
     type Response = GimbalManagerConfigureResponse;

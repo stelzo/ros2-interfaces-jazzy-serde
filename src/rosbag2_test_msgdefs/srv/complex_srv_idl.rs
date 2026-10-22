@@ -14,6 +14,7 @@ impl Default for ComplexSrvIdlRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ComplexSrvIdlRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ComplexSrvIdlResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ComplexSrvIdlResponse {}
 
 
 pub struct ComplexSrvIdl;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ComplexSrvIdl {
     type Request = ComplexSrvIdlRequest;
     type Response = ComplexSrvIdlResponse;

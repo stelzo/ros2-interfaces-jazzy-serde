@@ -15,4 +15,5 @@ impl Default for Goalpost {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Goalpost {}

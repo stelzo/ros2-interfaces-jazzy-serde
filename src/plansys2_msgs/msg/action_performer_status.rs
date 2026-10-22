@@ -28,4 +28,5 @@ impl Default for ActionPerformerStatus {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ActionPerformerStatus {}

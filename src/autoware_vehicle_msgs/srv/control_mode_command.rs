@@ -24,6 +24,7 @@ impl Default for ControlModeCommandRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ControlModeCommandRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for ControlModeCommandResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ControlModeCommandResponse {}
 
 
 pub struct ControlModeCommand;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ControlModeCommand {
     type Request = ControlModeCommandRequest;
     type Response = ControlModeCommandResponse;

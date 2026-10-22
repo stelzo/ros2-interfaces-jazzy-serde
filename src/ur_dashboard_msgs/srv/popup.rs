@@ -14,6 +14,7 @@ impl Default for PopupRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PopupRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for PopupResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PopupResponse {}
 
 
 pub struct Popup;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Popup {
     type Request = PopupRequest;
     type Response = PopupResponse;

@@ -23,6 +23,7 @@ impl Default for VehicleInfoGetRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for VehicleInfoGetRequest {}
 
 
@@ -42,10 +43,12 @@ impl Default for VehicleInfoGetResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for VehicleInfoGetResponse {}
 
 
 pub struct VehicleInfoGet;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for VehicleInfoGet {
     type Request = VehicleInfoGetRequest;
     type Response = VehicleInfoGetResponse;

@@ -47,4 +47,5 @@ impl Default for SystemReport {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SystemReport {}

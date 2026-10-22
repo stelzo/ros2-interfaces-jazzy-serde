@@ -14,6 +14,7 @@ impl Default for GetMotionSequenceRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetMotionSequenceRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetMotionSequenceResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetMotionSequenceResponse {}
 
 
 pub struct GetMotionSequence;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetMotionSequence {
     type Request = GetMotionSequenceRequest;
     type Response = GetMotionSequenceResponse;

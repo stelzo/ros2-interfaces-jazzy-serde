@@ -20,6 +20,7 @@ impl Default for CommandAckRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandAckRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for CommandAckResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandAckResponse {}
 
 
 pub struct CommandAck;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandAck {
     type Request = CommandAckRequest;
     type Response = CommandAckResponse;

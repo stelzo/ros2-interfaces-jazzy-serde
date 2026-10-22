@@ -22,6 +22,7 @@ impl Default for SetPenRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPenRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for SetPenResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPenResponse {}
 
 
 pub struct SetPen;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetPen {
     type Request = SetPenRequest;
     type Response = SetPenResponse;

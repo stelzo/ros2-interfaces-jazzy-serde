@@ -19,4 +19,5 @@ impl Default for PathPoint {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PathPoint {}

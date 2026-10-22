@@ -14,6 +14,7 @@ impl Default for FromLLRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FromLLRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for FromLLResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FromLLResponse {}
 
 
 pub struct FromLL;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FromLL {
     type Request = FromLLRequest;
     type Response = FromLLResponse;

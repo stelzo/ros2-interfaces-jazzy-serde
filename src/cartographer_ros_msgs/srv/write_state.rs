@@ -16,6 +16,7 @@ impl Default for WriteStateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WriteStateRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for WriteStateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WriteStateResponse {}
 
 
 pub struct WriteState;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WriteState {
     type Request = WriteStateRequest;
     type Response = WriteStateResponse;

@@ -17,4 +17,5 @@ impl Default for GenericTrajectory {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GenericTrajectory {}

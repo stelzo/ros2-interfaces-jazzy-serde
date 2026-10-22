@@ -18,4 +18,5 @@ impl Default for RobotStateEvent {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RobotStateEvent {}

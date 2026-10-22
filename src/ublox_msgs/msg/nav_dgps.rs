@@ -34,4 +34,5 @@ impl Default for NavDGPS {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NavDGPS {}

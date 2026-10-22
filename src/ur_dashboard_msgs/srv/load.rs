@@ -14,6 +14,7 @@ impl Default for LoadRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for LoadResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadResponse {}
 
 
 pub struct Load;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Load {
     type Request = LoadRequest;
     type Response = LoadResponse;

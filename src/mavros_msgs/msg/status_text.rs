@@ -28,4 +28,5 @@ impl Default for StatusText {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StatusText {}

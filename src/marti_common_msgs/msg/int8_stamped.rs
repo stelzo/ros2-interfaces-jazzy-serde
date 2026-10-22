@@ -15,4 +15,5 @@ impl Default for Int8Stamped {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Int8Stamped {}

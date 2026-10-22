@@ -53,4 +53,5 @@ impl Default for Light {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Light {}

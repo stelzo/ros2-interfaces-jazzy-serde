@@ -20,6 +20,7 @@ impl Default for SaveRouteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveRouteRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for SaveRouteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveRouteResponse {}
 
 
 pub struct SaveRoute;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SaveRoute {
     type Request = SaveRouteRequest;
     type Response = SaveRouteResponse;

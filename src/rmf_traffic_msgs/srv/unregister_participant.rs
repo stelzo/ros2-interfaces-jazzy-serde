@@ -14,6 +14,7 @@ impl Default for UnregisterParticipantRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UnregisterParticipantRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for UnregisterParticipantResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UnregisterParticipantResponse {}
 
 
 pub struct UnregisterParticipant;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UnregisterParticipant {
     type Request = UnregisterParticipantRequest;
     type Response = UnregisterParticipantResponse;

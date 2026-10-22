@@ -16,6 +16,7 @@ impl Default for SubmitTaskRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SubmitTaskRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for SubmitTaskResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SubmitTaskResponse {}
 
 
 pub struct SubmitTask;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SubmitTask {
     type Request = SubmitTaskRequest;
     type Response = SubmitTaskResponse;

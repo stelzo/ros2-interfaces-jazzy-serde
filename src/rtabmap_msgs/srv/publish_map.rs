@@ -18,6 +18,7 @@ impl Default for PublishMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PublishMapRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for PublishMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PublishMapResponse {}
 
 
 pub struct PublishMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for PublishMap {
     type Request = PublishMapRequest;
     type Response = PublishMapResponse;

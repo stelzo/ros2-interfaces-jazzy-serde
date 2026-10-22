@@ -16,6 +16,7 @@ impl Default for DqnRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DqnRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for DqnResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DqnResponse {}
 
 
 pub struct Dqn;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Dqn {
     type Request = DqnRequest;
     type Response = DqnResponse;

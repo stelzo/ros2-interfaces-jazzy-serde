@@ -92,4 +92,5 @@ impl Default for Object2280 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Object2280 {}

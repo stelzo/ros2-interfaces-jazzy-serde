@@ -14,6 +14,7 @@ impl Default for CONodeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CONodeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for CONodeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CONodeResponse {}
 
 
 pub struct CONode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CONode {
     type Request = CONodeRequest;
     type Response = CONodeResponse;

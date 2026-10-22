@@ -14,6 +14,7 @@ impl Default for CloseBlackboardStreamRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CloseBlackboardStreamRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for CloseBlackboardStreamResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CloseBlackboardStreamResponse {}
 
 
 pub struct CloseBlackboardStream;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CloseBlackboardStream {
     type Request = CloseBlackboardStreamRequest;
     type Response = CloseBlackboardStreamResponse;

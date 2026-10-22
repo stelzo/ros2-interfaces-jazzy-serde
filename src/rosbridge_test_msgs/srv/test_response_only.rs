@@ -14,6 +14,7 @@ impl Default for TestResponseOnlyRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestResponseOnlyRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for TestResponseOnlyResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestResponseOnlyResponse {}
 
 
 pub struct TestResponseOnly;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TestResponseOnly {
     type Request = TestResponseOnlyRequest;
     type Response = TestResponseOnlyResponse;

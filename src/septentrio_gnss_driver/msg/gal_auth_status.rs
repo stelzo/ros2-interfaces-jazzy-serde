@@ -27,4 +27,5 @@ impl Default for GALAuthStatus {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GALAuthStatus {}

@@ -14,6 +14,7 @@ impl Default for GetContaminationResultSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetContaminationResultSrvRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetContaminationResultSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetContaminationResultSrvResponse {}
 
 
 pub struct GetContaminationResultSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetContaminationResultSrv {
     type Request = GetContaminationResultSrvRequest;
     type Response = GetContaminationResultSrvResponse;

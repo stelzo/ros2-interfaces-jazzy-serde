@@ -14,6 +14,7 @@ impl Default for IsConnectedRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsConnectedRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for IsConnectedResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsConnectedResponse {}
 
 
 pub struct IsConnected;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IsConnected {
     type Request = IsConnectedRequest;
     type Response = IsConnectedResponse;

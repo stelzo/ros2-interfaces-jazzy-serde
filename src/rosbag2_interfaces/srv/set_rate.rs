@@ -14,6 +14,7 @@ impl Default for SetRateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetRateRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetRateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetRateResponse {}
 
 
 pub struct SetRate;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetRate {
     type Request = SetRateRequest;
     type Response = SetRateResponse;

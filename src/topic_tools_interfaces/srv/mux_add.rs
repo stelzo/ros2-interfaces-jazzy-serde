@@ -14,6 +14,7 @@ impl Default for MuxAddRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MuxAddRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for MuxAddResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MuxAddResponse {}
 
 
 pub struct MuxAdd;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MuxAdd {
     type Request = MuxAddRequest;
     type Response = MuxAddResponse;

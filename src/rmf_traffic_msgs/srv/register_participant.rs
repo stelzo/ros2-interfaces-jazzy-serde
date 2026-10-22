@@ -14,6 +14,7 @@ impl Default for RegisterParticipantRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RegisterParticipantRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for RegisterParticipantResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RegisterParticipantResponse {}
 
 
 pub struct RegisterParticipant;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RegisterParticipant {
     type Request = RegisterParticipantRequest;
     type Response = RegisterParticipantResponse;

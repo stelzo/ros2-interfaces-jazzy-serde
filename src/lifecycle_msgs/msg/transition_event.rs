@@ -19,4 +19,5 @@ impl Default for TransitionEvent {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TransitionEvent {}

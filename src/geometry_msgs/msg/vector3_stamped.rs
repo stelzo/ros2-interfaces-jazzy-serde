@@ -15,4 +15,5 @@ impl Default for Vector3Stamped {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Vector3Stamped {}

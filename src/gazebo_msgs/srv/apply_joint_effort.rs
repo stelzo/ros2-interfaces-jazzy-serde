@@ -20,6 +20,7 @@ impl Default for ApplyJointEffortRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApplyJointEffortRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for ApplyJointEffortResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ApplyJointEffortResponse {}
 
 
 pub struct ApplyJointEffort;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ApplyJointEffort {
     type Request = ApplyJointEffortRequest;
     type Response = ApplyJointEffortResponse;

@@ -16,6 +16,7 @@ impl Default for OpenSnapshotStreamRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for OpenSnapshotStreamRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for OpenSnapshotStreamResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for OpenSnapshotStreamResponse {}
 
 
 pub struct OpenSnapshotStream;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for OpenSnapshotStream {
     type Request = OpenSnapshotStreamRequest;
     type Response = OpenSnapshotStreamResponse;

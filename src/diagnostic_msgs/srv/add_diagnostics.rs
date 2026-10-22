@@ -14,6 +14,7 @@ impl Default for AddDiagnosticsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AddDiagnosticsRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for AddDiagnosticsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AddDiagnosticsResponse {}
 
 
 pub struct AddDiagnostics;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for AddDiagnostics {
     type Request = AddDiagnosticsRequest;
     type Response = AddDiagnosticsResponse;

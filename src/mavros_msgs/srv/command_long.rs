@@ -32,6 +32,7 @@ impl Default for CommandLongRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandLongRequest {}
 
 
@@ -51,10 +52,12 @@ impl Default for CommandLongResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandLongResponse {}
 
 
 pub struct CommandLong;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandLong {
     type Request = CommandLongRequest;
     type Response = CommandLongResponse;

@@ -22,6 +22,7 @@ impl Default for SpawnEntityRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpawnEntityRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for SpawnEntityResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpawnEntityResponse {}
 
 
 pub struct SpawnEntity;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SpawnEntity {
     type Request = SpawnEntityRequest;
     type Response = SpawnEntityResponse;

@@ -24,6 +24,7 @@ impl Default for ResetPoseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ResetPoseRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for ResetPoseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ResetPoseResponse {}
 
 
 pub struct ResetPose;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ResetPose {
     type Request = ResetPoseRequest;
     type Response = ResetPoseResponse;

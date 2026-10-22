@@ -14,6 +14,7 @@ impl Default for DemuxAddRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DemuxAddRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DemuxAddResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DemuxAddResponse {}
 
 
 pub struct DemuxAdd;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DemuxAdd {
     type Request = DemuxAddRequest;
     type Response = DemuxAddResponse;

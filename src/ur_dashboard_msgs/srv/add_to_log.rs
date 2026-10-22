@@ -14,6 +14,7 @@ impl Default for AddToLogRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AddToLogRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for AddToLogResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AddToLogResponse {}
 
 
 pub struct AddToLog;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for AddToLog {
     type Request = AddToLogRequest;
     type Response = AddToLogResponse;

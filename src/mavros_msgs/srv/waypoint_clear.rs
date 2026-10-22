@@ -14,6 +14,7 @@ impl Default for WaypointClearRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointClearRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for WaypointClearResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointClearResponse {}
 
 
 pub struct WaypointClear;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WaypointClear {
     type Request = WaypointClearRequest;
     type Response = WaypointClearResponse;

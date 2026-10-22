@@ -19,4 +19,5 @@ impl Default for ROI {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ROI {}

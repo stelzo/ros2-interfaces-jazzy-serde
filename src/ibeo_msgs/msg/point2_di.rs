@@ -15,4 +15,5 @@ impl Default for Point2Di {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Point2Di {}

@@ -14,6 +14,7 @@ impl Default for TopicsAndRawTypesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TopicsAndRawTypesRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for TopicsAndRawTypesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TopicsAndRawTypesResponse {}
 
 
 pub struct TopicsAndRawTypes;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TopicsAndRawTypes {
     type Request = TopicsAndRawTypesRequest;
     type Response = TopicsAndRawTypesResponse;

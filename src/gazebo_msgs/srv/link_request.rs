@@ -14,6 +14,7 @@ impl Default for LinkRequestRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LinkRequestRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for LinkRequestResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LinkRequestResponse {}
 
 
 pub struct LinkRequest;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LinkRequest {
     type Request = LinkRequestRequest;
     type Response = LinkRequestResponse;

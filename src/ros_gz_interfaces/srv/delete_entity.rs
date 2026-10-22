@@ -14,6 +14,7 @@ impl Default for DeleteEntityRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteEntityRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DeleteEntityResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteEntityResponse {}
 
 
 pub struct DeleteEntity;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteEntity {
     type Request = DeleteEntityRequest;
     type Response = DeleteEntityResponse;

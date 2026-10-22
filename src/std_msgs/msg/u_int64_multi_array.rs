@@ -15,4 +15,5 @@ impl Default for UInt64MultiArray {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UInt64MultiArray {}

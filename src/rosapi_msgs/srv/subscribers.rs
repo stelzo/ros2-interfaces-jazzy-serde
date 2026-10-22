@@ -14,6 +14,7 @@ impl Default for SubscribersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SubscribersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SubscribersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SubscribersResponse {}
 
 
 pub struct Subscribers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Subscribers {
     type Request = SubscribersRequest;
     type Response = SubscribersResponse;

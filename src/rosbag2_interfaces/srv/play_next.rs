@@ -14,6 +14,7 @@ impl Default for PlayNextRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PlayNextRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for PlayNextResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PlayNextResponse {}
 
 
 pub struct PlayNext;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for PlayNext {
     type Request = PlayNextRequest;
     type Response = PlayNextResponse;

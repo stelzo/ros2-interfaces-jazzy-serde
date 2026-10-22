@@ -14,6 +14,7 @@ impl Default for WarmStartRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WarmStartRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for WarmStartResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WarmStartResponse {}
 
 
 pub struct WarmStart;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WarmStart {
     type Request = WarmStartRequest;
     type Response = WarmStartResponse;

@@ -14,6 +14,7 @@ impl Default for DeleteModelRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteModelRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for DeleteModelResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteModelResponse {}
 
 
 pub struct DeleteModel;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteModel {
     type Request = DeleteModelRequest;
     type Response = DeleteModelResponse;

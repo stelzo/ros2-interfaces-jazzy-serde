@@ -19,4 +19,5 @@ impl Default for EsfSTATUS_Sens {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EsfSTATUS_Sens {}

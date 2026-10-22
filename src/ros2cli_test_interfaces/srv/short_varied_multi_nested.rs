@@ -14,6 +14,7 @@ impl Default for ShortVariedMultiNestedRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ShortVariedMultiNestedRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ShortVariedMultiNestedResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ShortVariedMultiNestedResponse {}
 
 
 pub struct ShortVariedMultiNested;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ShortVariedMultiNested {
     type Request = ShortVariedMultiNestedRequest;
     type Response = ShortVariedMultiNestedResponse;

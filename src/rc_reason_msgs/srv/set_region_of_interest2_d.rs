@@ -14,6 +14,7 @@ impl Default for SetRegionOfInterest2DRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetRegionOfInterest2DRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetRegionOfInterest2DResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetRegionOfInterest2DResponse {}
 
 
 pub struct SetRegionOfInterest2D;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetRegionOfInterest2D {
     type Request = SetRegionOfInterest2DRequest;
     type Response = SetRegionOfInterest2DResponse;

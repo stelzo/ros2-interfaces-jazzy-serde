@@ -14,6 +14,7 @@ impl Default for CommandBoolRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandBoolRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for CommandBoolResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandBoolResponse {}
 
 
 pub struct CommandBool;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandBool {
     type Request = CommandBoolRequest;
     type Response = CommandBoolResponse;

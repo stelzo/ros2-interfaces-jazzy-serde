@@ -26,6 +26,7 @@ impl Default for SilhouetteMatchDetectObjectRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SilhouetteMatchDetectObjectRequest {}
 
 
@@ -53,10 +54,12 @@ impl Default for SilhouetteMatchDetectObjectResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SilhouetteMatchDetectObjectResponse {}
 
 
 pub struct SilhouetteMatchDetectObject;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SilhouetteMatchDetectObject {
     type Request = SilhouetteMatchDetectObjectRequest;
     type Response = SilhouetteMatchDetectObjectResponse;

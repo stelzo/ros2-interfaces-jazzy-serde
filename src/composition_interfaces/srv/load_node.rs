@@ -28,6 +28,7 @@ impl Default for LoadNodeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadNodeRequest {}
 
 
@@ -51,10 +52,12 @@ impl Default for LoadNodeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadNodeResponse {}
 
 
 pub struct LoadNode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LoadNode {
     type Request = LoadNodeRequest;
     type Response = LoadNodeResponse;

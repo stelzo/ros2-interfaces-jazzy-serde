@@ -38,4 +38,5 @@ impl Default for CfgCFG {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CfgCFG {}

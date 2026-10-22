@@ -25,4 +25,5 @@ impl Default for SmaccContainerStructure {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SmaccContainerStructure {}

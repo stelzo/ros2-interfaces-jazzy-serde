@@ -15,4 +15,5 @@ impl Default for Matrix3x3Stamped {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Matrix3x3Stamped {}

@@ -14,6 +14,7 @@ impl Default for SetGridMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetGridMapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetGridMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetGridMapResponse {}
 
 
 pub struct SetGridMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetGridMap {
     type Request = SetGridMapRequest;
     type Response = SetGridMapResponse;

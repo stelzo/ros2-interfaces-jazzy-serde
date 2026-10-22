@@ -14,6 +14,7 @@ impl Default for ClearCostmapAroundRobotRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ClearCostmapAroundRobotRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ClearCostmapAroundRobotResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ClearCostmapAroundRobotResponse {}
 
 
 pub struct ClearCostmapAroundRobot;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ClearCostmapAroundRobot {
     type Request = ClearCostmapAroundRobotRequest;
     type Response = ClearCostmapAroundRobotResponse;

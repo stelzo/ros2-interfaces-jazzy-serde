@@ -16,6 +16,7 @@ impl Default for FileRenameRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileRenameRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for FileRenameResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileRenameResponse {}
 
 
 pub struct FileRename;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileRename {
     type Request = FileRenameRequest;
     type Response = FileRenameResponse;

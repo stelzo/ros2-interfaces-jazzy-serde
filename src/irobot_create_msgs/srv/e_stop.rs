@@ -14,6 +14,7 @@ impl Default for EStopRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EStopRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for EStopResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EStopResponse {}
 
 
 pub struct EStop;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for EStop {
     type Request = EStopRequest;
     type Response = EStopResponse;

@@ -14,6 +14,7 @@ impl Default for SetLoggerLevelsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLoggerLevelsRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetLoggerLevelsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLoggerLevelsResponse {}
 
 
 pub struct SetLoggerLevels;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetLoggerLevels {
     type Request = SetLoggerLevelsRequest;
     type Response = SetLoggerLevelsResponse;

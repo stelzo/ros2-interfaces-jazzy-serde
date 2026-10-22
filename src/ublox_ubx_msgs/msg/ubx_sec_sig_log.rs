@@ -19,4 +19,5 @@ impl Default for UBXSecSigLog {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UBXSecSigLog {}

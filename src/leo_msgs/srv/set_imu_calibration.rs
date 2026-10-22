@@ -18,6 +18,7 @@ impl Default for SetImuCalibrationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetImuCalibrationRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for SetImuCalibrationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetImuCalibrationResponse {}
 
 
 pub struct SetImuCalibration;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetImuCalibration {
     type Request = SetImuCalibrationRequest;
     type Response = SetImuCalibrationResponse;

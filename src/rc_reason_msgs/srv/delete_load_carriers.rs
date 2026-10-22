@@ -14,6 +14,7 @@ impl Default for DeleteLoadCarriersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteLoadCarriersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DeleteLoadCarriersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteLoadCarriersResponse {}
 
 
 pub struct DeleteLoadCarriers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteLoadCarriers {
     type Request = DeleteLoadCarriersRequest;
     type Response = DeleteLoadCarriersResponse;

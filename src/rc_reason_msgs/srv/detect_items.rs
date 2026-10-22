@@ -24,6 +24,7 @@ impl Default for DetectItemsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectItemsRequest {}
 
 
@@ -47,10 +48,12 @@ impl Default for DetectItemsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectItemsResponse {}
 
 
 pub struct DetectItems;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DetectItems {
     type Request = DetectItemsRequest;
     type Response = DetectItemsResponse;

@@ -14,6 +14,7 @@ impl Default for GetROSVersionRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetROSVersionRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetROSVersionResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetROSVersionResponse {}
 
 
 pub struct GetROSVersion;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetROSVersion {
     type Request = GetROSVersionRequest;
     type Response = GetROSVersionResponse;

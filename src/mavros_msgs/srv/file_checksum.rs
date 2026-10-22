@@ -14,6 +14,7 @@ impl Default for FileChecksumRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileChecksumRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for FileChecksumResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileChecksumResponse {}
 
 
 pub struct FileChecksum;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileChecksum {
     type Request = FileChecksumRequest;
     type Response = FileChecksumResponse;

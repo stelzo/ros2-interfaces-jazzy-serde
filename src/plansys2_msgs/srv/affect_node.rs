@@ -14,6 +14,7 @@ impl Default for AffectNodeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AffectNodeRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for AffectNodeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AffectNodeResponse {}
 
 
 pub struct AffectNode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for AffectNode {
     type Request = AffectNodeRequest;
     type Response = AffectNodeResponse;

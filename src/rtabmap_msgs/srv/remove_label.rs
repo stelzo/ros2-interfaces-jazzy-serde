@@ -14,6 +14,7 @@ impl Default for RemoveLabelRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RemoveLabelRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for RemoveLabelResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RemoveLabelResponse {}
 
 
 pub struct RemoveLabel;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RemoveLabel {
     type Request = RemoveLabelRequest;
     type Response = RemoveLabelResponse;

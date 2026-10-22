@@ -14,6 +14,7 @@ impl Default for PauseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PauseRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for PauseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PauseResponse {}
 
 
 pub struct Pause;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Pause {
     type Request = PauseRequest;
     type Response = PauseResponse;

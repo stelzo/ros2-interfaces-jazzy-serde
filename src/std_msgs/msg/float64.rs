@@ -13,4 +13,5 @@ impl Default for Float64 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Float64 {}

@@ -18,6 +18,7 @@ impl Default for RequestChangesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RequestChangesRequest {}
 
 
@@ -45,10 +46,12 @@ impl Default for RequestChangesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RequestChangesResponse {}
 
 
 pub struct RequestChanges;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RequestChanges {
     type Request = RequestChangesRequest;
     type Response = RequestChangesResponse;

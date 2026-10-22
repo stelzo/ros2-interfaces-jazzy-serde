@@ -57,4 +57,5 @@ impl Default for CfgNMEA7 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CfgNMEA7 {}

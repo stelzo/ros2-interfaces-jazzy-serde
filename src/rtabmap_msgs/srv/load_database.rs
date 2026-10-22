@@ -16,6 +16,7 @@ impl Default for LoadDatabaseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadDatabaseRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for LoadDatabaseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadDatabaseResponse {}
 
 
 pub struct LoadDatabase;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LoadDatabase {
     type Request = LoadDatabaseRequest;
     type Response = LoadDatabaseResponse;

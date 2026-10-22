@@ -14,6 +14,7 @@ impl Default for GetRateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRateRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetRateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRateResponse {}
 
 
 pub struct GetRate;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetRate {
     type Request = GetRateRequest;
     type Response = GetRateResponse;

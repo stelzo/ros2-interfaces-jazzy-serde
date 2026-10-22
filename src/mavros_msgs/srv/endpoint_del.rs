@@ -24,6 +24,7 @@ impl Default for EndpointDelRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EndpointDelRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for EndpointDelResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EndpointDelResponse {}
 
 
 pub struct EndpointDel;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for EndpointDel {
     type Request = EndpointDelRequest;
     type Response = EndpointDelResponse;

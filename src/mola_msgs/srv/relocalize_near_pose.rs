@@ -14,6 +14,7 @@ impl Default for RelocalizeNearPoseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RelocalizeNearPoseRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for RelocalizeNearPoseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RelocalizeNearPoseResponse {}
 
 
 pub struct RelocalizeNearPose;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RelocalizeNearPose {
     type Request = RelocalizeNearPoseRequest;
     type Response = RelocalizeNearPoseResponse;

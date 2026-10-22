@@ -14,6 +14,7 @@ impl Default for GetObjectInformationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetObjectInformationRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetObjectInformationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetObjectInformationResponse {}
 
 
 pub struct GetObjectInformation;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetObjectInformation {
     type Request = GetObjectInformationRequest;
     type Response = GetObjectInformationResponse;

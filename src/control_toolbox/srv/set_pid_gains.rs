@@ -22,6 +22,7 @@ impl Default for SetPidGainsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPidGainsRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for SetPidGainsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPidGainsResponse {}
 
 
 pub struct SetPidGains;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetPidGains {
     type Request = SetPidGainsRequest;
     type Response = SetPidGainsResponse;

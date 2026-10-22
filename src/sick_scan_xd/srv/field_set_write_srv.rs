@@ -16,6 +16,7 @@ impl Default for FieldSetWriteSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FieldSetWriteSrvRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for FieldSetWriteSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FieldSetWriteSrvResponse {}
 
 
 pub struct FieldSetWriteSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FieldSetWriteSrv {
     type Request = FieldSetWriteSrvRequest;
     type Response = FieldSetWriteSrvResponse;

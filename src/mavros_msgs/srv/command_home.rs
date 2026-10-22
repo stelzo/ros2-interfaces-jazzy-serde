@@ -22,6 +22,7 @@ impl Default for CommandHomeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandHomeRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for CommandHomeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandHomeResponse {}
 
 
 pub struct CommandHome;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandHome {
     type Request = CommandHomeRequest;
     type Response = CommandHomeResponse;

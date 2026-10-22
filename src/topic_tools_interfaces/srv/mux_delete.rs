@@ -14,6 +14,7 @@ impl Default for MuxDeleteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MuxDeleteRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for MuxDeleteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MuxDeleteResponse {}
 
 
 pub struct MuxDelete;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MuxDelete {
     type Request = MuxDeleteRequest;
     type Response = MuxDeleteResponse;

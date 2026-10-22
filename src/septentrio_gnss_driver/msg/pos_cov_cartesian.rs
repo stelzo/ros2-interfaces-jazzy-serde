@@ -39,4 +39,5 @@ impl Default for PosCovCartesian {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PosCovCartesian {}

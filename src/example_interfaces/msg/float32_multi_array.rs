@@ -15,4 +15,5 @@ impl Default for Float32MultiArray {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Float32MultiArray {}

@@ -14,6 +14,7 @@ impl Default for GetAvailableModesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetAvailableModesRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetAvailableModesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetAvailableModesResponse {}
 
 
 pub struct GetAvailableModes;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetAvailableModes {
     type Request = GetAvailableModesRequest;
     type Response = GetAvailableModesResponse;

@@ -22,4 +22,5 @@ impl Default for UpdSOS {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdSOS {}

@@ -14,6 +14,7 @@ impl Default for ListControllersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListControllersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ListControllersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListControllersResponse {}
 
 
 pub struct ListControllers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListControllers {
     type Request = ListControllersRequest;
     type Response = ListControllersResponse;

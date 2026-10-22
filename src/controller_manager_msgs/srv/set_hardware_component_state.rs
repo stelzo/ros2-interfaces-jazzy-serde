@@ -16,6 +16,7 @@ impl Default for SetHardwareComponentStateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetHardwareComponentStateRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for SetHardwareComponentStateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetHardwareComponentStateResponse {}
 
 
 pub struct SetHardwareComponentState;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetHardwareComponentState {
     type Request = SetHardwareComponentStateRequest;
     type Response = SetHardwareComponentStateResponse;

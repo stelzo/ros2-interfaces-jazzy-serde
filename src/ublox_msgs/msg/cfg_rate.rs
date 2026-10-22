@@ -27,4 +27,5 @@ impl Default for CfgRATE {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CfgRATE {}

@@ -24,6 +24,7 @@ impl Default for GetNodesInRadiusRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetNodesInRadiusRequest {}
 
 
@@ -45,10 +46,12 @@ impl Default for GetNodesInRadiusResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetNodesInRadiusResponse {}
 
 
 pub struct GetNodesInRadius;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetNodesInRadius {
     type Request = GetNodesInRadiusRequest;
     type Response = GetNodesInRadiusResponse;

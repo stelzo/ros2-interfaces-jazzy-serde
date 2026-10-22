@@ -42,4 +42,5 @@ impl Default for DetectedRadarObject {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectedRadarObject {}

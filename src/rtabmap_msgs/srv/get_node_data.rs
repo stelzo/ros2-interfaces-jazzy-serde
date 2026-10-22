@@ -22,6 +22,7 @@ impl Default for GetNodeDataRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetNodeDataRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for GetNodeDataResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetNodeDataResponse {}
 
 
 pub struct GetNodeData;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetNodeData {
     type Request = GetNodeDataRequest;
     type Response = GetNodeDataResponse;

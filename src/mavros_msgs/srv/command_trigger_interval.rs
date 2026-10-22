@@ -16,6 +16,7 @@ impl Default for CommandTriggerIntervalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandTriggerIntervalRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for CommandTriggerIntervalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CommandTriggerIntervalResponse {}
 
 
 pub struct CommandTriggerInterval;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CommandTriggerInterval {
     type Request = CommandTriggerIntervalRequest;
     type Response = CommandTriggerIntervalResponse;

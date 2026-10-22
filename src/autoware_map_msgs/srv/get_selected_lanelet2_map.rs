@@ -14,6 +14,7 @@ impl Default for GetSelectedLanelet2MapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetSelectedLanelet2MapRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetSelectedLanelet2MapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetSelectedLanelet2MapResponse {}
 
 
 pub struct GetSelectedLanelet2Map;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetSelectedLanelet2Map {
     type Request = GetSelectedLanelet2MapRequest;
     type Response = GetSelectedLanelet2MapResponse;

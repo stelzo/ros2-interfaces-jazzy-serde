@@ -22,6 +22,7 @@ impl Default for SetJointTrajectoryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetJointTrajectoryRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for SetJointTrajectoryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetJointTrajectoryResponse {}
 
 
 pub struct SetJointTrajectory;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetJointTrajectory {
     type Request = SetJointTrajectoryRequest;
     type Response = SetJointTrajectoryResponse;

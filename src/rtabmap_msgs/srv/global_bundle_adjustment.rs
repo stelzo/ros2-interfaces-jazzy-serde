@@ -20,6 +20,7 @@ impl Default for GlobalBundleAdjustmentRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GlobalBundleAdjustmentRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GlobalBundleAdjustmentResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GlobalBundleAdjustmentResponse {}
 
 
 pub struct GlobalBundleAdjustment;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GlobalBundleAdjustment {
     type Request = GlobalBundleAdjustmentRequest;
     type Response = GlobalBundleAdjustmentResponse;

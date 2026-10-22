@@ -14,6 +14,7 @@ impl Default for InterfaceVersionRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for InterfaceVersionRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for InterfaceVersionResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for InterfaceVersionResponse {}
 
 
 pub struct InterfaceVersion;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for InterfaceVersion {
     type Request = InterfaceVersionRequest;
     type Response = InterfaceVersionResponse;

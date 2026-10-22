@@ -14,6 +14,7 @@ impl Default for SpawnUrdfRobotRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpawnUrdfRobotRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SpawnUrdfRobotResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SpawnUrdfRobotResponse {}
 
 
 pub struct SpawnUrdfRobot;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SpawnUrdfRobot {
     type Request = SpawnUrdfRobotRequest;
     type Response = SpawnUrdfRobotResponse;

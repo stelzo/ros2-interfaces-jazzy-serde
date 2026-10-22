@@ -14,6 +14,7 @@ impl Default for SaveMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveMapRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SaveMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveMapResponse {}
 
 
 pub struct SaveMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SaveMap {
     type Request = SaveMapRequest;
     type Response = SaveMapResponse;

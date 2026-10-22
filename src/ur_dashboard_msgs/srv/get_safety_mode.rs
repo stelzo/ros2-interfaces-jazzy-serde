@@ -14,6 +14,7 @@ impl Default for GetSafetyModeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetSafetyModeRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetSafetyModeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetSafetyModeResponse {}
 
 
 pub struct GetSafetyMode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetSafetyMode {
     type Request = GetSafetyModeRequest;
     type Response = GetSafetyModeResponse;

@@ -19,4 +19,5 @@ impl Default for SmaccStatus {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SmaccStatus {}

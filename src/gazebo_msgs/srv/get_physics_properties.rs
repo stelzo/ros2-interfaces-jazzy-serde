@@ -14,6 +14,7 @@ impl Default for GetPhysicsPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPhysicsPropertiesRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for GetPhysicsPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPhysicsPropertiesResponse {}
 
 
 pub struct GetPhysicsProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPhysicsProperties {
     type Request = GetPhysicsPropertiesRequest;
     type Response = GetPhysicsPropertiesResponse;

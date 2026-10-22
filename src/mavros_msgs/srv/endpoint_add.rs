@@ -22,6 +22,7 @@ impl Default for EndpointAddRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EndpointAddRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for EndpointAddResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EndpointAddResponse {}
 
 
 pub struct EndpointAdd;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for EndpointAdd {
     type Request = EndpointAddRequest;
     type Response = EndpointAddResponse;

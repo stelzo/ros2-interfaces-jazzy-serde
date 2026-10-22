@@ -14,6 +14,7 @@ impl Default for BurstRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BurstRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for BurstResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BurstResponse {}
 
 
 pub struct Burst;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Burst {
     type Request = BurstRequest;
     type Response = BurstResponse;

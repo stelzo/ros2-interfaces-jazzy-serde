@@ -14,6 +14,7 @@ impl Default for GetRobotSoftwareVersionRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRobotSoftwareVersionRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetRobotSoftwareVersionResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRobotSoftwareVersionResponse {}
 
 
 pub struct GetRobotSoftwareVersion;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetRobotSoftwareVersion {
     type Request = GetRobotSoftwareVersionRequest;
     type Response = GetRobotSoftwareVersionResponse;

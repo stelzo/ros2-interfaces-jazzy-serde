@@ -13,4 +13,5 @@ impl Default for TestUInt8 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestUInt8 {}

@@ -44,4 +44,5 @@ impl Default for RTKBaseline {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RTKBaseline {}

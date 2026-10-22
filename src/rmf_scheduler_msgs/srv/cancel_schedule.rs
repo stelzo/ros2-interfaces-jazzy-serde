@@ -16,6 +16,7 @@ impl Default for CancelScheduleRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CancelScheduleRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for CancelScheduleResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CancelScheduleResponse {}
 
 
 pub struct CancelSchedule;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CancelSchedule {
     type Request = CancelScheduleRequest;
     type Response = CancelScheduleResponse;

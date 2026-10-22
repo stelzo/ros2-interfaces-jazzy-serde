@@ -16,6 +16,7 @@ impl Default for AddTwoIntsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AddTwoIntsRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for AddTwoIntsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AddTwoIntsResponse {}
 
 
 pub struct AddTwoInts;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for AddTwoInts {
     type Request = AddTwoIntsRequest;
     type Response = AddTwoIntsResponse;

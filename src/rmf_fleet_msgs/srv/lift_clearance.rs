@@ -16,6 +16,7 @@ impl Default for LiftClearanceRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LiftClearanceRequest {}
 
 
@@ -38,10 +39,12 @@ impl Default for LiftClearanceResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LiftClearanceResponse {}
 
 
 pub struct LiftClearance;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LiftClearance {
     type Request = LiftClearanceRequest;
     type Response = LiftClearanceResponse;

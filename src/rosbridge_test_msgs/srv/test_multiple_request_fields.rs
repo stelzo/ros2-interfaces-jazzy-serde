@@ -20,6 +20,7 @@ impl Default for TestMultipleRequestFieldsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestMultipleRequestFieldsRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for TestMultipleRequestFieldsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestMultipleRequestFieldsResponse {}
 
 
 pub struct TestMultipleRequestFields;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for TestMultipleRequestFields {
     type Request = TestMultipleRequestFieldsRequest;
     type Response = TestMultipleRequestFieldsResponse;

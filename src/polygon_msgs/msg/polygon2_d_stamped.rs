@@ -15,4 +15,5 @@ impl Default for Polygon2DStamped {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Polygon2DStamped {}

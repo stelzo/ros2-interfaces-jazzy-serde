@@ -14,6 +14,7 @@ impl Default for NovatelFRESETRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NovatelFRESETRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for NovatelFRESETResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NovatelFRESETResponse {}
 
 
 pub struct NovatelFRESET;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for NovatelFRESET {
     type Request = NovatelFRESETRequest;
     type Response = NovatelFRESETResponse;

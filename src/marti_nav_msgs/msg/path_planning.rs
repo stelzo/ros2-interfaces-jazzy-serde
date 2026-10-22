@@ -73,4 +73,5 @@ impl Default for PathPlanning {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PathPlanning {}

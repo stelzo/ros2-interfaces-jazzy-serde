@@ -18,6 +18,7 @@ impl Default for SetGoalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetGoalRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for SetGoalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetGoalResponse {}
 
 
 pub struct SetGoal;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetGoal {
     type Request = SetGoalRequest;
     type Response = SetGoalResponse;

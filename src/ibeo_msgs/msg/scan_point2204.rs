@@ -33,4 +33,5 @@ impl Default for ScanPoint2204 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ScanPoint2204 {}

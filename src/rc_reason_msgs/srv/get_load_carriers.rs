@@ -14,6 +14,7 @@ impl Default for GetLoadCarriersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLoadCarriersRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetLoadCarriersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLoadCarriersResponse {}
 
 
 pub struct GetLoadCarriers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetLoadCarriers {
     type Request = GetLoadCarriersRequest;
     type Response = GetLoadCarriersResponse;

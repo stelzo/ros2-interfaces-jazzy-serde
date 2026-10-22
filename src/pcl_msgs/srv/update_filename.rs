@@ -14,6 +14,7 @@ impl Default for UpdateFilenameRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdateFilenameRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for UpdateFilenameResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UpdateFilenameResponse {}
 
 
 pub struct UpdateFilename;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UpdateFilename {
     type Request = UpdateFilenameRequest;
     type Response = UpdateFilenameResponse;

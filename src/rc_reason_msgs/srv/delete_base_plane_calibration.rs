@@ -14,6 +14,7 @@ impl Default for DeleteBasePlaneCalibrationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteBasePlaneCalibrationRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DeleteBasePlaneCalibrationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteBasePlaneCalibrationResponse {}
 
 
 pub struct DeleteBasePlaneCalibration;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteBasePlaneCalibration {
     type Request = DeleteBasePlaneCalibrationRequest;
     type Response = DeleteBasePlaneCalibrationResponse;

@@ -14,6 +14,7 @@ impl Default for LogRequestEndRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LogRequestEndRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for LogRequestEndResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LogRequestEndResponse {}
 
 
 pub struct LogRequestEnd;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LogRequestEnd {
     type Request = LogRequestEndRequest;
     type Response = LogRequestEndResponse;

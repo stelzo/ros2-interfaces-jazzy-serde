@@ -21,4 +21,5 @@ impl Default for ChargerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ChargerRequest {}

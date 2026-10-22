@@ -21,4 +21,5 @@ impl Default for RGBD {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RGBD {}

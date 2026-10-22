@@ -14,6 +14,7 @@ impl Default for FileListRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileListRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for FileListResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileListResponse {}
 
 
 pub struct FileList;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileList {
     type Request = FileListRequest;
     type Response = FileListResponse;

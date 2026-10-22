@@ -16,6 +16,7 @@ impl Default for GetModelStateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetModelStateRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for GetModelStateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetModelStateResponse {}
 
 
 pub struct GetModelState;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetModelState {
     type Request = GetModelStateRequest;
     type Response = GetModelStateResponse;

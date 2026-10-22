@@ -14,6 +14,7 @@ impl Default for ReadMetricsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ReadMetricsRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for ReadMetricsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ReadMetricsResponse {}
 
 
 pub struct ReadMetrics;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ReadMetrics {
     type Request = ReadMetricsRequest;
     type Response = ReadMetricsResponse;

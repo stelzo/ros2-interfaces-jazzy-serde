@@ -14,6 +14,7 @@ impl Default for TriggerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TriggerRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for TriggerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TriggerResponse {}
 
 
 pub struct Trigger;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Trigger {
     type Request = TriggerRequest;
     type Response = TriggerResponse;

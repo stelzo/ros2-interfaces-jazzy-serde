@@ -56,4 +56,5 @@ impl Default for NavSTATUS {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NavSTATUS {}

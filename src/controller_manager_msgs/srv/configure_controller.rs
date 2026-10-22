@@ -14,6 +14,7 @@ impl Default for ConfigureControllerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ConfigureControllerRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ConfigureControllerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ConfigureControllerResponse {}
 
 
 pub struct ConfigureController;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ConfigureController {
     type Request = ConfigureControllerRequest;
     type Response = ConfigureControllerResponse;

@@ -14,6 +14,7 @@ impl Default for SmaccGetTransitionHistoryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SmaccGetTransitionHistoryRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SmaccGetTransitionHistoryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SmaccGetTransitionHistoryResponse {}
 
 
 pub struct SmaccGetTransitionHistory;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SmaccGetTransitionHistory {
     type Request = SmaccGetTransitionHistoryRequest;
     type Response = SmaccGetTransitionHistoryResponse;

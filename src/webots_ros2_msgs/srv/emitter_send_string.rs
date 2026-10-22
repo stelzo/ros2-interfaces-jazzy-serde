@@ -14,6 +14,7 @@ impl Default for EmitterSendStringRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EmitterSendStringRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for EmitterSendStringResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EmitterSendStringResponse {}
 
 
 pub struct EmitterSendString;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for EmitterSendString {
     type Request = EmitterSendStringRequest;
     type Response = EmitterSendStringResponse;

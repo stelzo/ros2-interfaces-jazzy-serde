@@ -22,4 +22,5 @@ impl Default for FileEntry {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileEntry {}

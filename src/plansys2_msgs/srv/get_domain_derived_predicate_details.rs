@@ -14,6 +14,7 @@ impl Default for GetDomainDerivedPredicateDetailsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainDerivedPredicateDetailsRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetDomainDerivedPredicateDetailsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainDerivedPredicateDetailsResponse {}
 
 
 pub struct GetDomainDerivedPredicateDetails;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetDomainDerivedPredicateDetails {
     type Request = GetDomainDerivedPredicateDetailsRequest;
     type Response = GetDomainDerivedPredicateDetailsResponse;

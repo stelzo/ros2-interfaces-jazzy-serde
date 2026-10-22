@@ -14,6 +14,7 @@ impl Default for RelocalizeFromGNSSRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RelocalizeFromGNSSRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for RelocalizeFromGNSSResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RelocalizeFromGNSSResponse {}
 
 
 pub struct RelocalizeFromGNSS;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RelocalizeFromGNSS {
     type Request = RelocalizeFromGNSSRequest;
     type Response = RelocalizeFromGNSSResponse;

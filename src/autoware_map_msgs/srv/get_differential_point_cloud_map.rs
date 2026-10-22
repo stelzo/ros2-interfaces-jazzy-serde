@@ -16,6 +16,7 @@ impl Default for GetDifferentialPointCloudMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDifferentialPointCloudMapRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetDifferentialPointCloudMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDifferentialPointCloudMapResponse {}
 
 
 pub struct GetDifferentialPointCloudMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetDifferentialPointCloudMap {
     type Request = GetDifferentialPointCloudMapRequest;
     type Response = GetDifferentialPointCloudMapResponse;

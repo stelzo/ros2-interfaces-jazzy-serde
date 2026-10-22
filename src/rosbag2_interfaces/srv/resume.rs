@@ -14,6 +14,7 @@ impl Default for ResumeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ResumeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ResumeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ResumeResponse {}
 
 
 pub struct Resume;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Resume {
     type Request = ResumeRequest;
     type Response = ResumeResponse;

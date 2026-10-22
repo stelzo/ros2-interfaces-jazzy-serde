@@ -14,6 +14,7 @@ impl Default for RobotPowerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RobotPowerRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for RobotPowerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RobotPowerResponse {}
 
 
 pub struct RobotPower;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RobotPower {
     type Request = RobotPowerRequest;
     type Response = RobotPowerResponse;

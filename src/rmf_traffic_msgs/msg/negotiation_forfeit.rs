@@ -15,4 +15,5 @@ impl Default for NegotiationForfeit {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NegotiationForfeit {}

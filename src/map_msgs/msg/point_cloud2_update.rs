@@ -22,4 +22,5 @@ impl Default for PointCloud2Update {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PointCloud2Update {}

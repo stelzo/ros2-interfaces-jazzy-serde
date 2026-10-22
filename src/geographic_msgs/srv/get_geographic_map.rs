@@ -16,6 +16,7 @@ impl Default for GetGeographicMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGeographicMapRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetGeographicMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGeographicMapResponse {}
 
 
 pub struct GetGeographicMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetGeographicMap {
     type Request = GetGeographicMapRequest;
     type Response = GetGeographicMapResponse;

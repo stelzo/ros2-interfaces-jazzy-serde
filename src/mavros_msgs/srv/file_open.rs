@@ -22,6 +22,7 @@ impl Default for FileOpenRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileOpenRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for FileOpenResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileOpenResponse {}
 
 
 pub struct FileOpen;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileOpen {
     type Request = FileOpenRequest;
     type Response = FileOpenResponse;

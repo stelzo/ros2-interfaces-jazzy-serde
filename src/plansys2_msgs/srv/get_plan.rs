@@ -16,6 +16,7 @@ impl Default for GetPlanRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPlanRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetPlanResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPlanResponse {}
 
 
 pub struct GetPlan;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPlan {
     type Request = GetPlanRequest;
     type Response = GetPlanResponse;

@@ -23,4 +23,5 @@ impl Default for RCGCRD4 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RCGCRD4 {}

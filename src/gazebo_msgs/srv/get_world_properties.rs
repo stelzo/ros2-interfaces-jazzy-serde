@@ -14,6 +14,7 @@ impl Default for GetWorldPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetWorldPropertiesRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for GetWorldPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetWorldPropertiesResponse {}
 
 
 pub struct GetWorldProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetWorldProperties {
     type Request = GetWorldPropertiesRequest;
     type Response = GetWorldPropertiesResponse;

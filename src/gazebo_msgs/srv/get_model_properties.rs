@@ -14,6 +14,7 @@ impl Default for GetModelPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetModelPropertiesRequest {}
 
 
@@ -47,10 +48,12 @@ impl Default for GetModelPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetModelPropertiesResponse {}
 
 
 pub struct GetModelProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetModelProperties {
     type Request = GetModelPropertiesRequest;
     type Response = GetModelPropertiesResponse;

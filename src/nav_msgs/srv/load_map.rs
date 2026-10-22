@@ -14,6 +14,7 @@ impl Default for LoadMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadMapRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for LoadMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadMapResponse {}
 
 
 pub struct LoadMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LoadMap {
     type Request = LoadMapRequest;
     type Response = LoadMapResponse;

@@ -41,4 +41,5 @@ impl Default for AIMPlusStatus {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for AIMPlusStatus {}

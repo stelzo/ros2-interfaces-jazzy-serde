@@ -16,6 +16,7 @@ impl Default for MakePlanFromToRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MakePlanFromToRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for MakePlanFromToResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MakePlanFromToResponse {}
 
 
 pub struct MakePlanFromTo;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MakePlanFromTo {
     type Request = MakePlanFromToRequest;
     type Response = MakePlanFromToResponse;

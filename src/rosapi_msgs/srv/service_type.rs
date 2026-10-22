@@ -14,6 +14,7 @@ impl Default for ServiceTypeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ServiceTypeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ServiceTypeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ServiceTypeResponse {}
 
 
 pub struct ServiceType;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ServiceType {
     type Request = ServiceTypeRequest;
     type Response = ServiceTypeResponse;

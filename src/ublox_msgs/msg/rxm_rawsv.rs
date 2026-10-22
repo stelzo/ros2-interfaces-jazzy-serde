@@ -25,4 +25,5 @@ impl Default for RxmRAWSV {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RxmRAWSV {}

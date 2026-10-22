@@ -44,6 +44,7 @@ impl Default for SetForceModeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetForceModeRequest {}
 
 
@@ -61,10 +62,12 @@ impl Default for SetForceModeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetForceModeResponse {}
 
 
 pub struct SetForceMode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetForceMode {
     type Request = SetForceModeRequest;
     type Response = SetForceModeResponse;

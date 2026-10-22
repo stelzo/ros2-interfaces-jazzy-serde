@@ -49,4 +49,5 @@ impl Default for CfgTMODE3 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CfgTMODE3 {}

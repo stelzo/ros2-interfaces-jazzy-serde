@@ -20,4 +20,5 @@ impl Default for Led {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Led {}

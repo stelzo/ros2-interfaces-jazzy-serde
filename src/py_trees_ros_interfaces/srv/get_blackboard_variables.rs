@@ -14,6 +14,7 @@ impl Default for GetBlackboardVariablesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetBlackboardVariablesRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetBlackboardVariablesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetBlackboardVariablesResponse {}
 
 
 pub struct GetBlackboardVariables;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetBlackboardVariables {
     type Request = GetBlackboardVariablesRequest;
     type Response = GetBlackboardVariablesResponse;

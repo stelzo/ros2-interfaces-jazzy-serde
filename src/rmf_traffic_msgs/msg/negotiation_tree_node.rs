@@ -19,4 +19,5 @@ impl Default for NegotiationTreeNode {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NegotiationTreeNode {}

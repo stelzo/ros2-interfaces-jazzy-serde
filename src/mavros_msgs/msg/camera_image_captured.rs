@@ -25,4 +25,5 @@ impl Default for CameraImageCaptured {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CameraImageCaptured {}

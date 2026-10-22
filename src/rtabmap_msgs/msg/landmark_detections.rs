@@ -15,4 +15,5 @@ impl Default for LandmarkDetections {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LandmarkDetections {}

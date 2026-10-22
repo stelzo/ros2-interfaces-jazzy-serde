@@ -41,4 +41,5 @@ impl Default for VectorInfoCart {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for VectorInfoCart {}

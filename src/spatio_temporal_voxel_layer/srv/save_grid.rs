@@ -14,6 +14,7 @@ impl Default for SaveGridRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveGridRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SaveGridResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveGridResponse {}
 
 
 pub struct SaveGrid;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SaveGrid {
     type Request = SaveGridRequest;
     type Response = SaveGridResponse;

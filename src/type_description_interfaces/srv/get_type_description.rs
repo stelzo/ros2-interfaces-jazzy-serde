@@ -18,6 +18,7 @@ impl Default for GetTypeDescriptionRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetTypeDescriptionRequest {}
 
 
@@ -43,10 +44,12 @@ impl Default for GetTypeDescriptionResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetTypeDescriptionResponse {}
 
 
 pub struct GetTypeDescription;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetTypeDescription {
     type Request = GetTypeDescriptionRequest;
     type Response = GetTypeDescriptionResponse;

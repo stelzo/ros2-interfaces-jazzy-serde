@@ -14,6 +14,7 @@ impl Default for DescribeParametersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DescribeParametersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DescribeParametersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DescribeParametersResponse {}
 
 
 pub struct DescribeParameters;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DescribeParameters {
     type Request = DescribeParametersRequest;
     type Response = DescribeParametersResponse;

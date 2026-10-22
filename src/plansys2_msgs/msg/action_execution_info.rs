@@ -37,4 +37,5 @@ impl Default for ActionExecutionInfo {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ActionExecutionInfo {}

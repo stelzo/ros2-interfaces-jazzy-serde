@@ -14,6 +14,7 @@ impl Default for ExistNodeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ExistNodeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ExistNodeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ExistNodeResponse {}
 
 
 pub struct ExistNode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ExistNode {
     type Request = ExistNodeRequest;
     type Response = ExistNodeResponse;

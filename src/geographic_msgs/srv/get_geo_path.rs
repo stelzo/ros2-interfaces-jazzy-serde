@@ -16,6 +16,7 @@ impl Default for GetGeoPathRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGeoPathRequest {}
 
 
@@ -45,10 +46,12 @@ impl Default for GetGeoPathResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGeoPathResponse {}
 
 
 pub struct GetGeoPath;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetGeoPath {
     type Request = GetGeoPathRequest;
     type Response = GetGeoPathResponse;

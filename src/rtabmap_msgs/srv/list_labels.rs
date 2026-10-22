@@ -14,6 +14,7 @@ impl Default for ListLabelsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListLabelsRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ListLabelsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ListLabelsResponse {}
 
 
 pub struct ListLabels;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ListLabels {
     type Request = ListLabelsRequest;
     type Response = ListLabelsResponse;

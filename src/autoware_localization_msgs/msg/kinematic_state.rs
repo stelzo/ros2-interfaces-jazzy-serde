@@ -21,4 +21,5 @@ impl Default for KinematicState {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for KinematicState {}

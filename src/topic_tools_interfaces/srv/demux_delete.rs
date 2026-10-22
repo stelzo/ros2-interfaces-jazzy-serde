@@ -14,6 +14,7 @@ impl Default for DemuxDeleteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DemuxDeleteRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for DemuxDeleteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DemuxDeleteResponse {}
 
 
 pub struct DemuxDelete;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DemuxDelete {
     type Request = DemuxDeleteRequest;
     type Response = DemuxDeleteResponse;

@@ -14,6 +14,7 @@ impl Default for MicroROSSelfTestRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MicroROSSelfTestRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for MicroROSSelfTestResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MicroROSSelfTestResponse {}
 
 
 pub struct MicroROSSelfTest;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MicroROSSelfTest {
     type Request = MicroROSSelfTestRequest;
     type Response = MicroROSSelfTestResponse;

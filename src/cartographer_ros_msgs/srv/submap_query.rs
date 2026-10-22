@@ -16,6 +16,7 @@ impl Default for SubmapQueryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SubmapQueryRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for SubmapQueryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SubmapQueryResponse {}
 
 
 pub struct SubmapQuery;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SubmapQuery {
     type Request = SubmapQueryRequest;
     type Response = SubmapQueryResponse;

@@ -14,6 +14,7 @@ impl Default for ChangeModeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ChangeModeRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ChangeModeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ChangeModeResponse {}
 
 
 pub struct ChangeMode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ChangeMode {
     type Request = ChangeModeRequest;
     type Response = ChangeModeResponse;

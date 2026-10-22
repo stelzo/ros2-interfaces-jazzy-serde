@@ -18,6 +18,7 @@ impl Default for RenameRobotStateInWarehouseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RenameRobotStateInWarehouseRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for RenameRobotStateInWarehouseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RenameRobotStateInWarehouseResponse {}
 
 
 pub struct RenameRobotStateInWarehouse;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RenameRobotStateInWarehouse {
     type Request = RenameRobotStateInWarehouseRequest;
     type Response = RenameRobotStateInWarehouseResponse;

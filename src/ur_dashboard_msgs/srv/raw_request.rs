@@ -14,6 +14,7 @@ impl Default for RawRequestRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RawRequestRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for RawRequestResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RawRequestResponse {}
 
 
 pub struct RawRequest;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RawRequest {
     type Request = RawRequestRequest;
     type Response = RawRequestResponse;

@@ -25,4 +25,5 @@ impl Default for EsrValid1 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EsrValid1 {}

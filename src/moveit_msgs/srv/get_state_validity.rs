@@ -18,6 +18,7 @@ impl Default for GetStateValidityRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetStateValidityRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for GetStateValidityResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetStateValidityResponse {}
 
 
 pub struct GetStateValidity;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetStateValidity {
     type Request = GetStateValidityRequest;
     type Response = GetStateValidityResponse;

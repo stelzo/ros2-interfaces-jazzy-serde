@@ -15,4 +15,5 @@ impl Default for Int16MultiArray {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Int16MultiArray {}

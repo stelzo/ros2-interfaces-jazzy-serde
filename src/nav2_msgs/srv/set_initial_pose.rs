@@ -14,6 +14,7 @@ impl Default for SetInitialPoseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetInitialPoseRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetInitialPoseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetInitialPoseResponse {}
 
 
 pub struct SetInitialPose;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetInitialPose {
     type Request = SetInitialPoseRequest;
     type Response = SetInitialPoseResponse;

@@ -26,4 +26,5 @@ impl Default for PlanningSceneComponents {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PlanningSceneComponents {}

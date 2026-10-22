@@ -14,6 +14,7 @@ impl Default for SetStringRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetStringRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetStringResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetStringResponse {}
 
 
 pub struct SetString;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetString {
     type Request = SetStringRequest;
     type Response = SetStringResponse;

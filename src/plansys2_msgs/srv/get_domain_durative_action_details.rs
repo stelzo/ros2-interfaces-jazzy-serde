@@ -16,6 +16,7 @@ impl Default for GetDomainDurativeActionDetailsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainDurativeActionDetailsRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetDomainDurativeActionDetailsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainDurativeActionDetailsResponse {}
 
 
 pub struct GetDomainDurativeActionDetails;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetDomainDurativeActionDetails {
     type Request = GetDomainDurativeActionDetailsRequest;
     type Response = GetDomainDurativeActionDetailsResponse;

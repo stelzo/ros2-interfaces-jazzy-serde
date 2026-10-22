@@ -14,6 +14,7 @@ impl Default for IsProgramRunningRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsProgramRunningRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for IsProgramRunningResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsProgramRunningResponse {}
 
 
 pub struct IsProgramRunning;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IsProgramRunning {
     type Request = IsProgramRunningRequest;
     type Response = IsProgramRunningResponse;

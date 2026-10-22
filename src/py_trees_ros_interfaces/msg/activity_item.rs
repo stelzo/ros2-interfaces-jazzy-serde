@@ -32,4 +32,5 @@ impl Default for ActivityItem {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ActivityItem {}

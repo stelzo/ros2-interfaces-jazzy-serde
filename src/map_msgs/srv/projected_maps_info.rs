@@ -14,6 +14,7 @@ impl Default for ProjectedMapsInfoRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ProjectedMapsInfoRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ProjectedMapsInfoResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ProjectedMapsInfoResponse {}
 
 
 pub struct ProjectedMapsInfo;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ProjectedMapsInfo {
     type Request = ProjectedMapsInfoRequest;
     type Response = ProjectedMapsInfoResponse;

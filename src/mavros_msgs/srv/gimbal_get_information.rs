@@ -14,6 +14,7 @@ impl Default for GimbalGetInformationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalGetInformationRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GimbalGetInformationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalGetInformationResponse {}
 
 
 pub struct GimbalGetInformation;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GimbalGetInformation {
     type Request = GimbalGetInformationRequest;
     type Response = GimbalGetInformationResponse;

@@ -27,4 +27,5 @@ impl Default for MeasEpoch {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MeasEpoch {}

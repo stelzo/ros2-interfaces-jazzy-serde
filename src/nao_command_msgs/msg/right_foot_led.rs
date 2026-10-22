@@ -13,4 +13,5 @@ impl Default for RightFootLed {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RightFootLed {}

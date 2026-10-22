@@ -51,4 +51,5 @@ impl Default for HostVehicleState2807 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HostVehicleState2807 {}

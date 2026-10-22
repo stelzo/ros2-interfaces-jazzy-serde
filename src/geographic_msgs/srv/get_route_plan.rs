@@ -18,6 +18,7 @@ impl Default for GetRoutePlanRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRoutePlanRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for GetRoutePlanResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRoutePlanResponse {}
 
 
 pub struct GetRoutePlan;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetRoutePlan {
     type Request = GetRoutePlanRequest;
     type Response = GetRoutePlanResponse;

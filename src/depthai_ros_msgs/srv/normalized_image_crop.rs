@@ -16,6 +16,7 @@ impl Default for NormalizedImageCropRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NormalizedImageCropRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for NormalizedImageCropResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NormalizedImageCropResponse {}
 
 
 pub struct NormalizedImageCrop;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for NormalizedImageCrop {
     type Request = NormalizedImageCropRequest;
     type Response = NormalizedImageCropResponse;

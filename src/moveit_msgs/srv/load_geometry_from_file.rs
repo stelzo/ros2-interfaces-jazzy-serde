@@ -14,6 +14,7 @@ impl Default for LoadGeometryFromFileRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadGeometryFromFileRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for LoadGeometryFromFileResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LoadGeometryFromFileResponse {}
 
 
 pub struct LoadGeometryFromFile;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LoadGeometryFromFile {
     type Request = LoadGeometryFromFileRequest;
     type Response = LoadGeometryFromFileResponse;

@@ -14,6 +14,7 @@ impl Default for IsProblemGoalSatisfiedRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsProblemGoalSatisfiedRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for IsProblemGoalSatisfiedResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for IsProblemGoalSatisfiedResponse {}
 
 
 pub struct IsProblemGoalSatisfied;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for IsProblemGoalSatisfied {
     type Request = IsProblemGoalSatisfiedRequest;
     type Response = IsProblemGoalSatisfiedResponse;

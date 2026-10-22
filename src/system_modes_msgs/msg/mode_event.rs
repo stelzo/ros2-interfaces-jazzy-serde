@@ -17,4 +17,5 @@ impl Default for ModeEvent {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ModeEvent {}

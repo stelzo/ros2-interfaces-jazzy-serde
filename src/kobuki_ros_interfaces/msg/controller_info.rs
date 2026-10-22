@@ -24,4 +24,5 @@ impl Default for ControllerInfo {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ControllerInfo {}

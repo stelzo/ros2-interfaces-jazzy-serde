@@ -71,4 +71,5 @@ impl Default for BoundedPlainSequences {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BoundedPlainSequences {}

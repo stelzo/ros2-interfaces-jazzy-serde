@@ -22,6 +22,7 @@ impl Default for UdpSendRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UdpSendRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for UdpSendResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UdpSendResponse {}
 
 
 pub struct UdpSend;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UdpSend {
     type Request = UdpSendRequest;
     type Response = UdpSendResponse;

@@ -14,6 +14,7 @@ impl Default for GetActionServersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetActionServersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetActionServersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetActionServersResponse {}
 
 
 pub struct GetActionServers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetActionServers {
     type Request = GetActionServersRequest;
     type Response = GetActionServersResponse;

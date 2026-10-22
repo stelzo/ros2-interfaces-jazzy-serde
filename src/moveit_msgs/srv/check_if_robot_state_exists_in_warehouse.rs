@@ -16,6 +16,7 @@ impl Default for CheckIfRobotStateExistsInWarehouseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CheckIfRobotStateExistsInWarehouseRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for CheckIfRobotStateExistsInWarehouseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CheckIfRobotStateExistsInWarehouseResponse {}
 
 
 pub struct CheckIfRobotStateExistsInWarehouse;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CheckIfRobotStateExistsInWarehouse {
     type Request = CheckIfRobotStateExistsInWarehouseRequest;
     type Response = CheckIfRobotStateExistsInWarehouseResponse;

@@ -14,6 +14,7 @@ impl Default for BodyRequestRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BodyRequestRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for BodyRequestResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BodyRequestResponse {}
 
 
 pub struct BodyRequest;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for BodyRequest {
     type Request = BodyRequestRequest;
     type Response = BodyRequestResponse;

@@ -14,6 +14,7 @@ impl Default for GetLayersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLayersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for GetLayersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLayersResponse {}
 
 
 pub struct GetLayers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetLayers {
     type Request = GetLayersRequest;
     type Response = GetLayersResponse;

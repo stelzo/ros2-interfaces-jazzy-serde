@@ -14,6 +14,7 @@ impl Default for HotStartRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HotStartRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for HotStartResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HotStartResponse {}
 
 
 pub struct HotStart;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for HotStart {
     type Request = HotStartRequest;
     type Response = HotStartResponse;

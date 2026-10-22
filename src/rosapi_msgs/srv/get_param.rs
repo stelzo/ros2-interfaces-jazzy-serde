@@ -16,6 +16,7 @@ impl Default for GetParamRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetParamRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetParamResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetParamResponse {}
 
 
 pub struct GetParam;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetParam {
     type Request = GetParamRequest;
     type Response = GetParamResponse;

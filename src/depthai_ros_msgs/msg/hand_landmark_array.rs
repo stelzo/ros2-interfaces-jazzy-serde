@@ -15,4 +15,5 @@ impl Default for HandLandmarkArray {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HandLandmarkArray {}

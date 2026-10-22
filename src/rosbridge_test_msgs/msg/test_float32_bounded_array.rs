@@ -13,4 +13,5 @@ impl Default for TestFloat32BoundedArray {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestFloat32BoundedArray {}

@@ -14,6 +14,7 @@ impl Default for FileMakeDirRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileMakeDirRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for FileMakeDirResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FileMakeDirResponse {}
 
 
 pub struct FileMakeDir;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FileMakeDir {
     type Request = FileMakeDirRequest;
     type Response = FileMakeDirResponse;

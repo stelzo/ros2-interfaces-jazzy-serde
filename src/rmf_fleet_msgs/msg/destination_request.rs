@@ -19,4 +19,5 @@ impl Default for DestinationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DestinationRequest {}

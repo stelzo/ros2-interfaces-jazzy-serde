@@ -14,6 +14,7 @@ impl Default for WarmupTemplateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WarmupTemplateRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for WarmupTemplateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WarmupTemplateResponse {}
 
 
 pub struct WarmupTemplate;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WarmupTemplate {
     type Request = WarmupTemplateRequest;
     type Response = WarmupTemplateResponse;

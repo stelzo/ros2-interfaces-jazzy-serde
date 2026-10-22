@@ -16,6 +16,7 @@ impl Default for CleanupLocalGridsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CleanupLocalGridsRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for CleanupLocalGridsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CleanupLocalGridsResponse {}
 
 
 pub struct CleanupLocalGrids;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CleanupLocalGrids {
     type Request = CleanupLocalGridsRequest;
     type Response = CleanupLocalGridsResponse;

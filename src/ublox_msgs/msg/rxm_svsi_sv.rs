@@ -31,4 +31,5 @@ impl Default for RxmSVSI_SV {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RxmSVSI_SV {}

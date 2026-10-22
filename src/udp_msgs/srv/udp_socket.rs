@@ -22,6 +22,7 @@ impl Default for UdpSocketRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UdpSocketRequest {}
 
 
@@ -39,10 +40,12 @@ impl Default for UdpSocketResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UdpSocketResponse {}
 
 
 pub struct UdpSocket;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UdpSocket {
     type Request = UdpSocketRequest;
     type Response = UdpSocketResponse;

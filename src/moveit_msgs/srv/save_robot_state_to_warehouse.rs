@@ -18,6 +18,7 @@ impl Default for SaveRobotStateToWarehouseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveRobotStateToWarehouseRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for SaveRobotStateToWarehouseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SaveRobotStateToWarehouseResponse {}
 
 
 pub struct SaveRobotStateToWarehouse;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SaveRobotStateToWarehouse {
     type Request = SaveRobotStateToWarehouseRequest;
     type Response = SaveRobotStateToWarehouseResponse;

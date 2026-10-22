@@ -24,4 +24,5 @@ impl Default for HealthStatus {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HealthStatus {}

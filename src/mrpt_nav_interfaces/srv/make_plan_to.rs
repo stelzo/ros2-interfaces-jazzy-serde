@@ -14,6 +14,7 @@ impl Default for MakePlanToRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MakePlanToRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for MakePlanToResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for MakePlanToResponse {}
 
 
 pub struct MakePlanTo;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for MakePlanTo {
     type Request = MakePlanToRequest;
     type Response = MakePlanToResponse;

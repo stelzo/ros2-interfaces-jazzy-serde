@@ -14,6 +14,7 @@ impl Default for SetLinkStateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLinkStateRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetLinkStateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLinkStateResponse {}
 
 
 pub struct SetLinkState;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetLinkState {
     type Request = SetLinkStateRequest;
     type Response = SetLinkStateResponse;

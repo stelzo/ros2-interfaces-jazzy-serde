@@ -14,6 +14,7 @@ impl Default for HasParamRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HasParamRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for HasParamResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HasParamResponse {}
 
 
 pub struct HasParam;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for HasParam {
     type Request = HasParamRequest;
     type Response = HasParamResponse;

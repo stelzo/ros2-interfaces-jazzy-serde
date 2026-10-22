@@ -14,6 +14,7 @@ impl Default for SetEntityStateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetEntityStateRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for SetEntityStateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetEntityStateResponse {}
 
 
 pub struct SetEntityState;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetEntityState {
     type Request = SetEntityStateRequest;
     type Response = SetEntityStateResponse;

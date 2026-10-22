@@ -14,6 +14,7 @@ impl Default for GetRouteListRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRouteListRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetRouteListResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetRouteListResponse {}
 
 
 pub struct GetRouteList;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetRouteList {
     type Request = GetRouteListRequest;
     type Response = GetRouteListResponse;

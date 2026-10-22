@@ -14,6 +14,7 @@ impl Default for ParamPullRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ParamPullRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ParamPullResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ParamPullResponse {}
 
 
 pub struct ParamPull;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ParamPull {
     type Request = ParamPullRequest;
     type Response = ParamPullResponse;

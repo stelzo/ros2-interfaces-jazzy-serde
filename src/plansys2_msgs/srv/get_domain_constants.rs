@@ -14,6 +14,7 @@ impl Default for GetDomainConstantsRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainConstantsRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetDomainConstantsResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainConstantsResponse {}
 
 
 pub struct GetDomainConstants;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetDomainConstants {
     type Request = GetDomainConstantsRequest;
     type Response = GetDomainConstantsResponse;

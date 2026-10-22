@@ -14,6 +14,7 @@ impl Default for ReloadDockDatabaseRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ReloadDockDatabaseRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ReloadDockDatabaseResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ReloadDockDatabaseResponse {}
 
 
 pub struct ReloadDockDatabase;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ReloadDockDatabase {
     type Request = ReloadDockDatabaseRequest;
     type Response = ReloadDockDatabaseResponse;

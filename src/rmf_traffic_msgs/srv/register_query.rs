@@ -14,6 +14,7 @@ impl Default for RegisterQueryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RegisterQueryRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for RegisterQueryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RegisterQueryResponse {}
 
 
 pub struct RegisterQuery;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RegisterQuery {
     type Request = RegisterQueryRequest;
     type Response = RegisterQueryResponse;

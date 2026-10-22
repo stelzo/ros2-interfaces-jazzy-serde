@@ -19,4 +19,5 @@ impl Default for RouteSpeed {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RouteSpeed {}

@@ -14,6 +14,7 @@ impl Default for ToLLRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ToLLRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for ToLLResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ToLLResponse {}
 
 
 pub struct ToLL;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ToLL {
     type Request = ToLLRequest;
     type Response = ToLLResponse;

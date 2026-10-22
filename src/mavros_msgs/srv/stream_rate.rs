@@ -30,6 +30,7 @@ impl Default for StreamRateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StreamRateRequest {}
 
 
@@ -47,10 +48,12 @@ impl Default for StreamRateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StreamRateResponse {}
 
 
 pub struct StreamRate;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for StreamRate {
     type Request = StreamRateRequest;
     type Response = StreamRateResponse;

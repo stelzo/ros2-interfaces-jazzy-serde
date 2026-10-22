@@ -14,6 +14,7 @@ impl Default for JointRequestRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for JointRequestRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for JointRequestResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for JointRequestResponse {}
 
 
 pub struct JointRequest;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for JointRequest {
     type Request = JointRequestRequest;
     type Response = JointRequestResponse;

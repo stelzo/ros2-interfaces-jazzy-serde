@@ -16,6 +16,7 @@ impl Default for SetMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetMapRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetMapResponse {}
 
 
 pub struct SetMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetMap {
     type Request = SetMapRequest;
     type Response = SetMapResponse;

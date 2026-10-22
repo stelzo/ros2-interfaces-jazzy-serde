@@ -40,6 +40,7 @@ impl Default for BasicTypesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BasicTypesRequest {}
 
 
@@ -83,10 +84,12 @@ impl Default for BasicTypesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for BasicTypesResponse {}
 
 
 pub struct BasicTypes;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for BasicTypes {
     type Request = BasicTypesRequest;
     type Response = BasicTypesResponse;

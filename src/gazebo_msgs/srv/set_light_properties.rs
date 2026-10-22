@@ -22,6 +22,7 @@ impl Default for SetLightPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLightPropertiesRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for SetLightPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetLightPropertiesResponse {}
 
 
 pub struct SetLightProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetLightProperties {
     type Request = SetLightPropertiesRequest;
     type Response = SetLightPropertiesResponse;

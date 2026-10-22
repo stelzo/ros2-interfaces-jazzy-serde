@@ -14,6 +14,7 @@ impl Default for SoundRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SoundRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SoundResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SoundResponse {}
 
 
 pub struct Sound;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Sound {
     type Request = SoundRequest;
     type Response = SoundResponse;

@@ -18,6 +18,7 @@ impl Default for COWriteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COWriteRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for COWriteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for COWriteResponse {}
 
 
 pub struct COWrite;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for COWrite {
     type Request = COWriteRequest;
     type Response = COWriteResponse;

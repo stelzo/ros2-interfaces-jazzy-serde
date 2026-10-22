@@ -74,6 +74,7 @@ impl Default for ArraysRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ArraysRequest {}
 
 
@@ -151,10 +152,12 @@ impl Default for ArraysResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ArraysResponse {}
 
 
 pub struct Arrays;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Arrays {
     type Request = ArraysRequest;
     type Response = ArraysResponse;

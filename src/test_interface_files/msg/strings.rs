@@ -39,4 +39,5 @@ impl Default for Strings {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Strings {}

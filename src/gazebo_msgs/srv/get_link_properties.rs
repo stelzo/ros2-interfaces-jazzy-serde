@@ -14,6 +14,7 @@ impl Default for GetLinkPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLinkPropertiesRequest {}
 
 
@@ -51,10 +52,12 @@ impl Default for GetLinkPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLinkPropertiesResponse {}
 
 
 pub struct GetLinkProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetLinkProperties {
     type Request = GetLinkPropertiesRequest;
     type Response = GetLinkPropertiesResponse;

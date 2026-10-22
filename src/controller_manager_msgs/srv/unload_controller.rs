@@ -14,6 +14,7 @@ impl Default for UnloadControllerRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UnloadControllerRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for UnloadControllerResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for UnloadControllerResponse {}
 
 
 pub struct UnloadController;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for UnloadController {
     type Request = UnloadControllerRequest;
     type Response = UnloadControllerResponse;

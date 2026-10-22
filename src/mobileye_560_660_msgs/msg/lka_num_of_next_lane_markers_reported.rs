@@ -15,4 +15,5 @@ impl Default for LkaNumOfNextLaneMarkersReported {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LkaNumOfNextLaneMarkersReported {}

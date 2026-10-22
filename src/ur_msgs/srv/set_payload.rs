@@ -16,6 +16,7 @@ impl Default for SetPayloadRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPayloadRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for SetPayloadResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetPayloadResponse {}
 
 
 pub struct SetPayload;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetPayload {
     type Request = SetPayloadRequest;
     type Response = SetPayloadResponse;

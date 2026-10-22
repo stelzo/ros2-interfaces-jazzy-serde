@@ -14,6 +14,7 @@ impl Default for GetGroupUrdfRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGroupUrdfRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetGroupUrdfResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetGroupUrdfResponse {}
 
 
 pub struct GetGroupUrdf;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetGroupUrdf {
     type Request = GetGroupUrdfRequest;
     type Response = GetGroupUrdfResponse;

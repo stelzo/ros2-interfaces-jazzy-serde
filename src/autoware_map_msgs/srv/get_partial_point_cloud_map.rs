@@ -14,6 +14,7 @@ impl Default for GetPartialPointCloudMapRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPartialPointCloudMapRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetPartialPointCloudMapResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetPartialPointCloudMapResponse {}
 
 
 pub struct GetPartialPointCloudMap;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetPartialPointCloudMap {
     type Request = GetPartialPointCloudMapRequest;
     type Response = GetPartialPointCloudMapResponse;

@@ -15,4 +15,5 @@ impl Default for Thrust {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Thrust {}

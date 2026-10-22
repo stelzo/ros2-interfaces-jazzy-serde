@@ -37,6 +37,7 @@ impl Default for GimbalManagerSetRoiRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerSetRoiRequest {}
 
 
@@ -56,10 +57,12 @@ impl Default for GimbalManagerSetRoiResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GimbalManagerSetRoiResponse {}
 
 
 pub struct GimbalManagerSetRoi;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GimbalManagerSetRoi {
     type Request = GimbalManagerSetRoiRequest;
     type Response = GimbalManagerSetRoiResponse;

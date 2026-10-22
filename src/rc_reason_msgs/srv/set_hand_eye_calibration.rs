@@ -16,6 +16,7 @@ impl Default for SetHandEyeCalibrationRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetHandEyeCalibrationRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for SetHandEyeCalibrationResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetHandEyeCalibrationResponse {}
 
 
 pub struct SetHandEyeCalibration;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetHandEyeCalibration {
     type Request = SetHandEyeCalibrationRequest;
     type Response = SetHandEyeCalibrationResponse;

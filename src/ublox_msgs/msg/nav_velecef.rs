@@ -26,4 +26,5 @@ impl Default for NavVELECEF {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for NavVELECEF {}

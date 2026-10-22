@@ -14,6 +14,7 @@ impl Default for WaypointSetCurrentRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointSetCurrentRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for WaypointSetCurrentResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for WaypointSetCurrentResponse {}
 
 
 pub struct WaypointSetCurrent;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for WaypointSetCurrent {
     type Request = WaypointSetCurrentRequest;
     type Response = WaypointSetCurrentResponse;

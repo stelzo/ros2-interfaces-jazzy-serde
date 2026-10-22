@@ -41,4 +41,5 @@ impl Default for EsrStatus4 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EsrStatus4 {}

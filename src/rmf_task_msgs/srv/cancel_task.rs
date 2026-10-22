@@ -16,6 +16,7 @@ impl Default for CancelTaskRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CancelTaskRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for CancelTaskResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for CancelTaskResponse {}
 
 
 pub struct CancelTask;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for CancelTask {
     type Request = CancelTaskRequest;
     type Response = CancelTaskResponse;

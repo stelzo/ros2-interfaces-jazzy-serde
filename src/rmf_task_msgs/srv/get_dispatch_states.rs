@@ -14,6 +14,7 @@ impl Default for GetDispatchStatesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDispatchStatesRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for GetDispatchStatesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDispatchStatesResponse {}
 
 
 pub struct GetDispatchStates;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetDispatchStates {
     type Request = GetDispatchStatesRequest;
     type Response = GetDispatchStatesResponse;

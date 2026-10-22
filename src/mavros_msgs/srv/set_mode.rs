@@ -30,6 +30,7 @@ impl Default for SetModeRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetModeRequest {}
 
 
@@ -47,10 +48,12 @@ impl Default for SetModeResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for SetModeResponse {}
 
 
 pub struct SetMode;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for SetMode {
     type Request = SetModeRequest;
     type Response = SetModeResponse;

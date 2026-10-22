@@ -14,6 +14,7 @@ impl Default for RemoveProblemGoalRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RemoveProblemGoalRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for RemoveProblemGoalResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for RemoveProblemGoalResponse {}
 
 
 pub struct RemoveProblemGoal;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for RemoveProblemGoal {
     type Request = RemoveProblemGoalRequest;
     type Response = RemoveProblemGoalResponse;

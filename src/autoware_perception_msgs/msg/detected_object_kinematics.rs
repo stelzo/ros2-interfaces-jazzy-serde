@@ -29,4 +29,5 @@ impl Default for DetectedObjectKinematics {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectedObjectKinematics {}

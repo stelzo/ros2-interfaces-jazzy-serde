@@ -141,4 +141,5 @@ impl Default for ActiveFaultLatched1 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ActiveFaultLatched1 {}

@@ -29,4 +29,5 @@ impl Default for HilSensor {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for HilSensor {}

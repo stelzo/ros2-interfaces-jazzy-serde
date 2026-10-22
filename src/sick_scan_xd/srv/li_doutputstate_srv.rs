@@ -14,6 +14,7 @@ impl Default for LIDoutputstateSrvRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LIDoutputstateSrvRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for LIDoutputstateSrvResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LIDoutputstateSrvResponse {}
 
 
 pub struct LIDoutputstateSrv;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LIDoutputstateSrv {
     type Request = LIDoutputstateSrvRequest;
     type Response = LIDoutputstateSrvResponse;

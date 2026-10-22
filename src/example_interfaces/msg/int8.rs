@@ -13,4 +13,5 @@ impl Default for Int8 {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Int8 {}

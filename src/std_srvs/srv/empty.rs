@@ -14,6 +14,7 @@ impl Default for EmptyRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EmptyRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for EmptyResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for EmptyResponse {}
 
 
 pub struct Empty;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Empty {
     type Request = EmptyRequest;
     type Response = EmptyResponse;

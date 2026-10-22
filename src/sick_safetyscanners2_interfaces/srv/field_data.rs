@@ -14,6 +14,7 @@ impl Default for FieldDataRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FieldDataRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for FieldDataResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FieldDataResponse {}
 
 
 pub struct FieldData;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FieldData {
     type Request = FieldDataRequest;
     type Response = FieldDataResponse;

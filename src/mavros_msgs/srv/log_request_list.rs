@@ -16,6 +16,7 @@ impl Default for LogRequestListRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LogRequestListRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for LogRequestListResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for LogRequestListResponse {}
 
 
 pub struct LogRequestList;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for LogRequestList {
     type Request = LogRequestListRequest;
     type Response = LogRequestListResponse;

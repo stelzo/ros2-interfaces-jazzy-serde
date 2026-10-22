@@ -14,6 +14,7 @@ impl Default for DeleteRouteRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteRouteRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for DeleteRouteResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DeleteRouteResponse {}
 
 
 pub struct DeleteRoute;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DeleteRoute {
     type Request = DeleteRouteRequest;
     type Response = DeleteRouteResponse;

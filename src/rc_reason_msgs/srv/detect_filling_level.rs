@@ -24,6 +24,7 @@ impl Default for DetectFillingLevelRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectFillingLevelRequest {}
 
 
@@ -45,10 +46,12 @@ impl Default for DetectFillingLevelResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for DetectFillingLevelResponse {}
 
 
 pub struct DetectFillingLevel;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for DetectFillingLevel {
     type Request = DetectFillingLevelRequest;
     type Response = DetectFillingLevelResponse;

@@ -14,6 +14,7 @@ impl Default for FinishTrajectoryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FinishTrajectoryRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for FinishTrajectoryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for FinishTrajectoryResponse {}
 
 
 pub struct FinishTrajectory;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for FinishTrajectory {
     type Request = FinishTrajectoryRequest;
     type Response = FinishTrajectoryResponse;

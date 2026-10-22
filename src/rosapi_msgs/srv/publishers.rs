@@ -14,6 +14,7 @@ impl Default for PublishersRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PublishersRequest {}
 
 
@@ -31,10 +32,12 @@ impl Default for PublishersResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for PublishersResponse {}
 
 
 pub struct Publishers;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for Publishers {
     type Request = PublishersRequest;
     type Response = PublishersResponse;

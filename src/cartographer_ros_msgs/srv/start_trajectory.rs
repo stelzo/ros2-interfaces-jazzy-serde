@@ -22,6 +22,7 @@ impl Default for StartTrajectoryRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StartTrajectoryRequest {}
 
 
@@ -41,10 +42,12 @@ impl Default for StartTrajectoryResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for StartTrajectoryResponse {}
 
 
 pub struct StartTrajectory;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for StartTrajectory {
     type Request = StartTrajectoryRequest;
     type Response = StartTrajectoryResponse;

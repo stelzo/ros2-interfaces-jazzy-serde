@@ -16,6 +16,7 @@ impl Default for GetLinkStateRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLinkStateRequest {}
 
 
@@ -37,10 +38,12 @@ impl Default for GetLinkStateResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetLinkStateResponse {}
 
 
 pub struct GetLinkState;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetLinkState {
     type Request = GetLinkStateRequest;
     type Response = GetLinkStateResponse;

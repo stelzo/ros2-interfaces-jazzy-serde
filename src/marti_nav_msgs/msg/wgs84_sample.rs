@@ -19,4 +19,5 @@ impl Default for Wgs84Sample {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for Wgs84Sample {}

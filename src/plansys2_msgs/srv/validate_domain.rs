@@ -14,6 +14,7 @@ impl Default for ValidateDomainRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ValidateDomainRequest {}
 
 
@@ -33,10 +34,12 @@ impl Default for ValidateDomainResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for ValidateDomainResponse {}
 
 
 pub struct ValidateDomain;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for ValidateDomain {
     type Request = ValidateDomainRequest;
     type Response = ValidateDomainResponse;

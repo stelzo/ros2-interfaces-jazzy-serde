@@ -14,6 +14,7 @@ impl Default for GetDomainTypesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainTypesRequest {}
 
 
@@ -35,10 +36,12 @@ impl Default for GetDomainTypesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetDomainTypesResponse {}
 
 
 pub struct GetDomainTypes;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetDomainTypes {
     type Request = GetDomainTypesRequest;
     type Response = GetDomainTypesResponse;

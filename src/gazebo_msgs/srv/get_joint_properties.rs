@@ -14,6 +14,7 @@ impl Default for GetJointPropertiesRequest {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetJointPropertiesRequest {}
 
 
@@ -50,10 +51,12 @@ impl Default for GetJointPropertiesResponse {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for GetJointPropertiesResponse {}
 
 
 pub struct GetJointProperties;
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Service for GetJointProperties {
     type Request = GetJointPropertiesRequest;
     type Response = GetJointPropertiesResponse;

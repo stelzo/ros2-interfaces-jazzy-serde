@@ -13,4 +13,5 @@ impl Default for TestTimeArray {
     }
 }
 
+#[cfg(feature = "ros2-client")]
 impl ros2_client::Message for TestTimeArray {}
