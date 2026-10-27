@@ -13,11 +13,6 @@
 edition = "2021"
 name = "ros2-interfaces-jazzy-serde"
 version = "0.0.6"
-authors = [
-  "Nisse Knudsen <nisse@make87.com>",
-  "Phillip Thomas <phillip@make87.com>",
-  "Christopher Sieh <stelzo@steado.de>",
-]
 build = false
 autobins = false
 autoexamples = false
