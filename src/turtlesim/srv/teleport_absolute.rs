@@ -41,11 +41,3 @@ impl ros2_client::Message for TeleportAbsoluteResponse {}
 
 
 pub struct TeleportAbsolute;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TeleportAbsolute {
-    type Request = TeleportAbsoluteRequest;
-    type Response = TeleportAbsoluteResponse;
-
-    fn request_type_name(&self) -> &str { "TeleportAbsoluteRequest" }
-    fn response_type_name(&self) -> &str { "TeleportAbsoluteResponse" }
-}

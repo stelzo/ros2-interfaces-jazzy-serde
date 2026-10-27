@@ -37,11 +37,3 @@ impl ros2_client::Message for ExistNodeResponse {}
 
 
 pub struct ExistNode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ExistNode {
-    type Request = ExistNodeRequest;
-    type Response = ExistNodeResponse;
-
-    fn request_type_name(&self) -> &str { "ExistNodeRequest" }
-    fn response_type_name(&self) -> &str { "ExistNodeResponse" }
-}

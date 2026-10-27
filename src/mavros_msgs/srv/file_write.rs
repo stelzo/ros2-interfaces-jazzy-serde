@@ -43,11 +43,3 @@ impl ros2_client::Message for FileWriteResponse {}
 
 
 pub struct FileWrite;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileWrite {
-    type Request = FileWriteRequest;
-    type Response = FileWriteResponse;
-
-    fn request_type_name(&self) -> &str { "FileWriteRequest" }
-    fn response_type_name(&self) -> &str { "FileWriteResponse" }
-}

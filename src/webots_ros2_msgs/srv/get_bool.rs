@@ -37,11 +37,3 @@ impl ros2_client::Message for GetBoolResponse {}
 
 
 pub struct GetBool;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetBool {
-    type Request = GetBoolRequest;
-    type Response = GetBoolResponse;
-
-    fn request_type_name(&self) -> &str { "GetBoolRequest" }
-    fn response_type_name(&self) -> &str { "GetBoolResponse" }
-}

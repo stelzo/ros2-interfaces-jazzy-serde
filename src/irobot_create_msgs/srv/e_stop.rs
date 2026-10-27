@@ -39,11 +39,3 @@ impl ros2_client::Message for EStopResponse {}
 
 
 pub struct EStop;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for EStop {
-    type Request = EStopRequest;
-    type Response = EStopResponse;
-
-    fn request_type_name(&self) -> &str { "EStopRequest" }
-    fn response_type_name(&self) -> &str { "EStopResponse" }
-}

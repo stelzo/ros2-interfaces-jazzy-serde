@@ -43,11 +43,3 @@ impl ros2_client::Message for SpawnResponse {}
 
 
 pub struct Spawn;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Spawn {
-    type Request = SpawnRequest;
-    type Response = SpawnResponse;
-
-    fn request_type_name(&self) -> &str { "SpawnRequest" }
-    fn response_type_name(&self) -> &str { "SpawnResponse" }
-}

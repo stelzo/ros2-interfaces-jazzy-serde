@@ -37,11 +37,3 @@ impl ros2_client::Message for QueryPlannerInterfacesResponse {}
 
 
 pub struct QueryPlannerInterfaces;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for QueryPlannerInterfaces {
-    type Request = QueryPlannerInterfacesRequest;
-    type Response = QueryPlannerInterfacesResponse;
-
-    fn request_type_name(&self) -> &str { "QueryPlannerInterfacesRequest" }
-    fn response_type_name(&self) -> &str { "QueryPlannerInterfacesResponse" }
-}

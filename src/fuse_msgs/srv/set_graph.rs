@@ -39,11 +39,3 @@ impl ros2_client::Message for SetGraphResponse {}
 
 
 pub struct SetGraph;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetGraph {
-    type Request = SetGraphRequest;
-    type Response = SetGraphResponse;
-
-    fn request_type_name(&self) -> &str { "SetGraphRequest" }
-    fn response_type_name(&self) -> &str { "SetGraphResponse" }
-}

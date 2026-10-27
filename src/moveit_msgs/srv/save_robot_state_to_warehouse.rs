@@ -41,11 +41,3 @@ impl ros2_client::Message for SaveRobotStateToWarehouseResponse {}
 
 
 pub struct SaveRobotStateToWarehouse;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SaveRobotStateToWarehouse {
-    type Request = SaveRobotStateToWarehouseRequest;
-    type Response = SaveRobotStateToWarehouseResponse;
-
-    fn request_type_name(&self) -> &str { "SaveRobotStateToWarehouseRequest" }
-    fn response_type_name(&self) -> &str { "SaveRobotStateToWarehouseResponse" }
-}

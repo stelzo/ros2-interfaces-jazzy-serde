@@ -37,11 +37,3 @@ impl ros2_client::Message for WaypointSetCurrentResponse {}
 
 
 pub struct WaypointSetCurrent;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for WaypointSetCurrent {
-    type Request = WaypointSetCurrentRequest;
-    type Response = WaypointSetCurrentResponse;
-
-    fn request_type_name(&self) -> &str { "WaypointSetCurrentRequest" }
-    fn response_type_name(&self) -> &str { "WaypointSetCurrentResponse" }
-}

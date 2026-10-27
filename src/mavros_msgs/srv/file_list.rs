@@ -41,11 +41,3 @@ impl ros2_client::Message for FileListResponse {}
 
 
 pub struct FileList;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileList {
-    type Request = FileListRequest;
-    type Response = FileListResponse;
-
-    fn request_type_name(&self) -> &str { "FileListRequest" }
-    fn response_type_name(&self) -> &str { "FileListResponse" }
-}

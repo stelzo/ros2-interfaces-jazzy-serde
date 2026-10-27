@@ -37,11 +37,3 @@ impl ros2_client::Message for ClearEntireCostmapResponse {}
 
 
 pub struct ClearEntireCostmap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ClearEntireCostmap {
-    type Request = ClearEntireCostmapRequest;
-    type Response = ClearEntireCostmapResponse;
-
-    fn request_type_name(&self) -> &str { "ClearEntireCostmapRequest" }
-    fn response_type_name(&self) -> &str { "ClearEntireCostmapResponse" }
-}

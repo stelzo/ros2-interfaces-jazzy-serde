@@ -37,11 +37,3 @@ impl ros2_client::Message for ResetODOResponse {}
 
 
 pub struct ResetODO;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ResetODO {
-    type Request = ResetODORequest;
-    type Response = ResetODOResponse;
-
-    fn request_type_name(&self) -> &str { "ResetODORequest" }
-    fn response_type_name(&self) -> &str { "ResetODOResponse" }
-}

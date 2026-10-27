@@ -49,11 +49,3 @@ impl ros2_client::Message for ApplyLinkWrenchResponse {}
 
 
 pub struct ApplyLinkWrench;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ApplyLinkWrench {
-    type Request = ApplyLinkWrenchRequest;
-    type Response = ApplyLinkWrenchResponse;
-
-    fn request_type_name(&self) -> &str { "ApplyLinkWrenchRequest" }
-    fn response_type_name(&self) -> &str { "ApplyLinkWrenchResponse" }
-}

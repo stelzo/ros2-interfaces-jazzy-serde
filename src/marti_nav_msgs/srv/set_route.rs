@@ -41,11 +41,3 @@ impl ros2_client::Message for SetRouteResponse {}
 
 
 pub struct SetRoute;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetRoute {
-    type Request = SetRouteRequest;
-    type Response = SetRouteResponse;
-
-    fn request_type_name(&self) -> &str { "SetRouteRequest" }
-    fn response_type_name(&self) -> &str { "SetRouteResponse" }
-}

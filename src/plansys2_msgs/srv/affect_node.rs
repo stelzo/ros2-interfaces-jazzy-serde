@@ -39,11 +39,3 @@ impl ros2_client::Message for AffectNodeResponse {}
 
 
 pub struct AffectNode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AffectNode {
-    type Request = AffectNodeRequest;
-    type Response = AffectNodeResponse;
-
-    fn request_type_name(&self) -> &str { "AffectNodeRequest" }
-    fn response_type_name(&self) -> &str { "AffectNodeResponse" }
-}

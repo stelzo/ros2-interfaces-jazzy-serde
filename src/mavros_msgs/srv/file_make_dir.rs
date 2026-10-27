@@ -39,11 +39,3 @@ impl ros2_client::Message for FileMakeDirResponse {}
 
 
 pub struct FileMakeDir;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileMakeDir {
-    type Request = FileMakeDirRequest;
-    type Response = FileMakeDirResponse;
-
-    fn request_type_name(&self) -> &str { "FileMakeDirRequest" }
-    fn response_type_name(&self) -> &str { "FileMakeDirResponse" }
-}

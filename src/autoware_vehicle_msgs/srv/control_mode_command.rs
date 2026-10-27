@@ -47,11 +47,3 @@ impl ros2_client::Message for ControlModeCommandResponse {}
 
 
 pub struct ControlModeCommand;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ControlModeCommand {
-    type Request = ControlModeCommandRequest;
-    type Response = ControlModeCommandResponse;
-
-    fn request_type_name(&self) -> &str { "ControlModeCommandRequest" }
-    fn response_type_name(&self) -> &str { "ControlModeCommandResponse" }
-}

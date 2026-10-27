@@ -39,11 +39,3 @@ impl ros2_client::Message for ParamPullResponse {}
 
 
 pub struct ParamPull;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ParamPull {
-    type Request = ParamPullRequest;
-    type Response = ParamPullResponse;
-
-    fn request_type_name(&self) -> &str { "ParamPullRequest" }
-    fn response_type_name(&self) -> &str { "ParamPullResponse" }
-}

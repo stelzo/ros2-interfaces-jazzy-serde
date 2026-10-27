@@ -37,11 +37,3 @@ impl ros2_client::Message for IsPausedResponse {}
 
 
 pub struct IsPaused;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for IsPaused {
-    type Request = IsPausedRequest;
-    type Response = IsPausedResponse;
-
-    fn request_type_name(&self) -> &str { "IsPausedRequest" }
-    fn response_type_name(&self) -> &str { "IsPausedResponse" }
-}

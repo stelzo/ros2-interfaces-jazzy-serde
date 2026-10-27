@@ -39,11 +39,3 @@ impl ros2_client::Message for GetGroupUrdfResponse {}
 
 
 pub struct GetGroupUrdf;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetGroupUrdf {
-    type Request = GetGroupUrdfRequest;
-    type Response = GetGroupUrdfResponse;
-
-    fn request_type_name(&self) -> &str { "GetGroupUrdfRequest" }
-    fn response_type_name(&self) -> &str { "GetGroupUrdfResponse" }
-}

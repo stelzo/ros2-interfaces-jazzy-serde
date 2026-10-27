@@ -51,11 +51,3 @@ impl ros2_client::Message for DetectFillingLevelResponse {}
 
 
 pub struct DetectFillingLevel;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DetectFillingLevel {
-    type Request = DetectFillingLevelRequest;
-    type Response = DetectFillingLevelResponse;
-
-    fn request_type_name(&self) -> &str { "DetectFillingLevelRequest" }
-    fn response_type_name(&self) -> &str { "DetectFillingLevelResponse" }
-}

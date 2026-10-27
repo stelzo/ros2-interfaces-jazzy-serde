@@ -45,11 +45,3 @@ impl ros2_client::Message for SetPidGainsResponse {}
 
 
 pub struct SetPidGains;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetPidGains {
-    type Request = SetPidGainsRequest;
-    type Response = SetPidGainsResponse;
-
-    fn request_type_name(&self) -> &str { "SetPidGainsRequest" }
-    fn response_type_name(&self) -> &str { "SetPidGainsResponse" }
-}

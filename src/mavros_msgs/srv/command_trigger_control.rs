@@ -43,11 +43,3 @@ impl ros2_client::Message for CommandTriggerControlResponse {}
 
 
 pub struct CommandTriggerControl;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandTriggerControl {
-    type Request = CommandTriggerControlRequest;
-    type Response = CommandTriggerControlResponse;
-
-    fn request_type_name(&self) -> &str { "CommandTriggerControlRequest" }
-    fn response_type_name(&self) -> &str { "CommandTriggerControlResponse" }
-}

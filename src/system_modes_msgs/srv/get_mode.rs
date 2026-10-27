@@ -37,11 +37,3 @@ impl ros2_client::Message for GetModeResponse {}
 
 
 pub struct GetMode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetMode {
-    type Request = GetModeRequest;
-    type Response = GetModeResponse;
-
-    fn request_type_name(&self) -> &str { "GetModeRequest" }
-    fn response_type_name(&self) -> &str { "GetModeResponse" }
-}

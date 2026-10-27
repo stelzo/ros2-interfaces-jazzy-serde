@@ -53,11 +53,3 @@ impl ros2_client::Message for StreamRateResponse {}
 
 
 pub struct StreamRate;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for StreamRate {
-    type Request = StreamRateRequest;
-    type Response = StreamRateResponse;
-
-    fn request_type_name(&self) -> &str { "StreamRateRequest" }
-    fn response_type_name(&self) -> &str { "StreamRateResponse" }
-}

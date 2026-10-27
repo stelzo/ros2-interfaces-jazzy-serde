@@ -41,11 +41,3 @@ impl ros2_client::Message for FileTruncateResponse {}
 
 
 pub struct FileTruncate;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileTruncate {
-    type Request = FileTruncateRequest;
-    type Response = FileTruncateResponse;
-
-    fn request_type_name(&self) -> &str { "FileTruncateRequest" }
-    fn response_type_name(&self) -> &str { "FileTruncateResponse" }
-}

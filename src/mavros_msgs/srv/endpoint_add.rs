@@ -49,11 +49,3 @@ impl ros2_client::Message for EndpointAddResponse {}
 
 
 pub struct EndpointAdd;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for EndpointAdd {
-    type Request = EndpointAddRequest;
-    type Response = EndpointAddResponse;
-
-    fn request_type_name(&self) -> &str { "EndpointAddRequest" }
-    fn response_type_name(&self) -> &str { "EndpointAddResponse" }
-}

@@ -47,11 +47,3 @@ impl ros2_client::Message for StartTrajectoryResponse {}
 
 
 pub struct StartTrajectory;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for StartTrajectory {
-    type Request = StartTrajectoryRequest;
-    type Response = StartTrajectoryResponse;
-
-    fn request_type_name(&self) -> &str { "StartTrajectoryRequest" }
-    fn response_type_name(&self) -> &str { "StartTrajectoryResponse" }
-}

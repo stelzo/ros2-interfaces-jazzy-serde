@@ -37,11 +37,3 @@ impl ros2_client::Message for SetMapProjectionsResponse {}
 
 
 pub struct SetMapProjections;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetMapProjections {
-    type Request = SetMapProjectionsRequest;
-    type Response = SetMapProjectionsResponse;
-
-    fn request_type_name(&self) -> &str { "SetMapProjectionsRequest" }
-    fn response_type_name(&self) -> &str { "SetMapProjectionsResponse" }
-}

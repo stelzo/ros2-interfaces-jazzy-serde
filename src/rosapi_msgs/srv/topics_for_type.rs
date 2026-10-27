@@ -37,11 +37,3 @@ impl ros2_client::Message for TopicsForTypeResponse {}
 
 
 pub struct TopicsForType;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TopicsForType {
-    type Request = TopicsForTypeRequest;
-    type Response = TopicsForTypeResponse;
-
-    fn request_type_name(&self) -> &str { "TopicsForTypeRequest" }
-    fn response_type_name(&self) -> &str { "TopicsForTypeResponse" }
-}

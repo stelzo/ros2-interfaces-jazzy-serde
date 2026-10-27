@@ -39,11 +39,3 @@ impl ros2_client::Message for DeleteLightResponse {}
 
 
 pub struct DeleteLight;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteLight {
-    type Request = DeleteLightRequest;
-    type Response = DeleteLightResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteLightRequest" }
-    fn response_type_name(&self) -> &str { "DeleteLightResponse" }
-}

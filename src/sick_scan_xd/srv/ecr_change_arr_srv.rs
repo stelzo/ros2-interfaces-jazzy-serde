@@ -37,11 +37,3 @@ impl ros2_client::Message for ECRChangeArrSrvResponse {}
 
 
 pub struct ECRChangeArrSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ECRChangeArrSrv {
-    type Request = ECRChangeArrSrvRequest;
-    type Response = ECRChangeArrSrvResponse;
-
-    fn request_type_name(&self) -> &str { "ECRChangeArrSrvRequest" }
-    fn response_type_name(&self) -> &str { "ECRChangeArrSrvResponse" }
-}

@@ -41,11 +41,3 @@ impl ros2_client::Message for RenameRobotStateInWarehouseResponse {}
 
 
 pub struct RenameRobotStateInWarehouse;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RenameRobotStateInWarehouse {
-    type Request = RenameRobotStateInWarehouseRequest;
-    type Response = RenameRobotStateInWarehouseResponse;
-
-    fn request_type_name(&self) -> &str { "RenameRobotStateInWarehouseRequest" }
-    fn response_type_name(&self) -> &str { "RenameRobotStateInWarehouseResponse" }
-}

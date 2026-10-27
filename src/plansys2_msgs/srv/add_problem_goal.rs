@@ -39,11 +39,3 @@ impl ros2_client::Message for AddProblemGoalResponse {}
 
 
 pub struct AddProblemGoal;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AddProblemGoal {
-    type Request = AddProblemGoalRequest;
-    type Response = AddProblemGoalResponse;
-
-    fn request_type_name(&self) -> &str { "AddProblemGoalRequest" }
-    fn response_type_name(&self) -> &str { "AddProblemGoalResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for LoadMapResponse {}
 
 
 pub struct LoadMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LoadMap {
-    type Request = LoadMapRequest;
-    type Response = LoadMapResponse;
-
-    fn request_type_name(&self) -> &str { "LoadMapRequest" }
-    fn response_type_name(&self) -> &str { "LoadMapResponse" }
-}

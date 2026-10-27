@@ -37,11 +37,3 @@ impl ros2_client::Message for GetBlackboardVariablesResponse {}
 
 
 pub struct GetBlackboardVariables;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetBlackboardVariables {
-    type Request = GetBlackboardVariablesRequest;
-    type Response = GetBlackboardVariablesResponse;
-
-    fn request_type_name(&self) -> &str { "GetBlackboardVariablesRequest" }
-    fn response_type_name(&self) -> &str { "GetBlackboardVariablesResponse" }
-}

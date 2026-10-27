@@ -57,11 +57,3 @@ impl ros2_client::Message for GimbalManagerPitchyawResponse {}
 
 
 pub struct GimbalManagerPitchyaw;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GimbalManagerPitchyaw {
-    type Request = GimbalManagerPitchyawRequest;
-    type Response = GimbalManagerPitchyawResponse;
-
-    fn request_type_name(&self) -> &str { "GimbalManagerPitchyawRequest" }
-    fn response_type_name(&self) -> &str { "GimbalManagerPitchyawResponse" }
-}

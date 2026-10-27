@@ -62,11 +62,3 @@ impl ros2_client::Message for SetMavFrameResponse {}
 
 
 pub struct SetMavFrame;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetMavFrame {
-    type Request = SetMavFrameRequest;
-    type Response = SetMavFrameResponse;
-
-    fn request_type_name(&self) -> &str { "SetMavFrameRequest" }
-    fn response_type_name(&self) -> &str { "SetMavFrameResponse" }
-}

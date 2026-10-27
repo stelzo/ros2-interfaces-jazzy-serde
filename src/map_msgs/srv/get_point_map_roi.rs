@@ -49,11 +49,3 @@ impl ros2_client::Message for GetPointMapROIResponse {}
 
 
 pub struct GetPointMapROI;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetPointMapROI {
-    type Request = GetPointMapROIRequest;
-    type Response = GetPointMapROIResponse;
-
-    fn request_type_name(&self) -> &str { "GetPointMapROIRequest" }
-    fn response_type_name(&self) -> &str { "GetPointMapROIResponse" }
-}

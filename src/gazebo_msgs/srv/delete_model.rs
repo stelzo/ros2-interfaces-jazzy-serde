@@ -39,11 +39,3 @@ impl ros2_client::Message for DeleteModelResponse {}
 
 
 pub struct DeleteModel;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteModel {
-    type Request = DeleteModelRequest;
-    type Response = DeleteModelResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteModelRequest" }
-    fn response_type_name(&self) -> &str { "DeleteModelResponse" }
-}

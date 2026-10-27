@@ -39,11 +39,3 @@ impl ros2_client::Message for SoundResponse {}
 
 
 pub struct Sound;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Sound {
-    type Request = SoundRequest;
-    type Response = SoundResponse;
-
-    fn request_type_name(&self) -> &str { "SoundRequest" }
-    fn response_type_name(&self) -> &str { "SoundResponse" }
-}

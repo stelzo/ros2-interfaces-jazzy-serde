@@ -37,11 +37,3 @@ impl ros2_client::Message for SpawnNodeFromStringResponse {}
 
 
 pub struct SpawnNodeFromString;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SpawnNodeFromString {
-    type Request = SpawnNodeFromStringRequest;
-    type Response = SpawnNodeFromStringResponse;
-
-    fn request_type_name(&self) -> &str { "SpawnNodeFromStringRequest" }
-    fn response_type_name(&self) -> &str { "SpawnNodeFromStringResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for GetLoggerLevelsResponse {}
 
 
 pub struct GetLoggerLevels;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetLoggerLevels {
-    type Request = GetLoggerLevelsRequest;
-    type Response = GetLoggerLevelsResponse;
-
-    fn request_type_name(&self) -> &str { "GetLoggerLevelsRequest" }
-    fn response_type_name(&self) -> &str { "GetLoggerLevelsResponse" }
-}

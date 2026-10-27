@@ -39,11 +39,3 @@ impl ros2_client::Message for CheckIfRobotStateExistsInWarehouseResponse {}
 
 
 pub struct CheckIfRobotStateExistsInWarehouse;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CheckIfRobotStateExistsInWarehouse {
-    type Request = CheckIfRobotStateExistsInWarehouseRequest;
-    type Response = CheckIfRobotStateExistsInWarehouseResponse;
-
-    fn request_type_name(&self) -> &str { "CheckIfRobotStateExistsInWarehouseRequest" }
-    fn response_type_name(&self) -> &str { "CheckIfRobotStateExistsInWarehouseResponse" }
-}

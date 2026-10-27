@@ -41,11 +41,3 @@ impl ros2_client::Message for CancelTaskResponse {}
 
 
 pub struct CancelTask;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CancelTask {
-    type Request = CancelTaskRequest;
-    type Response = CancelTaskResponse;
-
-    fn request_type_name(&self) -> &str { "CancelTaskRequest" }
-    fn response_type_name(&self) -> &str { "CancelTaskResponse" }
-}

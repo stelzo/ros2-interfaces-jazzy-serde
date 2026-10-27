@@ -39,11 +39,3 @@ impl ros2_client::Message for ClearProblemKnowledgeResponse {}
 
 
 pub struct ClearProblemKnowledge;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ClearProblemKnowledge {
-    type Request = ClearProblemKnowledgeRequest;
-    type Response = ClearProblemKnowledgeResponse;
-
-    fn request_type_name(&self) -> &str { "ClearProblemKnowledgeRequest" }
-    fn response_type_name(&self) -> &str { "ClearProblemKnowledgeResponse" }
-}

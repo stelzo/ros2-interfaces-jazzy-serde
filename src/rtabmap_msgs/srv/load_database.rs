@@ -39,11 +39,3 @@ impl ros2_client::Message for LoadDatabaseResponse {}
 
 
 pub struct LoadDatabase;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LoadDatabase {
-    type Request = LoadDatabaseRequest;
-    type Response = LoadDatabaseResponse;
-
-    fn request_type_name(&self) -> &str { "LoadDatabaseRequest" }
-    fn response_type_name(&self) -> &str { "LoadDatabaseResponse" }
-}

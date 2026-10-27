@@ -39,11 +39,3 @@ impl ros2_client::Message for TeleportRelativeResponse {}
 
 
 pub struct TeleportRelative;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TeleportRelative {
-    type Request = TeleportRelativeRequest;
-    type Response = TeleportRelativeResponse;
-
-    fn request_type_name(&self) -> &str { "TeleportRelativeRequest" }
-    fn response_type_name(&self) -> &str { "TeleportRelativeResponse" }
-}

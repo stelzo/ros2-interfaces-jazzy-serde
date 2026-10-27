@@ -37,11 +37,3 @@ impl ros2_client::Message for DemuxDeleteResponse {}
 
 
 pub struct DemuxDelete;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DemuxDelete {
-    type Request = DemuxDeleteRequest;
-    type Response = DemuxDeleteResponse;
-
-    fn request_type_name(&self) -> &str { "DemuxDeleteRequest" }
-    fn response_type_name(&self) -> &str { "DemuxDeleteResponse" }
-}

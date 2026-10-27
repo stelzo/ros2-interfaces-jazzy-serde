@@ -37,11 +37,3 @@ impl ros2_client::Message for ShortVariedMultiNestedResponse {}
 
 
 pub struct ShortVariedMultiNested;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ShortVariedMultiNested {
-    type Request = ShortVariedMultiNestedRequest;
-    type Response = ShortVariedMultiNestedResponse;
-
-    fn request_type_name(&self) -> &str { "ShortVariedMultiNestedRequest" }
-    fn response_type_name(&self) -> &str { "ShortVariedMultiNestedResponse" }
-}

@@ -53,11 +53,3 @@ impl ros2_client::Message for GetModelPropertiesResponse {}
 
 
 pub struct GetModelProperties;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetModelProperties {
-    type Request = GetModelPropertiesRequest;
-    type Response = GetModelPropertiesResponse;
-
-    fn request_type_name(&self) -> &str { "GetModelPropertiesRequest" }
-    fn response_type_name(&self) -> &str { "GetModelPropertiesResponse" }
-}

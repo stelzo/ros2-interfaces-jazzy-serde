@@ -37,11 +37,3 @@ impl ros2_client::Message for KillResponse {}
 
 
 pub struct Kill;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Kill {
-    type Request = KillRequest;
-    type Response = KillResponse;
-
-    fn request_type_name(&self) -> &str { "KillRequest" }
-    fn response_type_name(&self) -> &str { "KillResponse" }
-}

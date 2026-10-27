@@ -39,11 +39,3 @@ impl ros2_client::Message for CancelAllResponse {}
 
 
 pub struct CancelAll;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CancelAll {
-    type Request = CancelAllRequest;
-    type Response = CancelAllResponse;
-
-    fn request_type_name(&self) -> &str { "CancelAllRequest" }
-    fn response_type_name(&self) -> &str { "CancelAllResponse" }
-}

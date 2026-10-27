@@ -57,11 +57,3 @@ impl ros2_client::Message for CommandLongResponse {}
 
 
 pub struct CommandLong;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandLong {
-    type Request = CommandLongRequest;
-    type Response = CommandLongResponse;
-
-    fn request_type_name(&self) -> &str { "CommandLongRequest" }
-    fn response_type_name(&self) -> &str { "CommandLongResponse" }
-}

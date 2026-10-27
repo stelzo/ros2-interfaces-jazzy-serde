@@ -37,11 +37,3 @@ impl ros2_client::Message for NestedUint8ArrayTestServiceResponse {}
 
 
 pub struct NestedUint8ArrayTestService;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for NestedUint8ArrayTestService {
-    type Request = NestedUint8ArrayTestServiceRequest;
-    type Response = NestedUint8ArrayTestServiceResponse;
-
-    fn request_type_name(&self) -> &str { "NestedUint8ArrayTestServiceRequest" }
-    fn response_type_name(&self) -> &str { "NestedUint8ArrayTestServiceResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for GetLayersResponse {}
 
 
 pub struct GetLayers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetLayers {
-    type Request = GetLayersRequest;
-    type Response = GetLayersResponse;
-
-    fn request_type_name(&self) -> &str { "GetLayersRequest" }
-    fn response_type_name(&self) -> &str { "GetLayersResponse" }
-}

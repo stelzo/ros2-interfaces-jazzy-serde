@@ -37,11 +37,3 @@ impl ros2_client::Message for SetParametersAtomicallyResponse {}
 
 
 pub struct SetParametersAtomically;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetParametersAtomically {
-    type Request = SetParametersAtomicallyRequest;
-    type Response = SetParametersAtomicallyResponse;
-
-    fn request_type_name(&self) -> &str { "SetParametersAtomicallyRequest" }
-    fn response_type_name(&self) -> &str { "SetParametersAtomicallyResponse" }
-}

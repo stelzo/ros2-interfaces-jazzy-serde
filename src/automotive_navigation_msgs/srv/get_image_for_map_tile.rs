@@ -39,11 +39,3 @@ impl ros2_client::Message for GetImageForMapTileResponse {}
 
 
 pub struct GetImageForMapTile;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetImageForMapTile {
-    type Request = GetImageForMapTileRequest;
-    type Response = GetImageForMapTileResponse;
-
-    fn request_type_name(&self) -> &str { "GetImageForMapTileRequest" }
-    fn response_type_name(&self) -> &str { "GetImageForMapTileResponse" }
-}

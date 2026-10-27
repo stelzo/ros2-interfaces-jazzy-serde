@@ -37,11 +37,3 @@ impl ros2_client::Message for SplitBagfileResponse {}
 
 
 pub struct SplitBagfile;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SplitBagfile {
-    type Request = SplitBagfileRequest;
-    type Response = SplitBagfileResponse;
-
-    fn request_type_name(&self) -> &str { "SplitBagfileRequest" }
-    fn response_type_name(&self) -> &str { "SplitBagfileResponse" }
-}

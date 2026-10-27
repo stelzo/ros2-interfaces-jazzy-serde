@@ -43,11 +43,3 @@ impl ros2_client::Message for GetGeographicMapResponse {}
 
 
 pub struct GetGeographicMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetGeographicMap {
-    type Request = GetGeographicMapRequest;
-    type Response = GetGeographicMapResponse;
-
-    fn request_type_name(&self) -> &str { "GetGeographicMapRequest" }
-    fn response_type_name(&self) -> &str { "GetGeographicMapResponse" }
-}

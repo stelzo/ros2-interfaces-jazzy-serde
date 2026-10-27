@@ -39,11 +39,3 @@ impl ros2_client::Message for CreateTriggerResponse {}
 
 
 pub struct CreateTrigger;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CreateTrigger {
-    type Request = CreateTriggerRequest;
-    type Response = CreateTriggerResponse;
-
-    fn request_type_name(&self) -> &str { "CreateTriggerRequest" }
-    fn response_type_name(&self) -> &str { "CreateTriggerResponse" }
-}

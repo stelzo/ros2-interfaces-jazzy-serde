@@ -39,11 +39,3 @@ impl ros2_client::Message for GetTrajectoryStatesResponse {}
 
 
 pub struct GetTrajectoryStates;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetTrajectoryStates {
-    type Request = GetTrajectoryStatesRequest;
-    type Response = GetTrajectoryStatesResponse;
-
-    fn request_type_name(&self) -> &str { "GetTrajectoryStatesRequest" }
-    fn response_type_name(&self) -> &str { "GetTrajectoryStatesResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for HasParamResponse {}
 
 
 pub struct HasParam;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for HasParam {
-    type Request = HasParamRequest;
-    type Response = HasParamResponse;
-
-    fn request_type_name(&self) -> &str { "HasParamRequest" }
-    fn response_type_name(&self) -> &str { "HasParamResponse" }
-}

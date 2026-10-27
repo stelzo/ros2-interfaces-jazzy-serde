@@ -41,11 +41,3 @@ impl ros2_client::Message for GetContaminationResultSrvResponse {}
 
 
 pub struct GetContaminationResultSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetContaminationResultSrv {
-    type Request = GetContaminationResultSrvRequest;
-    type Response = GetContaminationResultSrvResponse;
-
-    fn request_type_name(&self) -> &str { "GetContaminationResultSrvRequest" }
-    fn response_type_name(&self) -> &str { "GetContaminationResultSrvResponse" }
-}

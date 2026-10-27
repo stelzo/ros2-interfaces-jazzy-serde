@@ -37,11 +37,3 @@ impl ros2_client::Message for GetActionServersResponse {}
 
 
 pub struct GetActionServers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetActionServers {
-    type Request = GetActionServersRequest;
-    type Response = GetActionServersResponse;
-
-    fn request_type_name(&self) -> &str { "GetActionServersRequest" }
-    fn response_type_name(&self) -> &str { "GetActionServersResponse" }
-}

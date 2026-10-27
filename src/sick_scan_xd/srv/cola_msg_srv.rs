@@ -37,11 +37,3 @@ impl ros2_client::Message for ColaMsgSrvResponse {}
 
 
 pub struct ColaMsgSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ColaMsgSrv {
-    type Request = ColaMsgSrvRequest;
-    type Response = ColaMsgSrvResponse;
-
-    fn request_type_name(&self) -> &str { "ColaMsgSrvRequest" }
-    fn response_type_name(&self) -> &str { "ColaMsgSrvResponse" }
-}

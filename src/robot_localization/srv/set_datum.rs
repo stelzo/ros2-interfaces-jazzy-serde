@@ -37,11 +37,3 @@ impl ros2_client::Message for SetDatumResponse {}
 
 
 pub struct SetDatum;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetDatum {
-    type Request = SetDatumRequest;
-    type Response = SetDatumResponse;
-
-    fn request_type_name(&self) -> &str { "SetDatumRequest" }
-    fn response_type_name(&self) -> &str { "SetDatumResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for WaypointClearResponse {}
 
 
 pub struct WaypointClear;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for WaypointClear {
-    type Request = WaypointClearRequest;
-    type Response = WaypointClearResponse;
-
-    fn request_type_name(&self) -> &str { "WaypointClearRequest" }
-    fn response_type_name(&self) -> &str { "WaypointClearResponse" }
-}

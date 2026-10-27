@@ -39,11 +39,3 @@ impl ros2_client::Message for SetLinkStateResponse {}
 
 
 pub struct SetLinkState;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetLinkState {
-    type Request = SetLinkStateRequest;
-    type Response = SetLinkStateResponse;
-
-    fn request_type_name(&self) -> &str { "SetLinkStateRequest" }
-    fn response_type_name(&self) -> &str { "SetLinkStateResponse" }
-}

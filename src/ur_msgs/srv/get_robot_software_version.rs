@@ -43,11 +43,3 @@ impl ros2_client::Message for GetRobotSoftwareVersionResponse {}
 
 
 pub struct GetRobotSoftwareVersion;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetRobotSoftwareVersion {
-    type Request = GetRobotSoftwareVersionRequest;
-    type Response = GetRobotSoftwareVersionResponse;
-
-    fn request_type_name(&self) -> &str { "GetRobotSoftwareVersionRequest" }
-    fn response_type_name(&self) -> &str { "GetRobotSoftwareVersionResponse" }
-}

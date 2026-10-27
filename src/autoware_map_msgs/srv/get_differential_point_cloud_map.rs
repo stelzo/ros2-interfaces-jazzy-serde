@@ -43,11 +43,3 @@ impl ros2_client::Message for GetDifferentialPointCloudMapResponse {}
 
 
 pub struct GetDifferentialPointCloudMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetDifferentialPointCloudMap {
-    type Request = GetDifferentialPointCloudMapRequest;
-    type Response = GetDifferentialPointCloudMapResponse;
-
-    fn request_type_name(&self) -> &str { "GetDifferentialPointCloudMapRequest" }
-    fn response_type_name(&self) -> &str { "GetDifferentialPointCloudMapResponse" }
-}

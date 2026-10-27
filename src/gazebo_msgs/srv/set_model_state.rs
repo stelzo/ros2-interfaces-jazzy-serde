@@ -39,11 +39,3 @@ impl ros2_client::Message for SetModelStateResponse {}
 
 
 pub struct SetModelState;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetModelState {
-    type Request = SetModelStateRequest;
-    type Response = SetModelStateResponse;
-
-    fn request_type_name(&self) -> &str { "SetModelStateRequest" }
-    fn response_type_name(&self) -> &str { "SetModelStateResponse" }
-}

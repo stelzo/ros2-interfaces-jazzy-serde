@@ -39,11 +39,3 @@ impl ros2_client::Message for AddTwoIntsResponse {}
 
 
 pub struct AddTwoInts;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AddTwoInts {
-    type Request = AddTwoIntsRequest;
-    type Response = AddTwoIntsResponse;
-
-    fn request_type_name(&self) -> &str { "AddTwoIntsRequest" }
-    fn response_type_name(&self) -> &str { "AddTwoIntsResponse" }
-}

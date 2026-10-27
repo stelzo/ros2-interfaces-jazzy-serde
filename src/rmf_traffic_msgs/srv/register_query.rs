@@ -41,11 +41,3 @@ impl ros2_client::Message for RegisterQueryResponse {}
 
 
 pub struct RegisterQuery;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RegisterQuery {
-    type Request = RegisterQueryRequest;
-    type Response = RegisterQueryResponse;
-
-    fn request_type_name(&self) -> &str { "RegisterQueryRequest" }
-    fn response_type_name(&self) -> &str { "RegisterQueryResponse" }
-}

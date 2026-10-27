@@ -51,11 +51,3 @@ impl ros2_client::Message for GetMap2Response {}
 
 
 pub struct GetMap2;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetMap2 {
-    type Request = GetMap2Request;
-    type Response = GetMap2Response;
-
-    fn request_type_name(&self) -> &str { "GetMap2Request" }
-    fn response_type_name(&self) -> &str { "GetMap2Response" }
-}

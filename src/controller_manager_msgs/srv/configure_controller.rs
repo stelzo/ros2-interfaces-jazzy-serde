@@ -37,11 +37,3 @@ impl ros2_client::Message for ConfigureControllerResponse {}
 
 
 pub struct ConfigureController;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ConfigureController {
-    type Request = ConfigureControllerRequest;
-    type Response = ConfigureControllerResponse;
-
-    fn request_type_name(&self) -> &str { "ConfigureControllerRequest" }
-    fn response_type_name(&self) -> &str { "ConfigureControllerResponse" }
-}

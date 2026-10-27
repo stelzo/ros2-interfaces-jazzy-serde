@@ -37,11 +37,3 @@ impl ros2_client::Message for DeleteParamResponse {}
 
 
 pub struct DeleteParam;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteParam {
-    type Request = DeleteParamRequest;
-    type Response = DeleteParamResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteParamRequest" }
-    fn response_type_name(&self) -> &str { "DeleteParamResponse" }
-}

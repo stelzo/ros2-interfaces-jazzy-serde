@@ -37,11 +37,3 @@ impl ros2_client::Message for DemuxListResponse {}
 
 
 pub struct DemuxList;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DemuxList {
-    type Request = DemuxListRequest;
-    type Response = DemuxListResponse;
-
-    fn request_type_name(&self) -> &str { "DemuxListRequest" }
-    fn response_type_name(&self) -> &str { "DemuxListResponse" }
-}

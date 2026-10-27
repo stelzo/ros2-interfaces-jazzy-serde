@@ -37,11 +37,3 @@ impl ros2_client::Message for GetTimeResponse {}
 
 
 pub struct GetTime;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetTime {
-    type Request = GetTimeRequest;
-    type Response = GetTimeResponse;
-
-    fn request_type_name(&self) -> &str { "GetTimeRequest" }
-    fn response_type_name(&self) -> &str { "GetTimeResponse" }
-}

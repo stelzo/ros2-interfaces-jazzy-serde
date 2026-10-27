@@ -37,11 +37,3 @@ impl ros2_client::Message for SickScanExitSrvResponse {}
 
 
 pub struct SickScanExitSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SickScanExitSrv {
-    type Request = SickScanExitSrvRequest;
-    type Response = SickScanExitSrvResponse;
-
-    fn request_type_name(&self) -> &str { "SickScanExitSrvRequest" }
-    fn response_type_name(&self) -> &str { "SickScanExitSrvResponse" }
-}

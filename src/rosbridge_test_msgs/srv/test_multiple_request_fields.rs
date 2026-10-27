@@ -43,11 +43,3 @@ impl ros2_client::Message for TestMultipleRequestFieldsResponse {}
 
 
 pub struct TestMultipleRequestFields;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TestMultipleRequestFields {
-    type Request = TestMultipleRequestFieldsRequest;
-    type Response = TestMultipleRequestFieldsResponse;
-
-    fn request_type_name(&self) -> &str { "TestMultipleRequestFieldsRequest" }
-    fn response_type_name(&self) -> &str { "TestMultipleRequestFieldsResponse" }
-}

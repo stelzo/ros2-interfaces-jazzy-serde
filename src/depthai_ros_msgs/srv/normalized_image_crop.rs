@@ -39,11 +39,3 @@ impl ros2_client::Message for NormalizedImageCropResponse {}
 
 
 pub struct NormalizedImageCrop;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for NormalizedImageCrop {
-    type Request = NormalizedImageCropRequest;
-    type Response = NormalizedImageCropResponse;
-
-    fn request_type_name(&self) -> &str { "NormalizedImageCropRequest" }
-    fn response_type_name(&self) -> &str { "NormalizedImageCropResponse" }
-}

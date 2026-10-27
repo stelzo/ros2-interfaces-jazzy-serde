@@ -46,11 +46,3 @@ impl ros2_client::Message for CancelGoalResponse {}
 
 
 pub struct CancelGoal;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CancelGoal {
-    type Request = CancelGoalRequest;
-    type Response = CancelGoalResponse;
-
-    fn request_type_name(&self) -> &str { "CancelGoalRequest" }
-    fn response_type_name(&self) -> &str { "CancelGoalResponse" }
-}

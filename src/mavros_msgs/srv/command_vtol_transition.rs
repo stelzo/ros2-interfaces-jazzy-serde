@@ -46,11 +46,3 @@ impl ros2_client::Message for CommandVtolTransitionResponse {}
 
 
 pub struct CommandVtolTransition;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandVtolTransition {
-    type Request = CommandVtolTransitionRequest;
-    type Response = CommandVtolTransitionResponse;
-
-    fn request_type_name(&self) -> &str { "CommandVtolTransitionRequest" }
-    fn response_type_name(&self) -> &str { "CommandVtolTransitionResponse" }
-}

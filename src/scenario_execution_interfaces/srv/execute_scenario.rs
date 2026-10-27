@@ -37,11 +37,3 @@ impl ros2_client::Message for ExecuteScenarioResponse {}
 
 
 pub struct ExecuteScenario;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ExecuteScenario {
-    type Request = ExecuteScenarioRequest;
-    type Response = ExecuteScenarioResponse;
-
-    fn request_type_name(&self) -> &str { "ExecuteScenarioRequest" }
-    fn response_type_name(&self) -> &str { "ExecuteScenarioResponse" }
-}

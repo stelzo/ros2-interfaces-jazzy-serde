@@ -37,11 +37,3 @@ impl ros2_client::Message for SeekResponse {}
 
 
 pub struct Seek;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Seek {
-    type Request = SeekRequest;
-    type Response = SeekResponse;
-
-    fn request_type_name(&self) -> &str { "SeekRequest" }
-    fn response_type_name(&self) -> &str { "SeekResponse" }
-}

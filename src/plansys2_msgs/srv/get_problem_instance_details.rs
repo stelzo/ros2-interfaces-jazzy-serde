@@ -41,11 +41,3 @@ impl ros2_client::Message for GetProblemInstanceDetailsResponse {}
 
 
 pub struct GetProblemInstanceDetails;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetProblemInstanceDetails {
-    type Request = GetProblemInstanceDetailsRequest;
-    type Response = GetProblemInstanceDetailsResponse;
-
-    fn request_type_name(&self) -> &str { "GetProblemInstanceDetailsRequest" }
-    fn response_type_name(&self) -> &str { "GetProblemInstanceDetailsResponse" }
-}

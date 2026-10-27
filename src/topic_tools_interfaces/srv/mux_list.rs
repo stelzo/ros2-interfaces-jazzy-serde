@@ -37,11 +37,3 @@ impl ros2_client::Message for MuxListResponse {}
 
 
 pub struct MuxList;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MuxList {
-    type Request = MuxListRequest;
-    type Response = MuxListResponse;
-
-    fn request_type_name(&self) -> &str { "MuxListRequest" }
-    fn response_type_name(&self) -> &str { "MuxListResponse" }
-}

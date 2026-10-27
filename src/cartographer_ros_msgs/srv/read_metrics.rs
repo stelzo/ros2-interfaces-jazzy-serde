@@ -41,11 +41,3 @@ impl ros2_client::Message for ReadMetricsResponse {}
 
 
 pub struct ReadMetrics;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ReadMetrics {
-    type Request = ReadMetricsRequest;
-    type Response = ReadMetricsResponse;
-
-    fn request_type_name(&self) -> &str { "ReadMetricsRequest" }
-    fn response_type_name(&self) -> &str { "ReadMetricsResponse" }
-}

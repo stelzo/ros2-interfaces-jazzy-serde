@@ -53,11 +53,3 @@ impl ros2_client::Message for DetectItemsResponse {}
 
 
 pub struct DetectItems;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DetectItems {
-    type Request = DetectItemsRequest;
-    type Response = DetectItemsResponse;
-
-    fn request_type_name(&self) -> &str { "DetectItemsRequest" }
-    fn response_type_name(&self) -> &str { "DetectItemsResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for GetParamNamesResponse {}
 
 
 pub struct GetParamNames;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetParamNames {
-    type Request = GetParamNamesRequest;
-    type Response = GetParamNamesResponse;
-
-    fn request_type_name(&self) -> &str { "GetParamNamesRequest" }
-    fn response_type_name(&self) -> &str { "GetParamNamesResponse" }
-}

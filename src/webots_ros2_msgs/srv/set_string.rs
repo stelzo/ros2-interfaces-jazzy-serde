@@ -37,11 +37,3 @@ impl ros2_client::Message for SetStringResponse {}
 
 
 pub struct SetString;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetString {
-    type Request = SetStringRequest;
-    type Response = SetStringResponse;
-
-    fn request_type_name(&self) -> &str { "SetStringRequest" }
-    fn response_type_name(&self) -> &str { "SetStringResponse" }
-}

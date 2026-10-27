@@ -41,11 +41,3 @@ impl ros2_client::Message for IsProgramRunningResponse {}
 
 
 pub struct IsProgramRunning;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for IsProgramRunning {
-    type Request = IsProgramRunningRequest;
-    type Response = IsProgramRunningResponse;
-
-    fn request_type_name(&self) -> &str { "IsProgramRunningRequest" }
-    fn response_type_name(&self) -> &str { "IsProgramRunningResponse" }
-}

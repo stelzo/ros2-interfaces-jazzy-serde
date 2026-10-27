@@ -41,11 +41,3 @@ impl ros2_client::Message for GetModelListResponse {}
 
 
 pub struct GetModelList;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetModelList {
-    type Request = GetModelListRequest;
-    type Response = GetModelListResponse;
-
-    fn request_type_name(&self) -> &str { "GetModelListRequest" }
-    fn response_type_name(&self) -> &str { "GetModelListResponse" }
-}

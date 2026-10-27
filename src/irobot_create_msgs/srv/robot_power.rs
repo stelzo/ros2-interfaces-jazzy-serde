@@ -39,11 +39,3 @@ impl ros2_client::Message for RobotPowerResponse {}
 
 
 pub struct RobotPower;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RobotPower {
-    type Request = RobotPowerRequest;
-    type Response = RobotPowerResponse;
-
-    fn request_type_name(&self) -> &str { "RobotPowerRequest" }
-    fn response_type_name(&self) -> &str { "RobotPowerResponse" }
-}

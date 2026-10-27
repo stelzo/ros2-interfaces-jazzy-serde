@@ -64,11 +64,3 @@ impl ros2_client::Message for MountConfigureResponse {}
 
 
 pub struct MountConfigure;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MountConfigure {
-    type Request = MountConfigureRequest;
-    type Response = MountConfigureResponse;
-
-    fn request_type_name(&self) -> &str { "MountConfigureRequest" }
-    fn response_type_name(&self) -> &str { "MountConfigureResponse" }
-}

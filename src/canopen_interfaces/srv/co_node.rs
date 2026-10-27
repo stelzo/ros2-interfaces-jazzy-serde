@@ -37,11 +37,3 @@ impl ros2_client::Message for CONodeResponse {}
 
 
 pub struct CONode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CONode {
-    type Request = CONodeRequest;
-    type Response = CONodeResponse;
-
-    fn request_type_name(&self) -> &str { "CONodeRequest" }
-    fn response_type_name(&self) -> &str { "CONodeResponse" }
-}

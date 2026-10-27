@@ -49,11 +49,3 @@ impl ros2_client::Message for GetPhysicsPropertiesResponse {}
 
 
 pub struct GetPhysicsProperties;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetPhysicsProperties {
-    type Request = GetPhysicsPropertiesRequest;
-    type Response = GetPhysicsPropertiesResponse;
-
-    fn request_type_name(&self) -> &str { "GetPhysicsPropertiesRequest" }
-    fn response_type_name(&self) -> &str { "GetPhysicsPropertiesResponse" }
-}

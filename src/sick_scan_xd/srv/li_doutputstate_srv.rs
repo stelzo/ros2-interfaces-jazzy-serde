@@ -37,11 +37,3 @@ impl ros2_client::Message for LIDoutputstateSrvResponse {}
 
 
 pub struct LIDoutputstateSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LIDoutputstateSrv {
-    type Request = LIDoutputstateSrvRequest;
-    type Response = LIDoutputstateSrvResponse;
-
-    fn request_type_name(&self) -> &str { "LIDoutputstateSrvRequest" }
-    fn response_type_name(&self) -> &str { "LIDoutputstateSrvResponse" }
-}

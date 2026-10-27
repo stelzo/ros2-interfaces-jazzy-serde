@@ -37,11 +37,3 @@ impl ros2_client::Message for GetCMGraphResponse {}
 
 
 pub struct GetCMGraph;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetCMGraph {
-    type Request = GetCMGraphRequest;
-    type Response = GetCMGraphResponse;
-
-    fn request_type_name(&self) -> &str { "GetCMGraphRequest" }
-    fn response_type_name(&self) -> &str { "GetCMGraphResponse" }
-}

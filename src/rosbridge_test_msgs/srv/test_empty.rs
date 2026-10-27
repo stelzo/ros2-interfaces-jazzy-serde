@@ -37,11 +37,3 @@ impl ros2_client::Message for TestEmptyResponse {}
 
 
 pub struct TestEmpty;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TestEmpty {
-    type Request = TestEmptyRequest;
-    type Response = TestEmptyResponse;
-
-    fn request_type_name(&self) -> &str { "TestEmptyRequest" }
-    fn response_type_name(&self) -> &str { "TestEmptyResponse" }
-}

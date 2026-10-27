@@ -37,11 +37,3 @@ impl ros2_client::Message for IsConnectedResponse {}
 
 
 pub struct IsConnected;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for IsConnected {
-    type Request = IsConnectedRequest;
-    type Response = IsConnectedResponse;
-
-    fn request_type_name(&self) -> &str { "IsConnectedRequest" }
-    fn response_type_name(&self) -> &str { "IsConnectedResponse" }
-}

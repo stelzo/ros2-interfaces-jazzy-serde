@@ -49,11 +49,3 @@ impl ros2_client::Message for GetTypeDescriptionResponse {}
 
 
 pub struct GetTypeDescription;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetTypeDescription {
-    type Request = GetTypeDescriptionRequest;
-    type Response = GetTypeDescriptionResponse;
-
-    fn request_type_name(&self) -> &str { "GetTypeDescriptionRequest" }
-    fn response_type_name(&self) -> &str { "GetTypeDescriptionResponse" }
-}

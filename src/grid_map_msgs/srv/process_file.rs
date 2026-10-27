@@ -39,11 +39,3 @@ impl ros2_client::Message for ProcessFileResponse {}
 
 
 pub struct ProcessFile;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ProcessFile {
-    type Request = ProcessFileRequest;
-    type Response = ProcessFileResponse;
-
-    fn request_type_name(&self) -> &str { "ProcessFileRequest" }
-    fn response_type_name(&self) -> &str { "ProcessFileResponse" }
-}

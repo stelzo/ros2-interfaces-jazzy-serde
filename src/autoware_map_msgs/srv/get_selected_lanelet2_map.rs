@@ -39,11 +39,3 @@ impl ros2_client::Message for GetSelectedLanelet2MapResponse {}
 
 
 pub struct GetSelectedLanelet2Map;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetSelectedLanelet2Map {
-    type Request = GetSelectedLanelet2MapRequest;
-    type Response = GetSelectedLanelet2MapResponse;
-
-    fn request_type_name(&self) -> &str { "GetSelectedLanelet2MapRequest" }
-    fn response_type_name(&self) -> &str { "GetSelectedLanelet2MapResponse" }
-}

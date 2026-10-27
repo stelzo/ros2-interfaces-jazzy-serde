@@ -41,11 +41,3 @@ impl ros2_client::Message for SetHardwareComponentStateResponse {}
 
 
 pub struct SetHardwareComponentState;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetHardwareComponentState {
-    type Request = SetHardwareComponentStateRequest;
-    type Response = SetHardwareComponentStateResponse;
-
-    fn request_type_name(&self) -> &str { "SetHardwareComponentStateRequest" }
-    fn response_type_name(&self) -> &str { "SetHardwareComponentStateResponse" }
-}

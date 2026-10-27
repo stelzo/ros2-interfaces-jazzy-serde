@@ -45,11 +45,3 @@ impl ros2_client::Message for UdpSendResponse {}
 
 
 pub struct UdpSend;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for UdpSend {
-    type Request = UdpSendRequest;
-    type Response = UdpSendResponse;
-
-    fn request_type_name(&self) -> &str { "UdpSendRequest" }
-    fn response_type_name(&self) -> &str { "UdpSendResponse" }
-}

@@ -39,11 +39,3 @@ impl ros2_client::Message for SCdevicestateSrvResponse {}
 
 
 pub struct SCdevicestateSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SCdevicestateSrv {
-    type Request = SCdevicestateSrvRequest;
-    type Response = SCdevicestateSrvResponse;
-
-    fn request_type_name(&self) -> &str { "SCdevicestateSrvRequest" }
-    fn response_type_name(&self) -> &str { "SCdevicestateSrvResponse" }
-}

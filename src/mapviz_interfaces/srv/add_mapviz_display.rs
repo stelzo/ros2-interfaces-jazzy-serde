@@ -47,11 +47,3 @@ impl ros2_client::Message for AddMapvizDisplayResponse {}
 
 
 pub struct AddMapvizDisplay;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AddMapvizDisplay {
-    type Request = AddMapvizDisplayRequest;
-    type Response = AddMapvizDisplayResponse;
-
-    fn request_type_name(&self) -> &str { "AddMapvizDisplayRequest" }
-    fn response_type_name(&self) -> &str { "AddMapvizDisplayResponse" }
-}

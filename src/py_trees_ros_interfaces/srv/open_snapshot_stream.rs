@@ -39,11 +39,3 @@ impl ros2_client::Message for OpenSnapshotStreamResponse {}
 
 
 pub struct OpenSnapshotStream;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for OpenSnapshotStream {
-    type Request = OpenSnapshotStreamRequest;
-    type Response = OpenSnapshotStreamResponse;
-
-    fn request_type_name(&self) -> &str { "OpenSnapshotStreamRequest" }
-    fn response_type_name(&self) -> &str { "OpenSnapshotStreamResponse" }
-}

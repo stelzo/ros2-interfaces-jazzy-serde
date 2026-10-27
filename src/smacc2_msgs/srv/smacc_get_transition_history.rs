@@ -37,11 +37,3 @@ impl ros2_client::Message for SmaccGetTransitionHistoryResponse {}
 
 
 pub struct SmaccGetTransitionHistory;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SmaccGetTransitionHistory {
-    type Request = SmaccGetTransitionHistoryRequest;
-    type Response = SmaccGetTransitionHistoryResponse;
-
-    fn request_type_name(&self) -> &str { "SmaccGetTransitionHistoryRequest" }
-    fn response_type_name(&self) -> &str { "SmaccGetTransitionHistoryResponse" }
-}

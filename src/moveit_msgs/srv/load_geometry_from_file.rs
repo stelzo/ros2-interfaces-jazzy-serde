@@ -37,11 +37,3 @@ impl ros2_client::Message for LoadGeometryFromFileResponse {}
 
 
 pub struct LoadGeometryFromFile;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LoadGeometryFromFile {
-    type Request = LoadGeometryFromFileRequest;
-    type Response = LoadGeometryFromFileResponse;
-
-    fn request_type_name(&self) -> &str { "LoadGeometryFromFileRequest" }
-    fn response_type_name(&self) -> &str { "LoadGeometryFromFileResponse" }
-}

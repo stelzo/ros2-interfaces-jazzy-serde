@@ -37,11 +37,3 @@ impl ros2_client::Message for SetParametersResponse {}
 
 
 pub struct SetParameters;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetParameters {
-    type Request = SetParametersRequest;
-    type Response = SetParametersResponse;
-
-    fn request_type_name(&self) -> &str { "SetParametersRequest" }
-    fn response_type_name(&self) -> &str { "SetParametersResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for ComplexSrvMsgResponse {}
 
 
 pub struct ComplexSrvMsg;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ComplexSrvMsg {
-    type Request = ComplexSrvMsgRequest;
-    type Response = ComplexSrvMsgResponse;
-
-    fn request_type_name(&self) -> &str { "ComplexSrvMsgRequest" }
-    fn response_type_name(&self) -> &str { "ComplexSrvMsgResponse" }
-}

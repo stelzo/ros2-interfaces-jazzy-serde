@@ -43,11 +43,3 @@ impl ros2_client::Message for SetHandEyeCalibrationPoseResponse {}
 
 
 pub struct SetHandEyeCalibrationPose;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetHandEyeCalibrationPose {
-    type Request = SetHandEyeCalibrationPoseRequest;
-    type Response = SetHandEyeCalibrationPoseResponse;
-
-    fn request_type_name(&self) -> &str { "SetHandEyeCalibrationPoseRequest" }
-    fn response_type_name(&self) -> &str { "SetHandEyeCalibrationPoseResponse" }
-}

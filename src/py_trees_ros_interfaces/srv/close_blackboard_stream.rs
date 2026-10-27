@@ -37,11 +37,3 @@ impl ros2_client::Message for CloseBlackboardStreamResponse {}
 
 
 pub struct CloseBlackboardStream;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CloseBlackboardStream {
-    type Request = CloseBlackboardStreamRequest;
-    type Response = CloseBlackboardStreamResponse;
-
-    fn request_type_name(&self) -> &str { "CloseBlackboardStreamRequest" }
-    fn response_type_name(&self) -> &str { "CloseBlackboardStreamResponse" }
-}

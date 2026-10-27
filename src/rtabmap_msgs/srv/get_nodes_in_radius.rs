@@ -51,11 +51,3 @@ impl ros2_client::Message for GetNodesInRadiusResponse {}
 
 
 pub struct GetNodesInRadius;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetNodesInRadius {
-    type Request = GetNodesInRadiusRequest;
-    type Response = GetNodesInRadiusResponse;
-
-    fn request_type_name(&self) -> &str { "GetNodesInRadiusRequest" }
-    fn response_type_name(&self) -> &str { "GetNodesInRadiusResponse" }
-}

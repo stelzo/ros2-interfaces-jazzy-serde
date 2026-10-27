@@ -39,11 +39,3 @@ impl ros2_client::Message for AddToLogResponse {}
 
 
 pub struct AddToLog;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AddToLog {
-    type Request = AddToLogRequest;
-    type Response = AddToLogResponse;
-
-    fn request_type_name(&self) -> &str { "AddToLogRequest" }
-    fn response_type_name(&self) -> &str { "AddToLogResponse" }
-}

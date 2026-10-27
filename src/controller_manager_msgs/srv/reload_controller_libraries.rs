@@ -37,11 +37,3 @@ impl ros2_client::Message for ReloadControllerLibrariesResponse {}
 
 
 pub struct ReloadControllerLibraries;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ReloadControllerLibraries {
-    type Request = ReloadControllerLibrariesRequest;
-    type Response = ReloadControllerLibrariesResponse;
-
-    fn request_type_name(&self) -> &str { "ReloadControllerLibrariesRequest" }
-    fn response_type_name(&self) -> &str { "ReloadControllerLibrariesResponse" }
-}

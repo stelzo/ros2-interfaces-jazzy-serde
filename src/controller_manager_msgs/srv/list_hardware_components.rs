@@ -37,11 +37,3 @@ impl ros2_client::Message for ListHardwareComponentsResponse {}
 
 
 pub struct ListHardwareComponents;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ListHardwareComponents {
-    type Request = ListHardwareComponentsRequest;
-    type Response = ListHardwareComponentsResponse;
-
-    fn request_type_name(&self) -> &str { "ListHardwareComponentsRequest" }
-    fn response_type_name(&self) -> &str { "ListHardwareComponentsResponse" }
-}

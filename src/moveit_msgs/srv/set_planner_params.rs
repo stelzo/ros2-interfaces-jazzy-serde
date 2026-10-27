@@ -45,11 +45,3 @@ impl ros2_client::Message for SetPlannerParamsResponse {}
 
 
 pub struct SetPlannerParams;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetPlannerParams {
-    type Request = SetPlannerParamsRequest;
-    type Response = SetPlannerParamsResponse;
-
-    fn request_type_name(&self) -> &str { "SetPlannerParamsRequest" }
-    fn response_type_name(&self) -> &str { "SetPlannerParamsResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for GetOctomapResponse {}
 
 
 pub struct GetOctomap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetOctomap {
-    type Request = GetOctomapRequest;
-    type Response = GetOctomapResponse;
-
-    fn request_type_name(&self) -> &str { "GetOctomapRequest" }
-    fn response_type_name(&self) -> &str { "GetOctomapResponse" }
-}

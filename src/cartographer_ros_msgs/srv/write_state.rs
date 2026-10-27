@@ -39,11 +39,3 @@ impl ros2_client::Message for WriteStateResponse {}
 
 
 pub struct WriteState;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for WriteState {
-    type Request = WriteStateRequest;
-    type Response = WriteStateResponse;
-
-    fn request_type_name(&self) -> &str { "WriteStateRequest" }
-    fn response_type_name(&self) -> &str { "WriteStateResponse" }
-}

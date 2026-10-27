@@ -37,11 +37,3 @@ impl ros2_client::Message for PauseResponse {}
 
 
 pub struct Pause;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Pause {
-    type Request = PauseRequest;
-    type Response = PauseResponse;
-
-    fn request_type_name(&self) -> &str { "PauseRequest" }
-    fn response_type_name(&self) -> &str { "PauseResponse" }
-}

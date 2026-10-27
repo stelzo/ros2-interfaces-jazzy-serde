@@ -37,11 +37,3 @@ impl ros2_client::Message for FromLLResponse {}
 
 
 pub struct FromLL;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FromLL {
-    type Request = FromLLRequest;
-    type Response = FromLLResponse;
-
-    fn request_type_name(&self) -> &str { "FromLLRequest" }
-    fn response_type_name(&self) -> &str { "FromLLResponse" }
-}

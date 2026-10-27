@@ -37,11 +37,3 @@ impl ros2_client::Message for EmitterSendStringResponse {}
 
 
 pub struct EmitterSendString;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for EmitterSendString {
-    type Request = EmitterSendStringRequest;
-    type Response = EmitterSendStringResponse;
-
-    fn request_type_name(&self) -> &str { "EmitterSendStringRequest" }
-    fn response_type_name(&self) -> &str { "EmitterSendStringResponse" }
-}

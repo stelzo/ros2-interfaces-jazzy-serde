@@ -37,11 +37,3 @@ impl ros2_client::Message for BurstResponse {}
 
 
 pub struct Burst;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Burst {
-    type Request = BurstRequest;
-    type Response = BurstResponse;
-
-    fn request_type_name(&self) -> &str { "BurstRequest" }
-    fn response_type_name(&self) -> &str { "BurstResponse" }
-}

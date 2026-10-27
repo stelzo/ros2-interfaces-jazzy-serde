@@ -37,11 +37,3 @@ impl ros2_client::Message for SetLoadCarrierResponse {}
 
 
 pub struct SetLoadCarrier;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetLoadCarrier {
-    type Request = SetLoadCarrierRequest;
-    type Response = SetLoadCarrierResponse;
-
-    fn request_type_name(&self) -> &str { "SetLoadCarrierRequest" }
-    fn response_type_name(&self) -> &str { "SetLoadCarrierResponse" }
-}

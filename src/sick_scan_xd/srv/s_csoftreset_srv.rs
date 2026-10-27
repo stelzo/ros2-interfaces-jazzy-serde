@@ -37,11 +37,3 @@ impl ros2_client::Message for SCsoftresetSrvResponse {}
 
 
 pub struct SCsoftresetSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SCsoftresetSrv {
-    type Request = SCsoftresetSrvRequest;
-    type Response = SCsoftresetSrvResponse;
-
-    fn request_type_name(&self) -> &str { "SCsoftresetSrvRequest" }
-    fn response_type_name(&self) -> &str { "SCsoftresetSrvResponse" }
-}

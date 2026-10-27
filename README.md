@@ -5,9 +5,9 @@
 This repository contains Rust structs for all interfaces (i.e., messages and services) that are listed as releases
 on the [ROS Index for Jazzy](https://index.ros.org/packages/#jazzy).
 
-The default `ros2-client` feature implements the ROS client message and service traits.
-For transport-independent structs with Serde serialization, disable default features;
-this avoids compiling `ros2-client` and its DDS runtime.
+The default `ros2-client` feature implements the `ros2_client::Message` trait for every message.
+For transport-independent structs with Serde serialization, disable default features.
+This avoids compiling `ros2-client` and its DDS runtime.
 
 Every package is a separate feature for this crate, so you can cherry-pick the interfaces you need.
 Example are `std_msgs`, `geometry_msgs` and `nav2_msgs`. 
@@ -25,40 +25,39 @@ For message types without a ROS client or DDS runtime:
 
 ```toml
 [dependencies]
-ros2-interfaces-jazzy-serde = { version = "0.0.5", default-features = false, features = ["sensor_msgs", "nav_msgs"] }
+ros2-interfaces-jazzy-serde = { version = "0.0.7", default-features = false, features = ["sensor_msgs", "nav_msgs"] }
 ```
 
 Enable `ros2-client` explicitly when connecting these types to a ROS DDS node.
-The `all` feature selects all interface packages; it does not enable transport integration.
+The `all` feature selects all interface packages. It does not enable transport integration.
 Struct fields and Serde serialization are identical in both modes.
 
 Then you can use the interfaces in your code:
 
 ```rust
-use ros2_client::{Context, MessageTypeName, Name, NodeName, NodeOptions};
-use ros2_interfaces_jazzy::std_msgs;
+use ros2_client::{Context, MessageTypeName, Name, NodeName, NodeOptions, QosProfile};
+use ros2_interfaces_jazzy_serde::std_msgs;
 
-fn test_publisher() {
+fn main() {
     let context = Context::new().unwrap();
     let mut node = context
         .new_node(
-            NodeName::new("/rustdds", "rustdds_listener").unwrap(),
+            NodeName::new("/", "talker").unwrap(),
             NodeOptions::new().enable_rosout(true),
         )
         .unwrap();
 
     let topic = node
         .create_topic(
-            &Name::new("/","topic").unwrap(),
+            &Name::new("/", "chatter").unwrap(),
             MessageTypeName::new("std_msgs", "String"),
-            &ros2_client::DEFAULT_PUBLISHER_QOS,
+            &QosProfile::publisher_default(),
         )
         .unwrap();
 
     let publisher = node
         .create_publisher::<std_msgs::msg::String>(&topic, None)
         .unwrap();
-
 
     let message = std_msgs::msg::String {
         data: "Hello, world!".to_string(),

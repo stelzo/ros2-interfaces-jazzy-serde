@@ -39,11 +39,3 @@ impl ros2_client::Message for ConfigLoggerResponse {}
 
 
 pub struct ConfigLogger;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ConfigLogger {
-    type Request = ConfigLoggerRequest;
-    type Response = ConfigLoggerResponse;
-
-    fn request_type_name(&self) -> &str { "ConfigLoggerRequest" }
-    fn response_type_name(&self) -> &str { "ConfigLoggerResponse" }
-}

@@ -37,11 +37,3 @@ impl ros2_client::Message for RelocalizeFromGNSSResponse {}
 
 
 pub struct RelocalizeFromGNSS;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RelocalizeFromGNSS {
-    type Request = RelocalizeFromGNSSRequest;
-    type Response = RelocalizeFromGNSSResponse;
-
-    fn request_type_name(&self) -> &str { "RelocalizeFromGNSSRequest" }
-    fn response_type_name(&self) -> &str { "RelocalizeFromGNSSResponse" }
-}

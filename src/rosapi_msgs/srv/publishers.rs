@@ -37,11 +37,3 @@ impl ros2_client::Message for PublishersResponse {}
 
 
 pub struct Publishers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Publishers {
-    type Request = PublishersRequest;
-    type Response = PublishersResponse;
-
-    fn request_type_name(&self) -> &str { "PublishersRequest" }
-    fn response_type_name(&self) -> &str { "PublishersResponse" }
-}

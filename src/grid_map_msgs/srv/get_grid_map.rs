@@ -47,11 +47,3 @@ impl ros2_client::Message for GetGridMapResponse {}
 
 
 pub struct GetGridMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetGridMap {
-    type Request = GetGridMapRequest;
-    type Response = GetGridMapResponse;
-
-    fn request_type_name(&self) -> &str { "GetGridMapRequest" }
-    fn response_type_name(&self) -> &str { "GetGridMapResponse" }
-}

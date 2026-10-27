@@ -37,11 +37,3 @@ impl ros2_client::Message for LoadControllerResponse {}
 
 
 pub struct LoadController;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LoadController {
-    type Request = LoadControllerRequest;
-    type Response = LoadControllerResponse;
-
-    fn request_type_name(&self) -> &str { "LoadControllerRequest" }
-    fn response_type_name(&self) -> &str { "LoadControllerResponse" }
-}

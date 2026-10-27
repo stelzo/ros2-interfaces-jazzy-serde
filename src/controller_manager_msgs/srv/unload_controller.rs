@@ -37,11 +37,3 @@ impl ros2_client::Message for UnloadControllerResponse {}
 
 
 pub struct UnloadController;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for UnloadController {
-    type Request = UnloadControllerRequest;
-    type Response = UnloadControllerResponse;
-
-    fn request_type_name(&self) -> &str { "UnloadControllerRequest" }
-    fn response_type_name(&self) -> &str { "UnloadControllerResponse" }
-}

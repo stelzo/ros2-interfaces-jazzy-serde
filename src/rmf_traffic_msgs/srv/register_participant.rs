@@ -45,11 +45,3 @@ impl ros2_client::Message for RegisterParticipantResponse {}
 
 
 pub struct RegisterParticipant;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RegisterParticipant {
-    type Request = RegisterParticipantRequest;
-    type Response = RegisterParticipantResponse;
-
-    fn request_type_name(&self) -> &str { "RegisterParticipantRequest" }
-    fn response_type_name(&self) -> &str { "RegisterParticipantResponse" }
-}

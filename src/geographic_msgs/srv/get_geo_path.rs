@@ -51,11 +51,3 @@ impl ros2_client::Message for GetGeoPathResponse {}
 
 
 pub struct GetGeoPath;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetGeoPath {
-    type Request = GetGeoPathRequest;
-    type Response = GetGeoPathResponse;
-
-    fn request_type_name(&self) -> &str { "GetGeoPathRequest" }
-    fn response_type_name(&self) -> &str { "GetGeoPathResponse" }
-}

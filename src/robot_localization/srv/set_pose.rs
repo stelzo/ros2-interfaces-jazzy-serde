@@ -37,11 +37,3 @@ impl ros2_client::Message for SetPoseResponse {}
 
 
 pub struct SetPose;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetPose {
-    type Request = SetPoseRequest;
-    type Response = SetPoseResponse;
-
-    fn request_type_name(&self) -> &str { "SetPoseRequest" }
-    fn response_type_name(&self) -> &str { "SetPoseResponse" }
-}

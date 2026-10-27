@@ -41,11 +41,3 @@ impl ros2_client::Message for ListTriggerStatesResponse {}
 
 
 pub struct ListTriggerStates;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ListTriggerStates {
-    type Request = ListTriggerStatesRequest;
-    type Response = ListTriggerStatesResponse;
-
-    fn request_type_name(&self) -> &str { "ListTriggerStatesRequest" }
-    fn response_type_name(&self) -> &str { "ListTriggerStatesResponse" }
-}

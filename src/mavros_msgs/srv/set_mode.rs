@@ -53,11 +53,3 @@ impl ros2_client::Message for SetModeResponse {}
 
 
 pub struct SetMode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetMode {
-    type Request = SetModeRequest;
-    type Response = SetModeResponse;
-
-    fn request_type_name(&self) -> &str { "SetModeRequest" }
-    fn response_type_name(&self) -> &str { "SetModeResponse" }
-}

@@ -41,11 +41,3 @@ impl ros2_client::Message for SetImuCalibrationResponse {}
 
 
 pub struct SetImuCalibration;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetImuCalibration {
-    type Request = SetImuCalibrationRequest;
-    type Response = SetImuCalibrationResponse;
-
-    fn request_type_name(&self) -> &str { "SetImuCalibrationRequest" }
-    fn response_type_name(&self) -> &str { "SetImuCalibrationResponse" }
-}

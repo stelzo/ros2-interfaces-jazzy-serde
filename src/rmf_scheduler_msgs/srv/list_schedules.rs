@@ -41,11 +41,3 @@ impl ros2_client::Message for ListSchedulesResponse {}
 
 
 pub struct ListSchedules;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ListSchedules {
-    type Request = ListSchedulesRequest;
-    type Response = ListSchedulesResponse;
-
-    fn request_type_name(&self) -> &str { "ListSchedulesRequest" }
-    fn response_type_name(&self) -> &str { "ListSchedulesResponse" }
-}

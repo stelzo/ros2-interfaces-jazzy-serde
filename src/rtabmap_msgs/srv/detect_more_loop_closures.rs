@@ -47,11 +47,3 @@ impl ros2_client::Message for DetectMoreLoopClosuresResponse {}
 
 
 pub struct DetectMoreLoopClosures;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DetectMoreLoopClosures {
-    type Request = DetectMoreLoopClosuresRequest;
-    type Response = DetectMoreLoopClosuresResponse;
-
-    fn request_type_name(&self) -> &str { "DetectMoreLoopClosuresRequest" }
-    fn response_type_name(&self) -> &str { "DetectMoreLoopClosuresResponse" }
-}

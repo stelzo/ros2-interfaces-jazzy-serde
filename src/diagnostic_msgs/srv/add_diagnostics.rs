@@ -39,11 +39,3 @@ impl ros2_client::Message for AddDiagnosticsResponse {}
 
 
 pub struct AddDiagnostics;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AddDiagnostics {
-    type Request = AddDiagnosticsRequest;
-    type Response = AddDiagnosticsResponse;
-
-    fn request_type_name(&self) -> &str { "AddDiagnosticsRequest" }
-    fn response_type_name(&self) -> &str { "AddDiagnosticsResponse" }
-}

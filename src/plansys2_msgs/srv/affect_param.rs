@@ -39,11 +39,3 @@ impl ros2_client::Message for AffectParamResponse {}
 
 
 pub struct AffectParam;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AffectParam {
-    type Request = AffectParamRequest;
-    type Response = AffectParamResponse;
-
-    fn request_type_name(&self) -> &str { "AffectParamRequest" }
-    fn response_type_name(&self) -> &str { "AffectParamResponse" }
-}

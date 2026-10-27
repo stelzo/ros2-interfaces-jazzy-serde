@@ -39,11 +39,3 @@ impl ros2_client::Message for SaveGridResponse {}
 
 
 pub struct SaveGrid;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SaveGrid {
-    type Request = SaveGridRequest;
-    type Response = SaveGridResponse;
-
-    fn request_type_name(&self) -> &str { "SaveGridRequest" }
-    fn response_type_name(&self) -> &str { "SaveGridResponse" }
-}

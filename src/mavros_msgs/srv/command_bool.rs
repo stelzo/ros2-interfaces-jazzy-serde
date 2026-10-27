@@ -39,11 +39,3 @@ impl ros2_client::Message for CommandBoolResponse {}
 
 
 pub struct CommandBool;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandBool {
-    type Request = CommandBoolRequest;
-    type Response = CommandBoolResponse;
-
-    fn request_type_name(&self) -> &str { "CommandBoolRequest" }
-    fn response_type_name(&self) -> &str { "CommandBoolResponse" }
-}

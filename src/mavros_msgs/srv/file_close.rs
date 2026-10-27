@@ -39,11 +39,3 @@ impl ros2_client::Message for FileCloseResponse {}
 
 
 pub struct FileClose;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileClose {
-    type Request = FileCloseRequest;
-    type Response = FileCloseResponse;
-
-    fn request_type_name(&self) -> &str { "FileCloseRequest" }
-    fn response_type_name(&self) -> &str { "FileCloseResponse" }
-}

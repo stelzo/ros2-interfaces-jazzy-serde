@@ -37,11 +37,3 @@ impl ros2_client::Message for UpdatePointcloudOctomapResponse {}
 
 
 pub struct UpdatePointcloudOctomap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for UpdatePointcloudOctomap {
-    type Request = UpdatePointcloudOctomapRequest;
-    type Response = UpdatePointcloudOctomapResponse;
-
-    fn request_type_name(&self) -> &str { "UpdatePointcloudOctomapRequest" }
-    fn response_type_name(&self) -> &str { "UpdatePointcloudOctomapResponse" }
-}

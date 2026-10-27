@@ -37,11 +37,3 @@ impl ros2_client::Message for TestRequestOnlyResponse {}
 
 
 pub struct TestRequestOnly;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TestRequestOnly {
-    type Request = TestRequestOnlyRequest;
-    type Response = TestRequestOnlyResponse;
-
-    fn request_type_name(&self) -> &str { "TestRequestOnlyRequest" }
-    fn response_type_name(&self) -> &str { "TestRequestOnlyResponse" }
-}

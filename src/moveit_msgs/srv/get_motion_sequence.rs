@@ -37,11 +37,3 @@ impl ros2_client::Message for GetMotionSequenceResponse {}
 
 
 pub struct GetMotionSequence;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetMotionSequence {
-    type Request = GetMotionSequenceRequest;
-    type Response = GetMotionSequenceResponse;
-
-    fn request_type_name(&self) -> &str { "GetMotionSequenceRequest" }
-    fn response_type_name(&self) -> &str { "GetMotionSequenceResponse" }
-}

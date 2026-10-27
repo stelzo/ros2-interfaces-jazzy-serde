@@ -39,11 +39,3 @@ impl ros2_client::Message for CleanupLocalGridsResponse {}
 
 
 pub struct CleanupLocalGrids;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CleanupLocalGrids {
-    type Request = CleanupLocalGridsRequest;
-    type Response = CleanupLocalGridsResponse;
-
-    fn request_type_name(&self) -> &str { "CleanupLocalGridsRequest" }
-    fn response_type_name(&self) -> &str { "CleanupLocalGridsResponse" }
-}

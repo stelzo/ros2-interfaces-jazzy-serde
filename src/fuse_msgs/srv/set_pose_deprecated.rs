@@ -37,11 +37,3 @@ impl ros2_client::Message for SetPoseDeprecatedResponse {}
 
 
 pub struct SetPoseDeprecated;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetPoseDeprecated {
-    type Request = SetPoseDeprecatedRequest;
-    type Response = SetPoseDeprecatedResponse;
-
-    fn request_type_name(&self) -> &str { "SetPoseDeprecatedRequest" }
-    fn response_type_name(&self) -> &str { "SetPoseDeprecatedResponse" }
-}

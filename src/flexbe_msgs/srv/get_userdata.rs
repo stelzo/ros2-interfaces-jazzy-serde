@@ -41,11 +41,3 @@ impl ros2_client::Message for GetUserdataResponse {}
 
 
 pub struct GetUserdata;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetUserdata {
-    type Request = GetUserdataRequest;
-    type Response = GetUserdataResponse;
-
-    fn request_type_name(&self) -> &str { "GetUserdataRequest" }
-    fn response_type_name(&self) -> &str { "GetUserdataResponse" }
-}

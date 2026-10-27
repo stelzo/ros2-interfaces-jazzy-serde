@@ -41,11 +41,3 @@ impl ros2_client::Message for FileChecksumResponse {}
 
 
 pub struct FileChecksum;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileChecksum {
-    type Request = FileChecksumRequest;
-    type Response = FileChecksumResponse;
-
-    fn request_type_name(&self) -> &str { "FileChecksumRequest" }
-    fn response_type_name(&self) -> &str { "FileChecksumResponse" }
-}

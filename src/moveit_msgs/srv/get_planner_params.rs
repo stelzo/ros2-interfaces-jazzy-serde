@@ -41,11 +41,3 @@ impl ros2_client::Message for GetPlannerParamsResponse {}
 
 
 pub struct GetPlannerParams;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetPlannerParams {
-    type Request = GetPlannerParamsRequest;
-    type Response = GetPlannerParamsResponse;
-
-    fn request_type_name(&self) -> &str { "GetPlannerParamsRequest" }
-    fn response_type_name(&self) -> &str { "GetPlannerParamsResponse" }
-}

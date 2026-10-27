@@ -45,11 +45,3 @@ impl ros2_client::Message for SaveRouteResponse {}
 
 
 pub struct SaveRoute;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SaveRoute {
-    type Request = SaveRouteRequest;
-    type Response = SaveRouteResponse;
-
-    fn request_type_name(&self) -> &str { "SaveRouteRequest" }
-    fn response_type_name(&self) -> &str { "SaveRouteResponse" }
-}

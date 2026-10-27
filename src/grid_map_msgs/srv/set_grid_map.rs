@@ -37,11 +37,3 @@ impl ros2_client::Message for SetGridMapResponse {}
 
 
 pub struct SetGridMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetGridMap {
-    type Request = SetGridMapRequest;
-    type Response = SetGridMapResponse;
-
-    fn request_type_name(&self) -> &str { "SetGridMapRequest" }
-    fn response_type_name(&self) -> &str { "SetGridMapResponse" }
-}

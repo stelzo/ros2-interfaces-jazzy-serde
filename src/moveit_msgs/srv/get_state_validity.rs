@@ -47,11 +47,3 @@ impl ros2_client::Message for GetStateValidityResponse {}
 
 
 pub struct GetStateValidity;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetStateValidity {
-    type Request = GetStateValidityRequest;
-    type Response = GetStateValidityResponse;
-
-    fn request_type_name(&self) -> &str { "GetStateValidityRequest" }
-    fn response_type_name(&self) -> &str { "GetStateValidityResponse" }
-}

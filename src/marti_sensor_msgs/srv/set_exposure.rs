@@ -41,11 +41,3 @@ impl ros2_client::Message for SetExposureResponse {}
 
 
 pub struct SetExposure;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetExposure {
-    type Request = SetExposureRequest;
-    type Response = SetExposureResponse;
-
-    fn request_type_name(&self) -> &str { "SetExposureRequest" }
-    fn response_type_name(&self) -> &str { "SetExposureResponse" }
-}

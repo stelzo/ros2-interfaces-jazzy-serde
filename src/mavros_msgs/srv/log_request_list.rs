@@ -39,11 +39,3 @@ impl ros2_client::Message for LogRequestListResponse {}
 
 
 pub struct LogRequestList;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LogRequestList {
-    type Request = LogRequestListRequest;
-    type Response = LogRequestListResponse;
-
-    fn request_type_name(&self) -> &str { "LogRequestListRequest" }
-    fn response_type_name(&self) -> &str { "LogRequestListResponse" }
-}

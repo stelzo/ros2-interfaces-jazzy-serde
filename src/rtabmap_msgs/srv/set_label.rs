@@ -39,11 +39,3 @@ impl ros2_client::Message for SetLabelResponse {}
 
 
 pub struct SetLabel;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetLabel {
-    type Request = SetLabelRequest;
-    type Response = SetLabelResponse;
-
-    fn request_type_name(&self) -> &str { "SetLabelRequest" }
-    fn response_type_name(&self) -> &str { "SetLabelResponse" }
-}

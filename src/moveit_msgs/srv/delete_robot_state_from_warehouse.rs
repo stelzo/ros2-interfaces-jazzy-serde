@@ -39,11 +39,3 @@ impl ros2_client::Message for DeleteRobotStateFromWarehouseResponse {}
 
 
 pub struct DeleteRobotStateFromWarehouse;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteRobotStateFromWarehouse {
-    type Request = DeleteRobotStateFromWarehouseRequest;
-    type Response = DeleteRobotStateFromWarehouseResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteRobotStateFromWarehouseRequest" }
-    fn response_type_name(&self) -> &str { "DeleteRobotStateFromWarehouseResponse" }
-}

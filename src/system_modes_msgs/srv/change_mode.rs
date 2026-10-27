@@ -37,11 +37,3 @@ impl ros2_client::Message for ChangeModeResponse {}
 
 
 pub struct ChangeMode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ChangeMode {
-    type Request = ChangeModeRequest;
-    type Response = ChangeModeResponse;
-
-    fn request_type_name(&self) -> &str { "ChangeModeRequest" }
-    fn response_type_name(&self) -> &str { "ChangeModeResponse" }
-}

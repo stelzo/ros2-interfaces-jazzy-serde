@@ -37,11 +37,3 @@ impl ros2_client::Message for WarmStartResponse {}
 
 
 pub struct WarmStart;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for WarmStart {
-    type Request = WarmStartRequest;
-    type Response = WarmStartResponse;
-
-    fn request_type_name(&self) -> &str { "WarmStartRequest" }
-    fn response_type_name(&self) -> &str { "WarmStartResponse" }
-}

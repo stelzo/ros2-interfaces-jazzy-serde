@@ -39,11 +39,3 @@ impl ros2_client::Message for CreateScheduleResponse {}
 
 
 pub struct CreateSchedule;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CreateSchedule {
-    type Request = CreateScheduleRequest;
-    type Response = CreateScheduleResponse;
-
-    fn request_type_name(&self) -> &str { "CreateScheduleRequest" }
-    fn response_type_name(&self) -> &str { "CreateScheduleResponse" }
-}

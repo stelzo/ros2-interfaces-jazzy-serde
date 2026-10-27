@@ -41,11 +41,3 @@ impl ros2_client::Message for GetLoadedProgramResponse {}
 
 
 pub struct GetLoadedProgram;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetLoadedProgram {
-    type Request = GetLoadedProgramRequest;
-    type Response = GetLoadedProgramResponse;
-
-    fn request_type_name(&self) -> &str { "GetLoadedProgramRequest" }
-    fn response_type_name(&self) -> &str { "GetLoadedProgramResponse" }
-}

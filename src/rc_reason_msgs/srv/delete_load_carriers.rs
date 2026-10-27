@@ -37,11 +37,3 @@ impl ros2_client::Message for DeleteLoadCarriersResponse {}
 
 
 pub struct DeleteLoadCarriers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteLoadCarriers {
-    type Request = DeleteLoadCarriersRequest;
-    type Response = DeleteLoadCarriersResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteLoadCarriersRequest" }
-    fn response_type_name(&self) -> &str { "DeleteLoadCarriersResponse" }
-}

@@ -41,11 +41,3 @@ impl ros2_client::Message for NodeDetailsResponse {}
 
 
 pub struct NodeDetails;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for NodeDetails {
-    type Request = NodeDetailsRequest;
-    type Response = NodeDetailsResponse;
-
-    fn request_type_name(&self) -> &str { "NodeDetailsRequest" }
-    fn response_type_name(&self) -> &str { "NodeDetailsResponse" }
-}

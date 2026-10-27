@@ -41,11 +41,3 @@ impl ros2_client::Message for MakePlanFromToResponse {}
 
 
 pub struct MakePlanFromTo;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MakePlanFromTo {
-    type Request = MakePlanFromToRequest;
-    type Response = MakePlanFromToResponse;
-
-    fn request_type_name(&self) -> &str { "MakePlanFromToRequest" }
-    fn response_type_name(&self) -> &str { "MakePlanFromToResponse" }
-}

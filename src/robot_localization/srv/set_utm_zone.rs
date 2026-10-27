@@ -37,11 +37,3 @@ impl ros2_client::Message for SetUTMZoneResponse {}
 
 
 pub struct SetUTMZone;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetUTMZone {
-    type Request = SetUTMZoneRequest;
-    type Response = SetUTMZoneResponse;
-
-    fn request_type_name(&self) -> &str { "SetUTMZoneRequest" }
-    fn response_type_name(&self) -> &str { "SetUTMZoneResponse" }
-}

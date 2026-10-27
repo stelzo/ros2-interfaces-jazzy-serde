@@ -39,11 +39,3 @@ impl ros2_client::Message for GetLoadCarriersResponse {}
 
 
 pub struct GetLoadCarriers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetLoadCarriers {
-    type Request = GetLoadCarriersRequest;
-    type Response = GetLoadCarriersResponse;
-
-    fn request_type_name(&self) -> &str { "GetLoadCarriersRequest" }
-    fn response_type_name(&self) -> &str { "GetLoadCarriersResponse" }
-}

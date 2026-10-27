@@ -37,11 +37,3 @@ impl ros2_client::Message for DeleteBasePlaneCalibrationResponse {}
 
 
 pub struct DeleteBasePlaneCalibration;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteBasePlaneCalibration {
-    type Request = DeleteBasePlaneCalibrationRequest;
-    type Response = DeleteBasePlaneCalibrationResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteBasePlaneCalibrationRequest" }
-    fn response_type_name(&self) -> &str { "DeleteBasePlaneCalibrationResponse" }
-}

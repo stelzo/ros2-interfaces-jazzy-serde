@@ -39,11 +39,3 @@ impl ros2_client::Message for MapLoadResponse {}
 
 
 pub struct MapLoad;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MapLoad {
-    type Request = MapLoadRequest;
-    type Response = MapLoadResponse;
-
-    fn request_type_name(&self) -> &str { "MapLoadRequest" }
-    fn response_type_name(&self) -> &str { "MapLoadResponse" }
-}

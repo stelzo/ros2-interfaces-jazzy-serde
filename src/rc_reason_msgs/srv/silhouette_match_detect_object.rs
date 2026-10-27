@@ -59,11 +59,3 @@ impl ros2_client::Message for SilhouetteMatchDetectObjectResponse {}
 
 
 pub struct SilhouetteMatchDetectObject;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SilhouetteMatchDetectObject {
-    type Request = SilhouetteMatchDetectObjectRequest;
-    type Response = SilhouetteMatchDetectObjectResponse;
-
-    fn request_type_name(&self) -> &str { "SilhouetteMatchDetectObjectRequest" }
-    fn response_type_name(&self) -> &str { "SilhouetteMatchDetectObjectResponse" }
-}

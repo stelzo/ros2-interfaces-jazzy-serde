@@ -43,11 +43,3 @@ impl ros2_client::Message for GlobalBundleAdjustmentResponse {}
 
 
 pub struct GlobalBundleAdjustment;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GlobalBundleAdjustment {
-    type Request = GlobalBundleAdjustmentRequest;
-    type Response = GlobalBundleAdjustmentResponse;
-
-    fn request_type_name(&self) -> &str { "GlobalBundleAdjustmentRequest" }
-    fn response_type_name(&self) -> &str { "GlobalBundleAdjustmentResponse" }
-}

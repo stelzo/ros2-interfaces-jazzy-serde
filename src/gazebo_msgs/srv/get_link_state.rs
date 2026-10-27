@@ -43,11 +43,3 @@ impl ros2_client::Message for GetLinkStateResponse {}
 
 
 pub struct GetLinkState;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetLinkState {
-    type Request = GetLinkStateRequest;
-    type Response = GetLinkStateResponse;
-
-    fn request_type_name(&self) -> &str { "GetLinkStateRequest" }
-    fn response_type_name(&self) -> &str { "GetLinkStateResponse" }
-}

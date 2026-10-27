@@ -43,11 +43,3 @@ impl ros2_client::Message for SubmitTaskResponse {}
 
 
 pub struct SubmitTask;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SubmitTask {
-    type Request = SubmitTaskRequest;
-    type Response = SubmitTaskResponse;
-
-    fn request_type_name(&self) -> &str { "SubmitTaskRequest" }
-    fn response_type_name(&self) -> &str { "SubmitTaskResponse" }
-}

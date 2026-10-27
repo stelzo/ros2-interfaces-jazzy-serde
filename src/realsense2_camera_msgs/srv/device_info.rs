@@ -49,11 +49,3 @@ impl ros2_client::Message for DeviceInfoResponse {}
 
 
 pub struct DeviceInfo;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeviceInfo {
-    type Request = DeviceInfoRequest;
-    type Response = DeviceInfoResponse;
-
-    fn request_type_name(&self) -> &str { "DeviceInfoRequest" }
-    fn response_type_name(&self) -> &str { "DeviceInfoResponse" }
-}

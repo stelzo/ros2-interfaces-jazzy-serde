@@ -47,11 +47,3 @@ impl ros2_client::Message for SetJointTrajectoryResponse {}
 
 
 pub struct SetJointTrajectory;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetJointTrajectory {
-    type Request = SetJointTrajectoryRequest;
-    type Response = SetJointTrajectoryResponse;
-
-    fn request_type_name(&self) -> &str { "SetJointTrajectoryRequest" }
-    fn response_type_name(&self) -> &str { "SetJointTrajectoryResponse" }
-}

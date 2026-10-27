@@ -39,11 +39,3 @@ impl ros2_client::Message for GetPositionIKResponse {}
 
 
 pub struct GetPositionIK;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetPositionIK {
-    type Request = GetPositionIKRequest;
-    type Response = GetPositionIKResponse;
-
-    fn request_type_name(&self) -> &str { "GetPositionIKRequest" }
-    fn response_type_name(&self) -> &str { "GetPositionIKResponse" }
-}

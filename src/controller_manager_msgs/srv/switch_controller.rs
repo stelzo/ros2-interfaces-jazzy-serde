@@ -50,11 +50,3 @@ impl ros2_client::Message for SwitchControllerResponse {}
 
 
 pub struct SwitchController;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SwitchController {
-    type Request = SwitchControllerRequest;
-    type Response = SwitchControllerResponse;
-
-    fn request_type_name(&self) -> &str { "SwitchControllerRequest" }
-    fn response_type_name(&self) -> &str { "SwitchControllerResponse" }
-}

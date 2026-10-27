@@ -37,11 +37,3 @@ impl ros2_client::Message for WarmupTemplateResponse {}
 
 
 pub struct WarmupTemplate;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for WarmupTemplate {
-    type Request = WarmupTemplateRequest;
-    type Response = WarmupTemplateResponse;
-
-    fn request_type_name(&self) -> &str { "WarmupTemplateRequest" }
-    fn response_type_name(&self) -> &str { "WarmupTemplateResponse" }
-}

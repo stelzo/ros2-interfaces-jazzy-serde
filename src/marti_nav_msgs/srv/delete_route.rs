@@ -39,11 +39,3 @@ impl ros2_client::Message for DeleteRouteResponse {}
 
 
 pub struct DeleteRoute;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteRoute {
-    type Request = DeleteRouteRequest;
-    type Response = DeleteRouteResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteRouteRequest" }
-    fn response_type_name(&self) -> &str { "DeleteRouteResponse" }
-}

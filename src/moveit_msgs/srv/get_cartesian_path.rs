@@ -71,11 +71,3 @@ impl ros2_client::Message for GetCartesianPathResponse {}
 
 
 pub struct GetCartesianPath;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetCartesianPath {
-    type Request = GetCartesianPathRequest;
-    type Response = GetCartesianPathResponse;
-
-    fn request_type_name(&self) -> &str { "GetCartesianPathRequest" }
-    fn response_type_name(&self) -> &str { "GetCartesianPathResponse" }
-}

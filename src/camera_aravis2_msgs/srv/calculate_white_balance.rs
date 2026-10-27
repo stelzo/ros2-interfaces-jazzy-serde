@@ -39,11 +39,3 @@ impl ros2_client::Message for CalculateWhiteBalanceResponse {}
 
 
 pub struct CalculateWhiteBalance;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CalculateWhiteBalance {
-    type Request = CalculateWhiteBalanceRequest;
-    type Response = CalculateWhiteBalanceResponse;
-
-    fn request_type_name(&self) -> &str { "CalculateWhiteBalanceRequest" }
-    fn response_type_name(&self) -> &str { "CalculateWhiteBalanceResponse" }
-}

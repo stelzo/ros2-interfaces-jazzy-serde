@@ -37,11 +37,3 @@ impl ros2_client::Message for StopResponse {}
 
 
 pub struct Stop;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Stop {
-    type Request = StopRequest;
-    type Response = StopResponse;
-
-    fn request_type_name(&self) -> &str { "StopRequest" }
-    fn response_type_name(&self) -> &str { "StopResponse" }
-}

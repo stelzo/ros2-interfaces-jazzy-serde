@@ -41,11 +41,3 @@ impl ros2_client::Message for UpdateRouteMetadataResponse {}
 
 
 pub struct UpdateRouteMetadata;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for UpdateRouteMetadata {
-    type Request = UpdateRouteMetadataRequest;
-    type Response = UpdateRouteMetadataResponse;
-
-    fn request_type_name(&self) -> &str { "UpdateRouteMetadataRequest" }
-    fn response_type_name(&self) -> &str { "UpdateRouteMetadataResponse" }
-}

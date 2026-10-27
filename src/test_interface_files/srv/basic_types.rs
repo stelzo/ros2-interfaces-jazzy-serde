@@ -89,11 +89,3 @@ impl ros2_client::Message for BasicTypesResponse {}
 
 
 pub struct BasicTypes;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for BasicTypes {
-    type Request = BasicTypesRequest;
-    type Response = BasicTypesResponse;
-
-    fn request_type_name(&self) -> &str { "BasicTypesRequest" }
-    fn response_type_name(&self) -> &str { "BasicTypesResponse" }
-}

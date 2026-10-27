@@ -37,11 +37,3 @@ impl ros2_client::Message for GetAvailableTransitionsResponse {}
 
 
 pub struct GetAvailableTransitions;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetAvailableTransitions {
-    type Request = GetAvailableTransitionsRequest;
-    type Response = GetAvailableTransitionsResponse;
-
-    fn request_type_name(&self) -> &str { "GetAvailableTransitionsRequest" }
-    fn response_type_name(&self) -> &str { "GetAvailableTransitionsResponse" }
-}

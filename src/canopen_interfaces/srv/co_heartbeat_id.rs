@@ -39,11 +39,3 @@ impl ros2_client::Message for COHeartbeatIDResponse {}
 
 
 pub struct COHeartbeatID;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for COHeartbeatID {
-    type Request = COHeartbeatIDRequest;
-    type Response = COHeartbeatIDResponse;
-
-    fn request_type_name(&self) -> &str { "COHeartbeatIDRequest" }
-    fn response_type_name(&self) -> &str { "COHeartbeatIDResponse" }
-}

@@ -43,11 +43,3 @@ impl ros2_client::Message for GetDomainActionDetailsResponse {}
 
 
 pub struct GetDomainActionDetails;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetDomainActionDetails {
-    type Request = GetDomainActionDetailsRequest;
-    type Response = GetDomainActionDetailsResponse;
-
-    fn request_type_name(&self) -> &str { "GetDomainActionDetailsRequest" }
-    fn response_type_name(&self) -> &str { "GetDomainActionDetailsResponse" }
-}

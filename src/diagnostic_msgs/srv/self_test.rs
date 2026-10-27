@@ -41,11 +41,3 @@ impl ros2_client::Message for SelfTestResponse {}
 
 
 pub struct SelfTest;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SelfTest {
-    type Request = SelfTestRequest;
-    type Response = SelfTestResponse;
-
-    fn request_type_name(&self) -> &str { "SelfTestRequest" }
-    fn response_type_name(&self) -> &str { "SelfTestResponse" }
-}

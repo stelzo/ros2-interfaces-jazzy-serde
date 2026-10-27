@@ -41,11 +41,3 @@ impl ros2_client::Message for SetJointPropertiesResponse {}
 
 
 pub struct SetJointProperties;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetJointProperties {
-    type Request = SetJointPropertiesRequest;
-    type Response = SetJointPropertiesResponse;
-
-    fn request_type_name(&self) -> &str { "SetJointPropertiesRequest" }
-    fn response_type_name(&self) -> &str { "SetJointPropertiesResponse" }
-}

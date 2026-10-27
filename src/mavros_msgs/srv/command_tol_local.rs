@@ -47,11 +47,3 @@ impl ros2_client::Message for CommandTOLLocalResponse {}
 
 
 pub struct CommandTOLLocal;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandTOLLocal {
-    type Request = CommandTOLLocalRequest;
-    type Response = CommandTOLLocalResponse;
-
-    fn request_type_name(&self) -> &str { "CommandTOLLocalRequest" }
-    fn response_type_name(&self) -> &str { "CommandTOLLocalResponse" }
-}

@@ -39,11 +39,3 @@ impl ros2_client::Message for RemoveProblemGoalResponse {}
 
 
 pub struct RemoveProblemGoal;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RemoveProblemGoal {
-    type Request = RemoveProblemGoalRequest;
-    type Response = RemoveProblemGoalResponse;
-
-    fn request_type_name(&self) -> &str { "RemoveProblemGoalRequest" }
-    fn response_type_name(&self) -> &str { "RemoveProblemGoalResponse" }
-}

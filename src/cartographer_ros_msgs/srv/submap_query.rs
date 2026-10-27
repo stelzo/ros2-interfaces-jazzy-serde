@@ -43,11 +43,3 @@ impl ros2_client::Message for SubmapQueryResponse {}
 
 
 pub struct SubmapQuery;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SubmapQuery {
-    type Request = SubmapQueryRequest;
-    type Response = SubmapQueryResponse;
-
-    fn request_type_name(&self) -> &str { "SubmapQueryRequest" }
-    fn response_type_name(&self) -> &str { "SubmapQueryResponse" }
-}

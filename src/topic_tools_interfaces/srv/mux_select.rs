@@ -39,11 +39,3 @@ impl ros2_client::Message for MuxSelectResponse {}
 
 
 pub struct MuxSelect;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MuxSelect {
-    type Request = MuxSelectRequest;
-    type Response = MuxSelectResponse;
-
-    fn request_type_name(&self) -> &str { "MuxSelectRequest" }
-    fn response_type_name(&self) -> &str { "MuxSelectResponse" }
-}

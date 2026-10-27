@@ -43,11 +43,3 @@ impl ros2_client::Message for ParamSetV2Response {}
 
 
 pub struct ParamSetV2;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ParamSetV2 {
-    type Request = ParamSetV2Request;
-    type Response = ParamSetV2Response;
-
-    fn request_type_name(&self) -> &str { "ParamSetV2Request" }
-    fn response_type_name(&self) -> &str { "ParamSetV2Response" }
-}

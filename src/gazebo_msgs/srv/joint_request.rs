@@ -37,11 +37,3 @@ impl ros2_client::Message for JointRequestResponse {}
 
 
 pub struct JointRequest;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for JointRequest {
-    type Request = JointRequestRequest;
-    type Response = JointRequestResponse;
-
-    fn request_type_name(&self) -> &str { "JointRequestRequest" }
-    fn response_type_name(&self) -> &str { "JointRequestResponse" }
-}

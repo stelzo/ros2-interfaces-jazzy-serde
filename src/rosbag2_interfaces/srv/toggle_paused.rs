@@ -37,11 +37,3 @@ impl ros2_client::Message for TogglePausedResponse {}
 
 
 pub struct TogglePaused;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TogglePaused {
-    type Request = TogglePausedRequest;
-    type Response = TogglePausedResponse;
-
-    fn request_type_name(&self) -> &str { "TogglePausedRequest" }
-    fn response_type_name(&self) -> &str { "TogglePausedResponse" }
-}

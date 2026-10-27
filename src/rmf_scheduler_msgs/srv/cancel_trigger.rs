@@ -39,11 +39,3 @@ impl ros2_client::Message for CancelTriggerResponse {}
 
 
 pub struct CancelTrigger;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CancelTrigger {
-    type Request = CancelTriggerRequest;
-    type Response = CancelTriggerResponse;
-
-    fn request_type_name(&self) -> &str { "CancelTriggerRequest" }
-    fn response_type_name(&self) -> &str { "CancelTriggerResponse" }
-}

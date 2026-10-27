@@ -43,11 +43,3 @@ impl ros2_client::Message for ServoCommandTypeResponse {}
 
 
 pub struct ServoCommandType;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ServoCommandType {
-    type Request = ServoCommandTypeRequest;
-    type Response = ServoCommandTypeResponse;
-
-    fn request_type_name(&self) -> &str { "ServoCommandTypeRequest" }
-    fn response_type_name(&self) -> &str { "ServoCommandTypeResponse" }
-}

@@ -59,11 +59,3 @@ impl ros2_client::Message for GimbalManagerCameraTrackResponse {}
 
 
 pub struct GimbalManagerCameraTrack;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GimbalManagerCameraTrack {
-    type Request = GimbalManagerCameraTrackRequest;
-    type Response = GimbalManagerCameraTrackResponse;
-
-    fn request_type_name(&self) -> &str { "GimbalManagerCameraTrackRequest" }
-    fn response_type_name(&self) -> &str { "GimbalManagerCameraTrackResponse" }
-}

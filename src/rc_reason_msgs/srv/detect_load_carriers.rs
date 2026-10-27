@@ -49,11 +49,3 @@ impl ros2_client::Message for DetectLoadCarriersResponse {}
 
 
 pub struct DetectLoadCarriers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DetectLoadCarriers {
-    type Request = DetectLoadCarriersRequest;
-    type Response = DetectLoadCarriersResponse;
-
-    fn request_type_name(&self) -> &str { "DetectLoadCarriersRequest" }
-    fn response_type_name(&self) -> &str { "DetectLoadCarriersResponse" }
-}

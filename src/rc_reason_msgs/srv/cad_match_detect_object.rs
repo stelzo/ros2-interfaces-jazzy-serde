@@ -61,11 +61,3 @@ impl ros2_client::Message for CadMatchDetectObjectResponse {}
 
 
 pub struct CadMatchDetectObject;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CadMatchDetectObject {
-    type Request = CadMatchDetectObjectRequest;
-    type Response = CadMatchDetectObjectResponse;
-
-    fn request_type_name(&self) -> &str { "CadMatchDetectObjectRequest" }
-    fn response_type_name(&self) -> &str { "CadMatchDetectObjectResponse" }
-}

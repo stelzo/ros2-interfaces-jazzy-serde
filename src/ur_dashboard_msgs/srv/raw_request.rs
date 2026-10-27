@@ -37,11 +37,3 @@ impl ros2_client::Message for RawRequestResponse {}
 
 
 pub struct RawRequest;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RawRequest {
-    type Request = RawRequestRequest;
-    type Response = RawRequestResponse;
-
-    fn request_type_name(&self) -> &str { "RawRequestRequest" }
-    fn response_type_name(&self) -> &str { "RawRequestResponse" }
-}

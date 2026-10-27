@@ -39,11 +39,3 @@ impl ros2_client::Message for MapSaveResponse {}
 
 
 pub struct MapSave;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MapSave {
-    type Request = MapSaveRequest;
-    type Response = MapSaveResponse;
-
-    fn request_type_name(&self) -> &str { "MapSaveRequest" }
-    fn response_type_name(&self) -> &str { "MapSaveResponse" }
-}

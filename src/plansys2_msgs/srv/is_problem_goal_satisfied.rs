@@ -41,11 +41,3 @@ impl ros2_client::Message for IsProblemGoalSatisfiedResponse {}
 
 
 pub struct IsProblemGoalSatisfied;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for IsProblemGoalSatisfied {
-    type Request = IsProblemGoalSatisfiedRequest;
-    type Response = IsProblemGoalSatisfiedResponse;
-
-    fn request_type_name(&self) -> &str { "IsProblemGoalSatisfiedRequest" }
-    fn response_type_name(&self) -> &str { "IsProblemGoalSatisfiedResponse" }
-}

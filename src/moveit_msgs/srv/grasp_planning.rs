@@ -47,11 +47,3 @@ impl ros2_client::Message for GraspPlanningResponse {}
 
 
 pub struct GraspPlanning;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GraspPlanning {
-    type Request = GraspPlanningRequest;
-    type Response = GraspPlanningResponse;
-
-    fn request_type_name(&self) -> &str { "GraspPlanningRequest" }
-    fn response_type_name(&self) -> &str { "GraspPlanningResponse" }
-}

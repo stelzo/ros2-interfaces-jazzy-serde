@@ -37,11 +37,3 @@ impl ros2_client::Message for MuxDeleteResponse {}
 
 
 pub struct MuxDelete;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for MuxDelete {
-    type Request = MuxDeleteRequest;
-    type Response = MuxDeleteResponse;
-
-    fn request_type_name(&self) -> &str { "MuxDeleteRequest" }
-    fn response_type_name(&self) -> &str { "MuxDeleteResponse" }
-}

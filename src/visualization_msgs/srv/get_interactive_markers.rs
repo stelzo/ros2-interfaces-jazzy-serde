@@ -39,11 +39,3 @@ impl ros2_client::Message for GetInteractiveMarkersResponse {}
 
 
 pub struct GetInteractiveMarkers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetInteractiveMarkers {
-    type Request = GetInteractiveMarkersRequest;
-    type Response = GetInteractiveMarkersResponse;
-
-    fn request_type_name(&self) -> &str { "GetInteractiveMarkersRequest" }
-    fn response_type_name(&self) -> &str { "GetInteractiveMarkersResponse" }
-}

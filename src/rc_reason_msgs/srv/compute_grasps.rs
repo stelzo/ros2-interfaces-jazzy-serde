@@ -61,11 +61,3 @@ impl ros2_client::Message for ComputeGraspsResponse {}
 
 
 pub struct ComputeGrasps;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ComputeGrasps {
-    type Request = ComputeGraspsRequest;
-    type Response = ComputeGraspsResponse;
-
-    fn request_type_name(&self) -> &str { "ComputeGraspsRequest" }
-    fn response_type_name(&self) -> &str { "ComputeGraspsResponse" }
-}

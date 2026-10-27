@@ -37,11 +37,3 @@ impl ros2_client::Message for RemoveLabelResponse {}
 
 
 pub struct RemoveLabel;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RemoveLabel {
-    type Request = RemoveLabelRequest;
-    type Response = RemoveLabelResponse;
-
-    fn request_type_name(&self) -> &str { "RemoveLabelRequest" }
-    fn response_type_name(&self) -> &str { "RemoveLabelResponse" }
-}

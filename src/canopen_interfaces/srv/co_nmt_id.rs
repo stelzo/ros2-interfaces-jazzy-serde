@@ -39,11 +39,3 @@ impl ros2_client::Message for CONmtIDResponse {}
 
 
 pub struct CONmtID;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CONmtID {
-    type Request = CONmtIDRequest;
-    type Response = CONmtIDResponse;
-
-    fn request_type_name(&self) -> &str { "CONmtIDRequest" }
-    fn response_type_name(&self) -> &str { "CONmtIDResponse" }
-}

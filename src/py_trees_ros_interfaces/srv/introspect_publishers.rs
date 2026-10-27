@@ -37,11 +37,3 @@ impl ros2_client::Message for IntrospectPublishersResponse {}
 
 
 pub struct IntrospectPublishers;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for IntrospectPublishers {
-    type Request = IntrospectPublishersRequest;
-    type Response = IntrospectPublishersResponse;
-
-    fn request_type_name(&self) -> &str { "IntrospectPublishersRequest" }
-    fn response_type_name(&self) -> &str { "IntrospectPublishersResponse" }
-}

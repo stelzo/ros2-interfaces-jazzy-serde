@@ -37,11 +37,3 @@ impl ros2_client::Message for ToggleFilterProcessingResponse {}
 
 
 pub struct ToggleFilterProcessing;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ToggleFilterProcessing {
-    type Request = ToggleFilterProcessingRequest;
-    type Response = ToggleFilterProcessingResponse;
-
-    fn request_type_name(&self) -> &str { "ToggleFilterProcessingRequest" }
-    fn response_type_name(&self) -> &str { "ToggleFilterProcessingResponse" }
-}

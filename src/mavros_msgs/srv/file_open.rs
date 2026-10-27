@@ -49,11 +49,3 @@ impl ros2_client::Message for FileOpenResponse {}
 
 
 pub struct FileOpen;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileOpen {
-    type Request = FileOpenRequest;
-    type Response = FileOpenResponse;
-
-    fn request_type_name(&self) -> &str { "FileOpenRequest" }
-    fn response_type_name(&self) -> &str { "FileOpenResponse" }
-}

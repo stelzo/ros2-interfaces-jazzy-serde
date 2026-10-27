@@ -37,11 +37,3 @@ impl ros2_client::Message for BasicSrvResponse {}
 
 
 pub struct BasicSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for BasicSrv {
-    type Request = BasicSrvRequest;
-    type Response = BasicSrvResponse;
-
-    fn request_type_name(&self) -> &str { "BasicSrvRequest" }
-    fn response_type_name(&self) -> &str { "BasicSrvResponse" }
-}

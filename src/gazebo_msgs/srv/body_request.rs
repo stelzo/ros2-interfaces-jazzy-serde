@@ -37,11 +37,3 @@ impl ros2_client::Message for BodyRequestResponse {}
 
 
 pub struct BodyRequest;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for BodyRequest {
-    type Request = BodyRequestRequest;
-    type Response = BodyRequestResponse;
-
-    fn request_type_name(&self) -> &str { "BodyRequestRequest" }
-    fn response_type_name(&self) -> &str { "BodyRequestResponse" }
-}

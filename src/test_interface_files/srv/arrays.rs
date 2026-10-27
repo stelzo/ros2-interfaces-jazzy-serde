@@ -157,11 +157,3 @@ impl ros2_client::Message for ArraysResponse {}
 
 
 pub struct Arrays;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Arrays {
-    type Request = ArraysRequest;
-    type Response = ArraysResponse;
-
-    fn request_type_name(&self) -> &str { "ArraysRequest" }
-    fn response_type_name(&self) -> &str { "ArraysResponse" }
-}

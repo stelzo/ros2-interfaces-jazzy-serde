@@ -41,11 +41,3 @@ impl ros2_client::Message for GetDomainDerivedPredicateDetailsResponse {}
 
 
 pub struct GetDomainDerivedPredicateDetails;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetDomainDerivedPredicateDetails {
-    type Request = GetDomainDerivedPredicateDetailsRequest;
-    type Response = GetDomainDerivedPredicateDetailsResponse;
-
-    fn request_type_name(&self) -> &str { "GetDomainDerivedPredicateDetailsRequest" }
-    fn response_type_name(&self) -> &str { "GetDomainDerivedPredicateDetailsResponse" }
-}

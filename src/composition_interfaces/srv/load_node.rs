@@ -57,11 +57,3 @@ impl ros2_client::Message for LoadNodeResponse {}
 
 
 pub struct LoadNode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LoadNode {
-    type Request = LoadNodeRequest;
-    type Response = LoadNodeResponse;
-
-    fn request_type_name(&self) -> &str { "LoadNodeRequest" }
-    fn response_type_name(&self) -> &str { "LoadNodeResponse" }
-}

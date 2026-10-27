@@ -37,11 +37,3 @@ impl ros2_client::Message for DescribeParametersResponse {}
 
 
 pub struct DescribeParameters;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DescribeParameters {
-    type Request = DescribeParametersRequest;
-    type Response = DescribeParametersResponse;
-
-    fn request_type_name(&self) -> &str { "DescribeParametersRequest" }
-    fn response_type_name(&self) -> &str { "DescribeParametersResponse" }
-}

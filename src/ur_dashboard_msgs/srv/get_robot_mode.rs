@@ -41,11 +41,3 @@ impl ros2_client::Message for GetRobotModeResponse {}
 
 
 pub struct GetRobotMode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetRobotMode {
-    type Request = GetRobotModeRequest;
-    type Response = GetRobotModeResponse;
-
-    fn request_type_name(&self) -> &str { "GetRobotModeRequest" }
-    fn response_type_name(&self) -> &str { "GetRobotModeResponse" }
-}

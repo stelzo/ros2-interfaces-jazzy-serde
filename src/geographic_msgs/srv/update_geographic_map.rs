@@ -39,11 +39,3 @@ impl ros2_client::Message for UpdateGeographicMapResponse {}
 
 
 pub struct UpdateGeographicMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for UpdateGeographicMap {
-    type Request = UpdateGeographicMapRequest;
-    type Response = UpdateGeographicMapResponse;
-
-    fn request_type_name(&self) -> &str { "UpdateGeographicMapRequest" }
-    fn response_type_name(&self) -> &str { "UpdateGeographicMapResponse" }
-}

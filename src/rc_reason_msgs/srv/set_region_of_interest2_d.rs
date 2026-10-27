@@ -37,11 +37,3 @@ impl ros2_client::Message for SetRegionOfInterest2DResponse {}
 
 
 pub struct SetRegionOfInterest2D;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetRegionOfInterest2D {
-    type Request = SetRegionOfInterest2DRequest;
-    type Response = SetRegionOfInterest2DResponse;
-
-    fn request_type_name(&self) -> &str { "SetRegionOfInterest2DRequest" }
-    fn response_type_name(&self) -> &str { "SetRegionOfInterest2DResponse" }
-}

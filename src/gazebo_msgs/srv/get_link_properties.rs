@@ -57,11 +57,3 @@ impl ros2_client::Message for GetLinkPropertiesResponse {}
 
 
 pub struct GetLinkProperties;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetLinkProperties {
-    type Request = GetLinkPropertiesRequest;
-    type Response = GetLinkPropertiesResponse;
-
-    fn request_type_name(&self) -> &str { "GetLinkPropertiesRequest" }
-    fn response_type_name(&self) -> &str { "GetLinkPropertiesResponse" }
-}

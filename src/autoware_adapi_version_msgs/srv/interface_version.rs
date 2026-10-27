@@ -41,11 +41,3 @@ impl ros2_client::Message for InterfaceVersionResponse {}
 
 
 pub struct InterfaceVersion;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for InterfaceVersion {
-    type Request = InterfaceVersionRequest;
-    type Response = InterfaceVersionResponse;
-
-    fn request_type_name(&self) -> &str { "InterfaceVersionRequest" }
-    fn response_type_name(&self) -> &str { "InterfaceVersionResponse" }
-}

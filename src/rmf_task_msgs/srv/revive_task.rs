@@ -39,11 +39,3 @@ impl ros2_client::Message for ReviveTaskResponse {}
 
 
 pub struct ReviveTask;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ReviveTask {
-    type Request = ReviveTaskRequest;
-    type Response = ReviveTaskResponse;
-
-    fn request_type_name(&self) -> &str { "ReviveTaskRequest" }
-    fn response_type_name(&self) -> &str { "ReviveTaskResponse" }
-}

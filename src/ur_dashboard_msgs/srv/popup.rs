@@ -39,11 +39,3 @@ impl ros2_client::Message for PopupResponse {}
 
 
 pub struct Popup;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Popup {
-    type Request = PopupRequest;
-    type Response = PopupResponse;
-
-    fn request_type_name(&self) -> &str { "PopupRequest" }
-    fn response_type_name(&self) -> &str { "PopupResponse" }
-}

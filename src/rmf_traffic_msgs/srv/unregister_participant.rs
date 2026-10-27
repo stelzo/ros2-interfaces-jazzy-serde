@@ -39,11 +39,3 @@ impl ros2_client::Message for UnregisterParticipantResponse {}
 
 
 pub struct UnregisterParticipant;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for UnregisterParticipant {
-    type Request = UnregisterParticipantRequest;
-    type Response = UnregisterParticipantResponse;
-
-    fn request_type_name(&self) -> &str { "UnregisterParticipantRequest" }
-    fn response_type_name(&self) -> &str { "UnregisterParticipantResponse" }
-}

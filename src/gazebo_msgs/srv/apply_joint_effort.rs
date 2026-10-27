@@ -45,11 +45,3 @@ impl ros2_client::Message for ApplyJointEffortResponse {}
 
 
 pub struct ApplyJointEffort;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ApplyJointEffort {
-    type Request = ApplyJointEffortRequest;
-    type Response = ApplyJointEffortResponse;
-
-    fn request_type_name(&self) -> &str { "ApplyJointEffortRequest" }
-    fn response_type_name(&self) -> &str { "ApplyJointEffortResponse" }
-}

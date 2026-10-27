@@ -37,11 +37,3 @@ impl ros2_client::Message for AddLinkResponse {}
 
 
 pub struct AddLink;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for AddLink {
-    type Request = AddLinkRequest;
-    type Response = AddLinkResponse;
-
-    fn request_type_name(&self) -> &str { "AddLinkRequest" }
-    fn response_type_name(&self) -> &str { "AddLinkResponse" }
-}

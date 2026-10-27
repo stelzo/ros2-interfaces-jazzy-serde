@@ -43,11 +43,3 @@ impl ros2_client::Message for FieldSetWriteSrvResponse {}
 
 
 pub struct FieldSetWriteSrv;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FieldSetWriteSrv {
-    type Request = FieldSetWriteSrvRequest;
-    type Response = FieldSetWriteSrvResponse;
-
-    fn request_type_name(&self) -> &str { "FieldSetWriteSrvRequest" }
-    fn response_type_name(&self) -> &str { "FieldSetWriteSrvResponse" }
-}

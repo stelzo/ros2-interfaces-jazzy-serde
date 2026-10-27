@@ -41,11 +41,3 @@ impl ros2_client::Message for OpenBlackboardStreamResponse {}
 
 
 pub struct OpenBlackboardStream;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for OpenBlackboardStream {
-    type Request = OpenBlackboardStreamRequest;
-    type Response = OpenBlackboardStreamResponse;
-
-    fn request_type_name(&self) -> &str { "OpenBlackboardStreamRequest" }
-    fn response_type_name(&self) -> &str { "OpenBlackboardStreamResponse" }
-}

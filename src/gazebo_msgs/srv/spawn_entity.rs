@@ -47,11 +47,3 @@ impl ros2_client::Message for SpawnEntityResponse {}
 
 
 pub struct SpawnEntity;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SpawnEntity {
-    type Request = SpawnEntityRequest;
-    type Response = SpawnEntityResponse;
-
-    fn request_type_name(&self) -> &str { "SpawnEntityRequest" }
-    fn response_type_name(&self) -> &str { "SpawnEntityResponse" }
-}

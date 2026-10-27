@@ -41,11 +41,3 @@ impl ros2_client::Message for GetDomainConstantsResponse {}
 
 
 pub struct GetDomainConstants;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetDomainConstants {
-    type Request = GetDomainConstantsRequest;
-    type Response = GetDomainConstantsResponse;
-
-    fn request_type_name(&self) -> &str { "GetDomainConstantsRequest" }
-    fn response_type_name(&self) -> &str { "GetDomainConstantsResponse" }
-}

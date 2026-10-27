@@ -59,11 +59,3 @@ impl ros2_client::Message for CommandIntResponse {}
 
 
 pub struct CommandInt;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandInt {
-    type Request = CommandIntRequest;
-    type Response = CommandIntResponse;
-
-    fn request_type_name(&self) -> &str { "CommandIntRequest" }
-    fn response_type_name(&self) -> &str { "CommandIntResponse" }
-}

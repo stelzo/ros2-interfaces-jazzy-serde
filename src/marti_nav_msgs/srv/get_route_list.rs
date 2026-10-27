@@ -41,11 +41,3 @@ impl ros2_client::Message for GetRouteListResponse {}
 
 
 pub struct GetRouteList;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetRouteList {
-    type Request = GetRouteListRequest;
-    type Response = GetRouteListResponse;
-
-    fn request_type_name(&self) -> &str { "GetRouteListRequest" }
-    fn response_type_name(&self) -> &str { "GetRouteListResponse" }
-}

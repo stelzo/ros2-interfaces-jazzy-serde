@@ -37,11 +37,3 @@ impl ros2_client::Message for NovatelFRESETResponse {}
 
 
 pub struct NovatelFRESET;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for NovatelFRESET {
-    type Request = NovatelFRESETRequest;
-    type Response = NovatelFRESETResponse;
-
-    fn request_type_name(&self) -> &str { "NovatelFRESETRequest" }
-    fn response_type_name(&self) -> &str { "NovatelFRESETResponse" }
-}

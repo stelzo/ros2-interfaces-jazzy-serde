@@ -47,11 +47,3 @@ impl ros2_client::Message for SaveMapResponse {}
 
 
 pub struct SaveMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SaveMap {
-    type Request = SaveMapRequest;
-    type Response = SaveMapResponse;
-
-    fn request_type_name(&self) -> &str { "SaveMapRequest" }
-    fn response_type_name(&self) -> &str { "SaveMapResponse" }
-}

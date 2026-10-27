@@ -37,11 +37,3 @@ impl ros2_client::Message for SendBytesResponse {}
 
 
 pub struct SendBytes;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SendBytes {
-    type Request = SendBytesRequest;
-    type Response = SendBytesResponse;
-
-    fn request_type_name(&self) -> &str { "SendBytesRequest" }
-    fn response_type_name(&self) -> &str { "SendBytesResponse" }
-}

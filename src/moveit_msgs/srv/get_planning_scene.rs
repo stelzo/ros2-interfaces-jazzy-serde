@@ -37,11 +37,3 @@ impl ros2_client::Message for GetPlanningSceneResponse {}
 
 
 pub struct GetPlanningScene;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetPlanningScene {
-    type Request = GetPlanningSceneRequest;
-    type Response = GetPlanningSceneResponse;
-
-    fn request_type_name(&self) -> &str { "GetPlanningSceneRequest" }
-    fn response_type_name(&self) -> &str { "GetPlanningSceneResponse" }
-}

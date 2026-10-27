@@ -54,11 +54,3 @@ impl ros2_client::Message for COReadIDResponse {}
 
 
 pub struct COReadID;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for COReadID {
-    type Request = COReadIDRequest;
-    type Response = COReadIDResponse;
-
-    fn request_type_name(&self) -> &str { "COReadIDRequest" }
-    fn response_type_name(&self) -> &str { "COReadIDResponse" }
-}

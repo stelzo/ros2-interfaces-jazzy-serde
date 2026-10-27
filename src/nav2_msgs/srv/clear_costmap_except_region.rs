@@ -37,11 +37,3 @@ impl ros2_client::Message for ClearCostmapExceptRegionResponse {}
 
 
 pub struct ClearCostmapExceptRegion;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ClearCostmapExceptRegion {
-    type Request = ClearCostmapExceptRegionRequest;
-    type Response = ClearCostmapExceptRegionResponse;
-
-    fn request_type_name(&self) -> &str { "ClearCostmapExceptRegionRequest" }
-    fn response_type_name(&self) -> &str { "ClearCostmapExceptRegionResponse" }
-}

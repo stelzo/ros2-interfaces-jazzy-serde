@@ -45,11 +45,3 @@ impl ros2_client::Message for CommandAckResponse {}
 
 
 pub struct CommandAck;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandAck {
-    type Request = CommandAckRequest;
-    type Response = CommandAckResponse;
-
-    fn request_type_name(&self) -> &str { "CommandAckRequest" }
-    fn response_type_name(&self) -> &str { "CommandAckResponse" }
-}

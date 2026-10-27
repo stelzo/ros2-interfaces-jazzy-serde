@@ -41,11 +41,3 @@ impl ros2_client::Message for GetSafetyModeResponse {}
 
 
 pub struct GetSafetyMode;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetSafetyMode {
-    type Request = GetSafetyModeRequest;
-    type Response = GetSafetyModeResponse;
-
-    fn request_type_name(&self) -> &str { "GetSafetyModeRequest" }
-    fn response_type_name(&self) -> &str { "GetSafetyModeResponse" }
-}

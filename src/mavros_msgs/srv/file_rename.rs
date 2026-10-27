@@ -41,11 +41,3 @@ impl ros2_client::Message for FileRenameResponse {}
 
 
 pub struct FileRename;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileRename {
-    type Request = FileRenameRequest;
-    type Response = FileRenameResponse;
-
-    fn request_type_name(&self) -> &str { "FileRenameRequest" }
-    fn response_type_name(&self) -> &str { "FileRenameResponse" }
-}

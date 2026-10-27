@@ -45,11 +45,3 @@ impl ros2_client::Message for SetPenResponse {}
 
 
 pub struct SetPen;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetPen {
-    type Request = SetPenRequest;
-    type Response = SetPenResponse;
-
-    fn request_type_name(&self) -> &str { "SetPenRequest" }
-    fn response_type_name(&self) -> &str { "SetPenResponse" }
-}

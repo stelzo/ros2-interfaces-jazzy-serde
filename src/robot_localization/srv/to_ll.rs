@@ -37,11 +37,3 @@ impl ros2_client::Message for ToLLResponse {}
 
 
 pub struct ToLL;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ToLL {
-    type Request = ToLLRequest;
-    type Response = ToLLResponse;
-
-    fn request_type_name(&self) -> &str { "ToLLRequest" }
-    fn response_type_name(&self) -> &str { "ToLLResponse" }
-}

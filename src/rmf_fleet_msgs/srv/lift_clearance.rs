@@ -44,11 +44,3 @@ impl ros2_client::Message for LiftClearanceResponse {}
 
 
 pub struct LiftClearance;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for LiftClearance {
-    type Request = LiftClearanceRequest;
-    type Response = LiftClearanceResponse;
-
-    fn request_type_name(&self) -> &str { "LiftClearanceRequest" }
-    fn response_type_name(&self) -> &str { "LiftClearanceResponse" }
-}

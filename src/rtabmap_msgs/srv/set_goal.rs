@@ -45,11 +45,3 @@ impl ros2_client::Message for SetGoalResponse {}
 
 
 pub struct SetGoal;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetGoal {
-    type Request = SetGoalRequest;
-    type Response = SetGoalResponse;
-
-    fn request_type_name(&self) -> &str { "SetGoalRequest" }
-    fn response_type_name(&self) -> &str { "SetGoalResponse" }
-}

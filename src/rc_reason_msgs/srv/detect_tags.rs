@@ -45,11 +45,3 @@ impl ros2_client::Message for DetectTagsResponse {}
 
 
 pub struct DetectTags;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DetectTags {
-    type Request = DetectTagsRequest;
-    type Response = DetectTagsResponse;
-
-    fn request_type_name(&self) -> &str { "DetectTagsRequest" }
-    fn response_type_name(&self) -> &str { "DetectTagsResponse" }
-}

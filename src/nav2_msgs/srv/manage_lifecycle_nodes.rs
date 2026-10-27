@@ -47,11 +47,3 @@ impl ros2_client::Message for ManageLifecycleNodesResponse {}
 
 
 pub struct ManageLifecycleNodes;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ManageLifecycleNodes {
-    type Request = ManageLifecycleNodesRequest;
-    type Response = ManageLifecycleNodesResponse;
-
-    fn request_type_name(&self) -> &str { "ManageLifecycleNodesRequest" }
-    fn response_type_name(&self) -> &str { "ManageLifecycleNodesResponse" }
-}

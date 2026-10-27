@@ -43,11 +43,3 @@ impl ros2_client::Message for GetCostResponse {}
 
 
 pub struct GetCost;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetCost {
-    type Request = GetCostRequest;
-    type Response = GetCostResponse;
-
-    fn request_type_name(&self) -> &str { "GetCostRequest" }
-    fn response_type_name(&self) -> &str { "GetCostResponse" }
-}

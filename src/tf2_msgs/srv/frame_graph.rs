@@ -37,11 +37,3 @@ impl ros2_client::Message for FrameGraphResponse {}
 
 
 pub struct FrameGraph;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FrameGraph {
-    type Request = FrameGraphRequest;
-    type Response = FrameGraphResponse;
-
-    fn request_type_name(&self) -> &str { "FrameGraphRequest" }
-    fn response_type_name(&self) -> &str { "FrameGraphResponse" }
-}

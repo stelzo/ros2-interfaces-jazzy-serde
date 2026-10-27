@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/SchemaStore/schemastore/refs/heads/master/src/schemas/json/github-workflow.json
+# Release workflow for ros2-interfaces-jazzy-serde. A v* tag publishes the crate to crates.io.
+#
+# Secrets: CARGO_REGISTRY_TOKEN
+
+name: release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  # The tag must match the crate version and be at least the version the API
+  # changes since the last release require. publish-crates waits for this, so
+  # a wrong version stops the release before anything is published.
+  semver-check:
+    runs-on: ubuntu-dev-resolute
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Dependencies
+        run: apt-get update && apt-get install -y pkg-config libssl-dev
+      - name: Rust toolchain
+        run: |
+          rustup self update
+          rustup toolchain uninstall stable
+          rustup toolchain install stable
+          rustup default stable
+      - name: Install cargo-semver-checks
+        run: |
+          curl -fsSL https://github.com/obi1kenobi/cargo-semver-checks/releases/download/v0.51.0/cargo-semver-checks-x86_64-unknown-linux-gnu.tar.gz \
+            | tar -xz -C "$(dirname "$(command -v cargo)")"
+      - name: Check the tag
+        run: |
+          VERSION="$(grep -m1 '^version = ' Cargo.toml | sed 's/version = "\(.*\)"/\1/')"
+          if [ "${{ github.ref_name }}" != "v${VERSION}" ]; then
+            echo "Tag ${{ github.ref_name }} does not match the version v${VERSION}"
+            exit 1
+          fi
+      - name: Check the version
+        run: python3 scripts/semver_check.py "${{ github.ref_name }}"
+
+  publish-crates:
+    needs:
+      - semver-check
+    runs-on: ubuntu-dev-resolute
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: apt-get update && apt-get install -y pkg-config libssl-dev
+      - name: Publish to crates.io
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        run: |
+          set -euo pipefail
+          if ! output=$(cargo publish 2>&1); then
+            echo "$output"
+            echo "$output" | grep -q "already exists" || exit 1
+            echo "Version already published, skipping."
+          fi

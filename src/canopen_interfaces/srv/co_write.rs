@@ -41,11 +41,3 @@ impl ros2_client::Message for COWriteResponse {}
 
 
 pub struct COWrite;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for COWrite {
-    type Request = COWriteRequest;
-    type Response = COWriteResponse;
-
-    fn request_type_name(&self) -> &str { "COWriteRequest" }
-    fn response_type_name(&self) -> &str { "COWriteResponse" }
-}

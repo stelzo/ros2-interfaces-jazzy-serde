@@ -37,11 +37,3 @@ impl ros2_client::Message for ComplexSrvIdlResponse {}
 
 
 pub struct ComplexSrvIdl;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ComplexSrvIdl {
-    type Request = ComplexSrvIdlRequest;
-    type Response = ComplexSrvIdlResponse;
-
-    fn request_type_name(&self) -> &str { "ComplexSrvIdlRequest" }
-    fn response_type_name(&self) -> &str { "ComplexSrvIdlResponse" }
-}

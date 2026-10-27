@@ -37,11 +37,3 @@ impl ros2_client::Message for GetRateResponse {}
 
 
 pub struct GetRate;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetRate {
-    type Request = GetRateRequest;
-    type Response = GetRateResponse;
-
-    fn request_type_name(&self) -> &str { "GetRateRequest" }
-    fn response_type_name(&self) -> &str { "GetRateResponse" }
-}

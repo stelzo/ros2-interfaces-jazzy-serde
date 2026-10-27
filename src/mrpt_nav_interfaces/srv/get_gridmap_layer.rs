@@ -39,11 +39,3 @@ impl ros2_client::Message for GetGridmapLayerResponse {}
 
 
 pub struct GetGridmapLayer;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetGridmapLayer {
-    type Request = GetGridmapLayerRequest;
-    type Response = GetGridmapLayerResponse;
-
-    fn request_type_name(&self) -> &str { "GetGridmapLayerRequest" }
-    fn response_type_name(&self) -> &str { "GetGridmapLayerResponse" }
-}

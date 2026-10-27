@@ -37,11 +37,3 @@ impl ros2_client::Message for ClearCostmapAroundRobotResponse {}
 
 
 pub struct ClearCostmapAroundRobot;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ClearCostmapAroundRobot {
-    type Request = ClearCostmapAroundRobotRequest;
-    type Response = ClearCostmapAroundRobotResponse;
-
-    fn request_type_name(&self) -> &str { "ClearCostmapAroundRobotRequest" }
-    fn response_type_name(&self) -> &str { "ClearCostmapAroundRobotResponse" }
-}

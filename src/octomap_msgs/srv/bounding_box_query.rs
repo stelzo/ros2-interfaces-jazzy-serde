@@ -39,11 +39,3 @@ impl ros2_client::Message for BoundingBoxQueryResponse {}
 
 
 pub struct BoundingBoxQuery;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for BoundingBoxQuery {
-    type Request = BoundingBoxQueryRequest;
-    type Response = BoundingBoxQueryResponse;
-
-    fn request_type_name(&self) -> &str { "BoundingBoxQueryRequest" }
-    fn response_type_name(&self) -> &str { "BoundingBoxQueryResponse" }
-}

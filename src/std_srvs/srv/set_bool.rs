@@ -39,11 +39,3 @@ impl ros2_client::Message for SetBoolResponse {}
 
 
 pub struct SetBool;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetBool {
-    type Request = SetBoolRequest;
-    type Response = SetBoolResponse;
-
-    fn request_type_name(&self) -> &str { "SetBoolRequest" }
-    fn response_type_name(&self) -> &str { "SetBoolResponse" }
-}

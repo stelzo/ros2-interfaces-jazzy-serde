@@ -51,11 +51,3 @@ impl ros2_client::Message for RequestChangesResponse {}
 
 
 pub struct RequestChanges;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for RequestChanges {
-    type Request = RequestChangesRequest;
-    type Response = RequestChangesResponse;
-
-    fn request_type_name(&self) -> &str { "RequestChangesRequest" }
-    fn response_type_name(&self) -> &str { "RequestChangesResponse" }
-}

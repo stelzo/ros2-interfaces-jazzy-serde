@@ -39,11 +39,3 @@ impl ros2_client::Message for ValidateDomainResponse {}
 
 
 pub struct ValidateDomain;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ValidateDomain {
-    type Request = ValidateDomainRequest;
-    type Response = ValidateDomainResponse;
-
-    fn request_type_name(&self) -> &str { "ValidateDomainRequest" }
-    fn response_type_name(&self) -> &str { "ValidateDomainResponse" }
-}

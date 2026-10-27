@@ -47,11 +47,3 @@ impl ros2_client::Message for PlanRouteResponse {}
 
 
 pub struct PlanRoute;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for PlanRoute {
-    type Request = PlanRouteRequest;
-    type Response = PlanRouteResponse;
-
-    fn request_type_name(&self) -> &str { "PlanRouteRequest" }
-    fn response_type_name(&self) -> &str { "PlanRouteResponse" }
-}

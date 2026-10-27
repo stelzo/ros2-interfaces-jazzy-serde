@@ -39,11 +39,3 @@ impl ros2_client::Message for SetMapResponse {}
 
 
 pub struct SetMap;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetMap {
-    type Request = SetMapRequest;
-    type Response = SetMapResponse;
-
-    fn request_type_name(&self) -> &str { "SetMapRequest" }
-    fn response_type_name(&self) -> &str { "SetMapResponse" }
-}

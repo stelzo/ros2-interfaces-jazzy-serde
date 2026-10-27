@@ -41,11 +41,3 @@ impl ros2_client::Message for PlayResponse {}
 
 
 pub struct Play;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for Play {
-    type Request = PlayRequest;
-    type Response = PlayResponse;
-
-    fn request_type_name(&self) -> &str { "PlayRequest" }
-    fn response_type_name(&self) -> &str { "PlayResponse" }
-}

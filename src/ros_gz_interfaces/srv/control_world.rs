@@ -37,11 +37,3 @@ impl ros2_client::Message for ControlWorldResponse {}
 
 
 pub struct ControlWorld;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ControlWorld {
-    type Request = ControlWorldRequest;
-    type Response = ControlWorldResponse;
-
-    fn request_type_name(&self) -> &str { "ControlWorldRequest" }
-    fn response_type_name(&self) -> &str { "ControlWorldResponse" }
-}

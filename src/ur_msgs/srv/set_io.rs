@@ -73,11 +73,3 @@ impl ros2_client::Message for SetIOResponse {}
 
 
 pub struct SetIO;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetIO {
-    type Request = SetIORequest;
-    type Response = SetIOResponse;
-
-    fn request_type_name(&self) -> &str { "SetIORequest" }
-    fn response_type_name(&self) -> &str { "SetIOResponse" }
-}

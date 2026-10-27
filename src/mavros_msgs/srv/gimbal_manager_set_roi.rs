@@ -62,11 +62,3 @@ impl ros2_client::Message for GimbalManagerSetRoiResponse {}
 
 
 pub struct GimbalManagerSetRoi;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GimbalManagerSetRoi {
-    type Request = GimbalManagerSetRoiRequest;
-    type Response = GimbalManagerSetRoiResponse;
-
-    fn request_type_name(&self) -> &str { "GimbalManagerSetRoiRequest" }
-    fn response_type_name(&self) -> &str { "GimbalManagerSetRoiResponse" }
-}

@@ -41,11 +41,3 @@ impl ros2_client::Message for GetOrderedSubGoalsResponse {}
 
 
 pub struct GetOrderedSubGoals;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetOrderedSubGoals {
-    type Request = GetOrderedSubGoalsRequest;
-    type Response = GetOrderedSubGoalsResponse;
-
-    fn request_type_name(&self) -> &str { "GetOrderedSubGoalsRequest" }
-    fn response_type_name(&self) -> &str { "GetOrderedSubGoalsResponse" }
-}

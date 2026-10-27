@@ -37,11 +37,3 @@ impl ros2_client::Message for SetEntityStateResponse {}
 
 
 pub struct SetEntityState;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetEntityState {
-    type Request = SetEntityStateRequest;
-    type Response = SetEntityStateResponse;
-
-    fn request_type_name(&self) -> &str { "SetEntityStateRequest" }
-    fn response_type_name(&self) -> &str { "SetEntityStateResponse" }
-}

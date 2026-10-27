@@ -39,11 +39,3 @@ impl ros2_client::Message for FileRemoveDirResponse {}
 
 
 pub struct FileRemoveDir;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for FileRemoveDir {
-    type Request = FileRemoveDirRequest;
-    type Response = FileRemoveDirResponse;
-
-    fn request_type_name(&self) -> &str { "FileRemoveDirRequest" }
-    fn response_type_name(&self) -> &str { "FileRemoveDirResponse" }
-}

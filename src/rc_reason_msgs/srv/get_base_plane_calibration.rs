@@ -43,11 +43,3 @@ impl ros2_client::Message for GetBasePlaneCalibrationResponse {}
 
 
 pub struct GetBasePlaneCalibration;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetBasePlaneCalibration {
-    type Request = GetBasePlaneCalibrationRequest;
-    type Response = GetBasePlaneCalibrationResponse;
-
-    fn request_type_name(&self) -> &str { "GetBasePlaneCalibrationRequest" }
-    fn response_type_name(&self) -> &str { "GetBasePlaneCalibrationResponse" }
-}

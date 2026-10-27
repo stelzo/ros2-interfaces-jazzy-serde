@@ -48,11 +48,3 @@ impl ros2_client::Message for VehicleInfoGetResponse {}
 
 
 pub struct VehicleInfoGet;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for VehicleInfoGet {
-    type Request = VehicleInfoGetRequest;
-    type Response = VehicleInfoGetResponse;
-
-    fn request_type_name(&self) -> &str { "VehicleInfoGetRequest" }
-    fn response_type_name(&self) -> &str { "VehicleInfoGetResponse" }
-}

@@ -39,11 +39,3 @@ impl ros2_client::Message for ReconfigureSnapshotStreamResponse {}
 
 
 pub struct ReconfigureSnapshotStream;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ReconfigureSnapshotStream {
-    type Request = ReconfigureSnapshotStreamRequest;
-    type Response = ReconfigureSnapshotStreamResponse;
-
-    fn request_type_name(&self) -> &str { "ReconfigureSnapshotStreamRequest" }
-    fn response_type_name(&self) -> &str { "ReconfigureSnapshotStreamResponse" }
-}

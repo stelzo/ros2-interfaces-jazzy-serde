@@ -37,11 +37,3 @@ impl ros2_client::Message for DeleteRegionsOfInterest2DResponse {}
 
 
 pub struct DeleteRegionsOfInterest2D;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DeleteRegionsOfInterest2D {
-    type Request = DeleteRegionsOfInterest2DRequest;
-    type Response = DeleteRegionsOfInterest2DResponse;
-
-    fn request_type_name(&self) -> &str { "DeleteRegionsOfInterest2DRequest" }
-    fn response_type_name(&self) -> &str { "DeleteRegionsOfInterest2DResponse" }
-}

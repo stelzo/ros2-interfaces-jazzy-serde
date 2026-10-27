@@ -43,11 +43,3 @@ impl ros2_client::Message for GetDomainDurativeActionDetailsResponse {}
 
 
 pub struct GetDomainDurativeActionDetails;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetDomainDurativeActionDetails {
-    type Request = GetDomainDurativeActionDetailsRequest;
-    type Response = GetDomainDurativeActionDetailsResponse;
-
-    fn request_type_name(&self) -> &str { "GetDomainDurativeActionDetailsRequest" }
-    fn response_type_name(&self) -> &str { "GetDomainDurativeActionDetailsResponse" }
-}

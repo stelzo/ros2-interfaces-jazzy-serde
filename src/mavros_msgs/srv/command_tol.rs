@@ -47,11 +47,3 @@ impl ros2_client::Message for CommandTOLResponse {}
 
 
 pub struct CommandTOL;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for CommandTOL {
-    type Request = CommandTOLRequest;
-    type Response = CommandTOLResponse;
-
-    fn request_type_name(&self) -> &str { "CommandTOLRequest" }
-    fn response_type_name(&self) -> &str { "CommandTOLResponse" }
-}

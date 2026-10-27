@@ -39,11 +39,3 @@ impl ros2_client::Message for DemuxSelectResponse {}
 
 
 pub struct DemuxSelect;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for DemuxSelect {
-    type Request = DemuxSelectRequest;
-    type Response = DemuxSelectResponse;
-
-    fn request_type_name(&self) -> &str { "DemuxSelectRequest" }
-    fn response_type_name(&self) -> &str { "DemuxSelectResponse" }
-}

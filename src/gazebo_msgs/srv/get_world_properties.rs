@@ -45,11 +45,3 @@ impl ros2_client::Message for GetWorldPropertiesResponse {}
 
 
 pub struct GetWorldProperties;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetWorldProperties {
-    type Request = GetWorldPropertiesRequest;
-    type Response = GetWorldPropertiesResponse;
-
-    fn request_type_name(&self) -> &str { "GetWorldPropertiesRequest" }
-    fn response_type_name(&self) -> &str { "GetWorldPropertiesResponse" }
-}

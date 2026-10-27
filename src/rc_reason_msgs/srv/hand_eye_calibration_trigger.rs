@@ -41,11 +41,3 @@ impl ros2_client::Message for HandEyeCalibrationTriggerResponse {}
 
 
 pub struct HandEyeCalibrationTrigger;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for HandEyeCalibrationTrigger {
-    type Request = HandEyeCalibrationTriggerRequest;
-    type Response = HandEyeCalibrationTriggerResponse;
-
-    fn request_type_name(&self) -> &str { "HandEyeCalibrationTriggerRequest" }
-    fn response_type_name(&self) -> &str { "HandEyeCalibrationTriggerResponse" }
-}

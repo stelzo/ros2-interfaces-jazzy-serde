@@ -39,11 +39,3 @@ impl ros2_client::Message for GetRobotStateFromWarehouseResponse {}
 
 
 pub struct GetRobotStateFromWarehouse;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for GetRobotStateFromWarehouse {
-    type Request = GetRobotStateFromWarehouseRequest;
-    type Response = GetRobotStateFromWarehouseResponse;
-
-    fn request_type_name(&self) -> &str { "GetRobotStateFromWarehouseRequest" }
-    fn response_type_name(&self) -> &str { "GetRobotStateFromWarehouseResponse" }
-}

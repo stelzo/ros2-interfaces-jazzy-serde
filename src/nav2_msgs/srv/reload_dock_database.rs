@@ -37,11 +37,3 @@ impl ros2_client::Message for ReloadDockDatabaseResponse {}
 
 
 pub struct ReloadDockDatabase;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for ReloadDockDatabase {
-    type Request = ReloadDockDatabaseRequest;
-    type Response = ReloadDockDatabaseResponse;
-
-    fn request_type_name(&self) -> &str { "ReloadDockDatabaseRequest" }
-    fn response_type_name(&self) -> &str { "ReloadDockDatabaseResponse" }
-}

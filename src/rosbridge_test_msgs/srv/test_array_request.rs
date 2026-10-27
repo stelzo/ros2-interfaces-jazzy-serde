@@ -37,11 +37,3 @@ impl ros2_client::Message for TestArrayRequestResponse {}
 
 
 pub struct TestArrayRequest;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for TestArrayRequest {
-    type Request = TestArrayRequestRequest;
-    type Response = TestArrayRequestResponse;
-
-    fn request_type_name(&self) -> &str { "TestArrayRequestRequest" }
-    fn response_type_name(&self) -> &str { "TestArrayRequestResponse" }
-}

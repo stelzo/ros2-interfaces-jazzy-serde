@@ -47,11 +47,3 @@ impl ros2_client::Message for SetLightPropertiesResponse {}
 
 
 pub struct SetLightProperties;
-#[cfg(feature = "ros2-client")]
-impl ros2_client::Service for SetLightProperties {
-    type Request = SetLightPropertiesRequest;
-    type Response = SetLightPropertiesResponse;
-
-    fn request_type_name(&self) -> &str { "SetLightPropertiesRequest" }
-    fn response_type_name(&self) -> &str { "SetLightPropertiesResponse" }
-}
